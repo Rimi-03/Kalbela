@@ -8,3 +8,12 @@ const ads = [
 const randomAd = Math.floor(Math.random() * ads.length);
 
 document.getElementById("adBanner").src = ads[randomAd];
+
+// Mega Menu
+
+const menuBtn = document.getElementById("menuToggle");
+const megaMenu = document.getElementById("megaMenu");
+
+menuBtn.addEventListener("click", () => {
+  megaMenu.classList.toggle("show");
+});
