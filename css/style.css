@@ -20,3 +20,21 @@ img {
   max-width: 100%;
   display: block;
 }
+/* ====================================
+   Advertisement
+==================================== */
+
+#top-ad {
+  padding: 8px 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+#adBanner {
+  width: 100%;
+  max-height: 120px; /* Change this value */
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  border-radius: 2px;
+}
