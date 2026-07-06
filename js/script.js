@@ -1,22 +1,30 @@
-const ads = [
-  "images/ad1.avif",
-  "images/ad1.jpg",
-  "images/ad2.jpg",
-  "images/ad3.jpg",
-  "images/ad4.jpg",
-  "images/ad5.jpeg",
-  "images/ad6.jpg",
-];
+document.addEventListener("DOMContentLoaded", function () {
+  // Array of your local ad objects
+  const ads = [
+    {
+      image: "images/ad1.jpg",
+      url: "https://example.com/sponsor-1",
+    },
+    {
+      image: "images/ad2.jpg",
+      url: "https://example.com/sponsor-2",
+    },
+    {
+      image: "images/ad3.jpg",
+      url: "https://example.com/sponsor-3",
+    },
+  ];
 
-const randomAd = Math.floor(Math.random() * ads.length);
+  // Pick a random ad index
+  const randomIndex = Math.floor(Math.random() * ads.length);
+  const selectedAd = ads[randomIndex];
 
-document.getElementById("adBanner").src = ads[randomAd];
+  // Inject into the HTML elements
+  const adImage = document.getElementById("ad-image");
+  const adLink = document.getElementById("ad-link");
 
-// Mega Menu
-
-const menuBtn = document.getElementById("menuToggle");
-const megaMenu = document.getElementById("megaMenu");
-
-menuBtn.addEventListener("click", () => {
-  megaMenu.classList.toggle("show");
+  if (selectedAd) {
+    adImage.src = selectedAd.image;
+    adLink.href = selectedAd.url;
+  }
 });
