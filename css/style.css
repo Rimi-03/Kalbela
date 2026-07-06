@@ -6,6 +6,11 @@
   font-size: 0.9rem;
 }
 
+header section.py-3 {
+  position: relative;
+  z-index: 1030; /* বুটস্ট্র্যাপের sticky-top (1020) এর চেয়ে বেশি রাখা হয়েছে */
+}
+
 .ad-wrapper {
   max-width: 970px; /* Maximum size matching Kalbela's desktop ad */
   width: 100%;
@@ -44,9 +49,9 @@ MID HEADER
 =====================*/
 
 .quick-links {
-  white-space: nowrap;
-  overflow-x: auto;
-  scrollbar-width: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .quick-links::-webkit-scrollbar {
@@ -126,17 +131,47 @@ SOCIAL MEGA MENU
     left: 0 !important;
     transform: none;
   }
+  .main-navbar .navbar-collapse {
+    background: #c40000;
+    margin-top: 8px;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .main-navbar .navbar-collapse .nav-link {
+    color: #fff;
+  }
+
+  .main-navbar .navbar-collapse .nav-link:hover {
+    color: #fff;
+    background: #a80000;
+  }
+
+  .all-menu {
+    width: 100%;
+
+    right: auto;
+
+    left: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
   .quick-links {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    white-space: nowrap;
+    /* overflow-x: auto; */
+    scrollbar-width: none;
   }
 
-  .quick-links li {
-    flex: 0 0 auto;
+  .quick-links::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-dropdown {
+    width: 320px;
   }
 }
 
@@ -188,9 +223,159 @@ Header Icons
   border-radius: 50%;
 }
 
-/* ======================
-Responsive
-====================== */
+/*=========================
+MAIN NAVBAR
+=========================*/
+
+.main-navbar {
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  min-height: 54px;
+}
+
+.main-navbar .container {
+  max-width: 1320px;
+}
+
+.main-navbar .nav-link {
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 16px 14px;
+  transition: 0.25s;
+}
+
+.main-navbar .nav-link:hover {
+  color: #c40000;
+}
+
+.main-navbar .nav-link.active {
+  color: #c40000;
+  font-weight: 700;
+}
+
+.main-navbar .nav-link i {
+  font-size: 16px;
+}
+
+.nav-icon {
+  color: #fff;
+  padding: 12px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.nav-icon:hover {
+  background: #a50000;
+  color: #fff;
+}
+
+.main-navbar .navbar-nav {
+  flex-wrap: nowrap;
+}
+
+.main-navbar .nav-item {
+  white-space: nowrap;
+}
+
+/*=========================
+HAMBURGER MENU
+=========================*/
+
+.menu-btn {
+  color: #333;
+  background: transparent;
+  border: none;
+
+  font-size: 20px;
+
+  padding: 12px;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  color: #c40000;
+  background: #f5f5f5;
+  box-shadow: none;
+}
+.menu-dropdown {
+  width: 700px;
+  border: none;
+  border-radius: 10px;
+}
+.menu-dropdown .dropdown-item {
+  border-radius: 6px;
+
+  padding: 8px 12px;
+
+  margin-bottom: 4px;
+
+  transition: 0.25s;
+}
+
+.menu-dropdown .dropdown-item:hover {
+  color: #c40000;
+
+  background: #f8f8f8;
+}
+.menu-wrapper {
+  position: relative;
+}
+.all-menu {
+  position: absolute;
+
+  top: 100%;
+
+  right: 0;
+
+  width: 1100px;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+
+  padding: 20px;
+
+  display: none;
+
+  z-index: 9999;
+}
+.menu-header {
+  font-size: 14px;
+
+  color: #777;
+
+  margin-bottom: 15px;
+}
+.menu-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 12px;
+}
+.menu-grid a {
+  color: #222;
+
+  text-decoration: none;
+
+  padding: 8px 12px;
+
+  border-radius: 6px;
+
+  transition: 0.25s;
+}
+
+.menu-grid a:hover {
+  background: #f5f5f5;
+
+  color: #c40000;
+}
 
 .footer-links a {
   color: #212529;

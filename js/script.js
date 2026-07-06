@@ -28,3 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
     adLink.href = selectedAd.url;
   }
 });
+
+const menuBtn = document.getElementById("menuToggle");
+const menu = document.getElementById("allMenu");
+
+menuBtn.addEventListener("click", function (e) {
+  e.stopPropagation();
+
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});
+
+document.addEventListener("click", function () {
+  menu.style.display = "none";
+});
