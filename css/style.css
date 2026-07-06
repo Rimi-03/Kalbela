@@ -306,3 +306,149 @@ img {
     height: 38px;
   }
 }
+
+/* ====================================
+   TOP NAV
+==================================== */
+
+#top-nav {
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  z-index: 100;
+}
+
+/* Navigation */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 56px;
+  width: 100%;
+}
+
+.main-nav {
+  overflow-x: auto;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.main-nav::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .nav-list {
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list a {
+  color: #111;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.nav-list a:hover {
+  color: #d60000;
+}
+
+.home-link {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+/* Hamburger */
+
+.menu-toggle {
+  border: none;
+  background: none;
+  font-size: 22px;
+  color: #111;
+  padding: 0;
+  transition: 0.25s;
+}
+
+.menu-toggle:hover {
+  color: #d60000;
+}
+
+.menu-toggle:hover {
+  color: #d60000;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 991px) {
+  .nav-wrapper {
+    min-height: 50px;
+    padding-right: 45px; /* Creates protected space for the floating mobile toggle */
+  }
+
+  .main-nav {
+    overflow-x: auto; /* Turns on active swipe-scrolling */
+    scrollbar-width: none; /* Removes scrollbar track layout UI */
+  }
+
+  .main-nav::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on Chrome/Safari */
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Flows sequentially instead of spacing out widely */
+    gap: 18px; /* Clean uniform spacing during overflow horizontal scroll */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .nav-list a {
+    font-size: 15px;
+  }
+
+  /* Pins the separate mobile toggle cleanly to the far right side */
+  .mobile-toggle-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding-left: 10px;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    min-height: 50px;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+
+  .nav-list a {
+    font-size: 15px;
+  }
+}
