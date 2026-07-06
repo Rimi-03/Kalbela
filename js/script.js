@@ -1,8 +1,11 @@
 const ads = [
+  "images/ad1.avif",
   "images/ad1.jpg",
   "images/ad2.jpg",
   "images/ad3.jpg",
   "images/ad4.jpg",
+  "images/ad5.jpeg",
+  "images/ad6.jpg",
 ];
 
 const randomAd = Math.floor(Math.random() * ads.length);

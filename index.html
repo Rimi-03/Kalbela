@@ -24,6 +24,11 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -31,187 +36,188 @@
   <body>
     <!-- Advertisement -->
     <section id="top-ad">
-      <div class="container">
-        <img id="adBanner" src="" alt="Advertisement" class="img-fluid w-100" />
+      <div class="container-xl">
+        <div class="top-ad-wrapper">
+          <img id="adBanner" src="" alt="Advertisement" />
+        </div>
       </div>
     </section>
 
     <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header class="main-header">
-      <div class="container">
-        <div class="row align-items-center py-3">
+      <div class="container-xl">
+        <!-- Desktop Header -->
+        <div class="desktop-header d-none d-lg-flex">
           <!-- Logo -->
-          <div class="col-lg-3">
+          <div class="header-logo">
             <a href="#">
-              <img src="images/logo.png" alt="Logo" class="img-fluid logo" />
+              <img src="images/logo.png" alt="Kalbela" class="logo" />
             </a>
           </div>
 
-          <!-- Middle Menu -->
-          <div class="col-lg-7">
-            <div class="d-flex justify-content-center gap-4 header-menu">
-              <a href="#">
-                <i class="bi bi-newspaper"></i>
-                আজকের পত্রিকা
-              </a>
+          <!-- Center Menu -->
+          <div class="header-menu">
+            <a href="#"
+              ><i class="fa-sharp fa-solid fa-table-list"></i> আজকের পত্রিকা</a
+            >
 
-              <a href="#">
-                <i class="bi bi-file-earmark-text"></i>
-                ই-পেপার
-              </a>
+            <a href="#"><i class="fa-regular fa-newspaper me-2"></i> ই-পেপার</a>
 
-              <a href="#">
-                <i class="bi bi-book"></i>
-                ম্যাগাজিন
-              </a>
+            <a
+              href="#"
+              class="dropdown-toggle magazine-dropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa fa-book mr-2"></i>
 
-              <a href="#">
-                <i class="bi bi-archive"></i>
-                আর্কাইভ
-              </a>
+              ম্যাগাজিন
+            </a>
 
-              <a href="#">
-                <i class="bi bi-hand-thumbs-up-fill"></i>
-                সোশ্যাল মিডিয়া
-              </a>
+            <ul class="dropdown-menu magazine-menu shadow">
+              <li>
+                <a class="dropdown-item" href="#"> প্রচ্ছদ </a>
+              </li>
 
-              <a href="#">
-                <i class="bi bi-translate"></i>
-                বাংলা কনভার্টার
-              </a>
-            </div>
+              <li>
+                <a class="dropdown-item" href="#"> সাহিত্য </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#"> জীবনধারা </a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="#"> বিশেষ সংখ্যা </a>
+              </li>
+            </ul>
+
+            <a href="#"><i class="bi bi-archive"></i> আর্কাইভ</a>
+
+            <a href="#"><i class="bi bi-facebook"></i> সোশ্যাল মিডিয়া</a>
+
+            <a href="#"><i class="bi bi-translate"></i> বাংলা কনভার্টার</a>
           </div>
 
-          <!-- Right Icons -->
-          <div class="col-lg-2">
-            <div class="d-flex justify-content-end gap-3 header-icons">
-              <button class="icon-btn">
-                <i class="bi bi-search"></i>
-              </button>
+          <!-- Icons -->
+          <div class="header-icons">
+            <button class="icon-btn">
+              <i class="bi bi-search"></i>
+            </button>
 
-              <button class="icon-btn position-relative">
-                <i class="bi bi-bell"></i>
+            <button class="icon-btn position-relative">
+              <i class="bi bi-bell"></i>
+              <span class="notification-dot"></span>
+            </button>
+          </div>
+        </div>
 
-                <span class="notification-dot"></span>
-              </button>
+        <!-- Mobile Header -->
+
+        <div class="mobile-header d-lg-none container-fluid px-3">
+          <div class="row align-items-start position-relative">
+            <!-- Left Column: Logo -->
+            <div class="col-4 mobile-logo-box">
+              <img src="images/logo.png" alt="Kalbela" class="img-fluid" />
+            </div>
+
+            <!-- Right Column: Links and Action Icons -->
+            <div class="col-8 ps-2 position-relative">
+              <!-- Row 1: First two links + Search & Bell Icons -->
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <div class="mobile-links-grid mb-2">
+                  <a href="#"
+                    ><i class="fa-sharp fa-solid fa-table-list"></i> আজকের
+                    পত্রিকা</a
+                  >
+
+                  <a href="#"
+                    ><i class="fa-regular fa-newspaper me-2"></i> ই-পেপার</a
+                  >
+                </div>
+
+                <div
+                  class="mobile-icons d-flex gap-2 position-absolute end-0 top-0 mt-1 me-3"
+                >
+                  <button class="icon-btn"><i class="bi bi-search"></i></button>
+                  <button class="icon-btn position-relative">
+                    <i class="bi bi-bell"></i>
+                    <span class="notification-dot"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Row 2: Next two links -->
+              <div class="mobile-links-grid mb-2">
+                <!-- Magazine Dropdown -->
+                <div class="dropdown">
+                  <a
+                    href="#"
+                    class="dropdown-toggle magazine-dropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa fa-book mr-2"></i>
+
+                    ম্যাগাজিন
+                  </a>
+
+                  <ul class="dropdown-menu magazine-menu shadow">
+                    <li>
+                      <a class="dropdown-item" href="#"> ঈদ আনন্দ ২০২৫ </a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        স্বাস্থ্য সংখ্যা ২০২৫
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#"> ঈদ সংখ্যা ২০২৫ </a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#"> ঈদ আনন্দ ২০২৪ </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> ঈদ সংখ্যা ২০২৩ </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> সারাবেলা ম্যাগাজিন </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> টি ২০ ম্যাগাজিন </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"> ফ্রি হিট </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <a href="#">
+                  <i class="fa-solid fa-box-archive"></i>
+                  আর্কাইভ
+                </a>
+              </div>
+
+              <!-- Row 3: Bottom two links -->
+              <div class="mobile-links-grid">
+                <a href="#"
+                  ><i class="fa-solid fa-thumbs-up"></i> সোশ্যাল মিডিয়া</a
+                >
+
+                <a href="#"><i class="bi bi-translate"></i> বাংলা কনভার্টার</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <!-- ================= NAVBAR ================= -->
-
-    <nav class="custom-navbar">
-      <div class="container">
-        <div class="nav-container">
-          <!-- Left Side -->
-          <div class="nav-left">
-            <a href="#" class="home-btn">
-              <i class="bi bi-house-fill"></i>
-            </a>
-
-            <!-- Hidden now, shown on sticky -->
-            <div class="sticky-brand" id="stickyBrand">
-              <img src="images/logo.png" alt="Logo" />
-
-              <div class="sticky-date">বুধবার, ০১ জুলাই ২০২৬</div>
-            </div>
-          </div>
-
-          <!-- Center Menu -->
-          <div class="nav-center d-none d-lg-flex">
-            <a href="#">সর্বশেষ</a>
-            <a href="#">জাতীয়</a>
-            <a href="#">রাজনীতি</a>
-            <a href="#">সারাদেশ</a>
-            <a href="#">বিশ্ব</a>
-            <a href="#">খেলা</a>
-            <a href="#">শিক্ষা</a>
-            <a href="#">বাণিজ্য</a>
-            <a href="#">বিনোদন</a>
-            <a href="#">মতামত</a>
-            <a href="#">ভিডিও</a>
-          </div>
-
-          <!-- Right Side -->
-
-          <div class="nav-right">
-            <!-- Desktop -->
-
-            <button class="menu-btn d-none d-lg-block" id="desktopMenu">
-              <i class="bi bi-list"></i>
-            </button>
-
-            <!-- Mobile -->
-
-            <button
-              class="menu-btn d-lg-none"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#mobileMenu"
-            >
-              <i class="bi bi-list"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Mega Menu -->
-    <div id="megaMenu" class="mega-menu">
-      <div class="container">
-        <div class="menu-date">বুধবার, ০১ জুলাই ২০২৬, ১৭ আষাঢ় ১৪৩৩</div>
-
-        <hr />
-
-        <div class="row">
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">সর্বশেষ</a>
-            <a href="#">বাণিজ্য</a>
-            <a href="#">রাজধানী</a>
-            <a href="#">নারী-শিশু</a>
-            <a href="#">রংবেলা</a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">জাতীয়</a>
-            <a href="#">বিনোদন</a>
-            <a href="#">শিল্প-সাহিত্য</a>
-            <a href="#">আইন ও পরামর্শ</a>
-            <a href="#">নির্বাচন</a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">রাজনীতি</a>
-            <a href="#">মতামত</a>
-            <a href="#">প্রবাস</a>
-            <a href="#">সোশ্যাল মিডিয়া</a>
-            <a href="#">অডিও</a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">সারাদেশ</a>
-            <a href="#">আইন-আদালত</a>
-            <a href="#">প্রযুক্তি</a>
-            <a href="#">বিচিত্র</a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">বিশ্ব</a>
-            <a href="#">অপরাধ</a>
-            <a href="#">চাকরি</a>
-            <a href="#">কর্পোরেট</a>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <a href="#">খেলা</a>
-            <a href="#">স্বাস্থ্য</a>
-            <a href="#">ধর্ম</a>
-            <a href="#">লাইফস্টাইল</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
