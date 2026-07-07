@@ -1,9 +1,102 @@
 /* ফন্ট ও টেক্সট সাইজ */
-.font-solaiman {
-  font-family: "SolaimanLipi", sans-serif;
+/* --- Fixes the whole page font and overrides Bootstrap defaults --- */
+/* --- Fixes the whole page font without breaking icon libraries --- */
+html,
+body,
+:not(i):not([class*="fa-"]):not([class*="fas"]):not([class*="fab"]) {
+  font-family:
+    "SolaimanLipi",
+    "Noto Serif Bengali",
+    system-ui,
+    -apple-system,
+    sans-serif !important;
 }
-.fs-7 {
-  font-size: 0.9rem;
+
+html,
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #212529;
+  -webkit-text-size-adjust: 100%;
+}
+/* Fixes top nav text size and makes them bold */
+#top-nav ul li a,
+.menu-links a {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-weight: 1.2 !important;
+}
+
+/* Fixes sub-navigation / quick links bar below header */
+.quick-links a {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+/* Bold headings for main news items, side grids, and category streams */
+.title,
+.title a,
+.small-news-card h5 a,
+.overlay-headline {
+  font-size: 1.15rem !important; /* Calibrated Bengali title display scale */
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+}
+
+/* Featured / Lead News Headings (Large text) */
+.lead-news .main-title a,
+.main-title a,
+.sp-menu-title h2 a {
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+/* Softens description text weights to match reading layouts */
+.summery {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #3f3f46 !important;
+}
+/* Category blocks and widget title rules */
+.category-header span.cat-name,
+.sidebar-widget-title {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+}
+
+/* Small dropdown panels and select items text adjustments */
+.archive-widget select,
+.area-news-widget select,
+.btn-arch {
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+}
+
+/* Calendar numerical layouts */
+.archive-calendar th,
+.archive-calendar td {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+/* Fixes Bootstrap custom CSS variables */
+:root {
+  --bs-body-font-family:
+    "SolaimanLipi", "Noto Serif Bengali", sans-serif !important;
+  --pollOptionRadioBg: #ccc;
+  --pollOptionRadioBgActive: #e3e4e8;
+  --pollOptionRadioBorder: #c7cad1;
+  --pollOptionRadioBorderActive: #c7cad1;
+  --bs-font-sans-serif:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --bs-body-bg: #fff;
 }
 
 header section.py-3 {
@@ -1087,13 +1180,6 @@ HAMBURGER MENU
   text-align: center;
   position: relative;
   z-index: 10;
-}
-.sports-upcoming > div:first-child {
-  background: var(--kb-orange);
-  color: #fff;
-  font-weight: 700;
-  padding: 8px 0;
-  text-align: center;
 }
 .upcoming-scroll {
   max-height: 360px;
