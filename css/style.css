@@ -8,7 +8,7 @@
 
 header section.py-3 {
   position: relative;
-  z-index: 1030; /* বুটস্ট্র্যাপের sticky-top (1020) এর চেয়ে বেশি রাখা হয়েছে */
+  z-index: 1030; /* বুটস্ট্র্যাপের sticky-top (1020) এর চেয়ে বেশি রাখা হয়েছে */
 }
 
 .ad-wrapper {
@@ -34,9 +34,7 @@ Top Bar
 
 .top-links .nav-link {
   color: #555;
-
   padding: 0.2rem 0.75rem;
-
   font-size: 14px;
 }
 
@@ -86,14 +84,10 @@ SOCIAL MEGA MENU
   display: flex;
   align-items: center;
   gap: 10px;
-
   padding: 10px 12px;
-
   color: #222;
   text-decoration: none;
-
   border-radius: 8px;
-
   transition: 0.25s;
 }
 
@@ -116,51 +110,53 @@ SOCIAL MEGA MENU
   margin: 1.5rem 0;
 }
 
+.goog-te-banner-frame,
+.goog-te-banner,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* ======================
 Header Icons
 ====================== */
 
 .header-icon {
   width: 42px;
-
   height: 42px;
-
   border-radius: 50%;
-
   background: #f8f9fa;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   color: #333;
-
   transition: 0.3s;
-
   text-decoration: none;
 }
 
 .header-icon:hover {
   background: #dc3545;
-
   color: #fff;
 }
 
 .notification-dot {
   position: absolute;
-
   top: 9px;
-
   right: 10px;
-
   width: 8px;
-
   height: 8px;
-
   background: red;
-
   border-radius: 50%;
 }
 
@@ -169,9 +165,66 @@ Header Icons
    ========================================================================== */
 
 #top-nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+  z-index: 1060; /* Keeps it above standard page elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background: #fff;
   border-top: 1px solid #ececec;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#top-nav .all-mega-menu-panel {
+  max-height: calc(
+    100vh - 50px
+  ); /* Restricts the menu from spilling below the user's viewport */
+  overflow-y: auto; /* Adds a clean, independent scrollbar inside the menu grid if it has too many links on small devices */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  padding: 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Adjust based on your site width */
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.sticky-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px; /* Space between date and home icon */
+  border-right: 1px solid #ddd; /* Match the divider line in image 1 */
+  padding-right: 15px;
+}
+
+.sticky-logo {
+  height: 32px; /* Adjust size to match your font height */
+  width: auto;
+}
+
+.sticky-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #333;
+  font-family: sans-serif; /* Use your site's Bengali font */
+}
+
+.sticky-date .day {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 /* Ensure the primary wrapper allows children links to naturally wrap dynamically */
@@ -202,7 +255,6 @@ Header Icons
   background: #ffffff !important;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   padding: 16px !important;
   margin-top: 12px; /* Leaves clean room for the indicator arrow */
   z-index: 99999 !important;
@@ -265,9 +317,7 @@ HAMBURGER MENU
   color: #333;
   background: transparent;
   border: none;
-
   font-size: 20px;
-
   padding: 12px;
 }
 
@@ -277,58 +327,51 @@ HAMBURGER MENU
   background: #f5f5f5;
   box-shadow: none;
 }
+
 .menu-dropdown {
   width: 700px;
   border: none;
   border-radius: 10px;
 }
+
 .menu-dropdown .dropdown-item {
   border-radius: 6px;
-
   padding: 8px 12px;
-
   margin-bottom: 4px;
-
   transition: 0.25s;
 }
 
 .menu-dropdown .dropdown-item:hover {
   color: #c40000;
-
   background: #f8f8f8;
 }
+
 .menu-wrapper {
   position: relative;
 }
+
 .menu-header {
   font-size: 14px;
-
   color: #777;
-
   margin-bottom: 15px;
 }
+
 .menu-grid {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   gap: 12px;
 }
+
 .menu-grid a {
   color: #222;
-
   text-decoration: none;
-
   padding: 8px 12px;
-
   border-radius: 6px;
-
   transition: 0.25s;
 }
 
 .menu-grid a:hover {
   background: #f5f5f5;
-
   color: #c40000;
 }
 
@@ -342,7 +385,7 @@ HAMBURGER MENU
   color: #dc3545; /* হোভার করলে কালবেলা রেড */
 }
 
-/* সোশ্যাল মিডিয়া আইকনগুলোর হুবহু কালার ও রাউন্ড শেপ */
+/* সোশ্যাল মিডিয়া আইকনগুলোর হুবহু কালার ও রাউন্ড শেপ */
 .footer-social-icons a {
   display: inline-flex;
   align-items: center;
@@ -397,7 +440,6 @@ HAMBURGER MENU
 @media (max-width: 991px) {
   .quick-links {
     margin-top: 20px;
-
     gap: 0;
   }
 
@@ -414,17 +456,11 @@ HAMBURGER MENU
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-
-  .row-cols-lg-7 > * {
-    flex: 0 0 auto;
-    width: 14.2857%; /* Builds a beautiful, perfectly balanced 7-column layout */
-  }
 }
 
 @media (max-width: 768px) {
   .quick-links {
     white-space: nowrap;
-    /* overflow-x: auto; */
     scrollbar-width: none;
   }
 

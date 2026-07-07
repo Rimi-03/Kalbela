@@ -29,14 +29,63 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Initialize Google Translate
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "bn",
+      includedLanguages: "bn,en",
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    },
+    "google_translate_element",
+  );
+}
+
+// Load Google Translate script
+(function () {
+  const script = document.createElement("script");
+  script.src =
+    "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  script.async = true;
+  document.body.appendChild(script);
+})();
+
+// Translate function
+function translatePage(lang) {
+  document.cookie = `googtrans=/bn/${lang};path=/`;
+  document.cookie = `googtrans=/bn/${lang};domain=${location.hostname};path=/`;
+
+  location.reload();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const enBtn = document.getElementById("translate-to-en");
+  const bnBtn = document.getElementById("translate-to-bn");
+
+  if (enBtn) {
+    enBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      translatePage("en");
+    });
+  }
+
+  if (bnBtn) {
+    bnBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      translatePage("bn");
+    });
+  }
+});
+
 $(document).ready(function () {
   var dropdown_menu_open = false;
   var click_allow = true;
 
   // Target your exact trigger button wrapper
   $(".dropdownAllMenuBut").on("click", function (e) {
-    e.preventDefault(); // Stop jumping to href="#"
-    e.stopPropagation(); // Stop click from immediately closing via document handler
+    e.preventDefault();
+    e.stopPropagation();
 
     if (click_allow) {
       click_allow = false;
@@ -49,7 +98,6 @@ $(document).ready(function () {
         dropdown_menu_open = true;
       }
 
-      // Simple debounce tracking to match your timing setup
       var menuClickInterval = setInterval(function () {
         click_allow = true;
         clearInterval(menuClickInterval);
@@ -66,4 +114,88 @@ $(document).ready(function () {
       }
     }
   });
+});
+
+function updateDynamicDates() {
+  const now = new Date();
+
+  // Options for the English Top Bar date
+  const enOptions = {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  };
+  let enDateStr = now.toLocaleDateString("en-US", enOptions);
+  enDateStr = enDateStr.replace(
+    /([A-Za-z]+), ([A-Za-z]+) (\d+), (\d+)/,
+    "$1, $3 $2, $4",
+  );
+
+  // Options for the Bengali Sticky Brand & Mega Menu dates
+  const bnOptions = {
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  };
+  const bnDateStr = now.toLocaleDateString("bn-BD", bnOptions);
+
+  const bnDayName = now.toLocaleDateString("bn-BD", { weekday: "long" });
+  const bnFullDate = now.toLocaleDateString("bn-BD", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  });
+
+  // 1. Update English Top Bar Date safely (preserves your inner calendar icon node)
+  const topBarDateEl = document.getElementById("top-bar-date");
+  if (topBarDateEl) {
+    Array.from(topBarDateEl.childNodes).forEach((node) => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.remove();
+      }
+    });
+    topBarDateEl.appendChild(document.createTextNode(enDateStr));
+  }
+
+  // 2. Update Sticky Brand Block (Dual-line Bengali layout)
+  const stickyDayEl = document.getElementById("sticky-day");
+  const stickyDateEl = document.getElementById("sticky-date");
+  if (stickyDayEl && stickyDateEl) {
+    stickyDayEl.textContent = bnDayName;
+    stickyDateEl.textContent = bnFullDate;
+  }
+
+  // 3. Update Mega Menu Panel Bengali Date
+  const megaMenuDateEl = document.querySelector(
+    ".all-mega-menu-panel .text-danger",
+  );
+  if (megaMenuDateEl) {
+    megaMenuDateEl.textContent = bnDateStr;
+  }
+}
+
+function handleScrollVisibility() {
+  let lastScrollTop = 0;
+  const brandBlock = document.getElementById("scroll-brand-block");
+  const scrollThreshold = 150;
+
+  if (!brandBlock) return;
+
+  window.addEventListener("scroll", function () {
+    const brandBlock = document.getElementById("scroll-brand-block");
+
+    if (window.scrollY > 180) {
+      brandBlock.classList.remove("d-none");
+    } else {
+      brandBlock.classList.add("d-none");
+    }
+  });
+}
+
+// Initialize both UI automation loops safely on layout ready window hooks
+document.addEventListener("DOMContentLoaded", function () {
+  updateDynamicDates();
+  handleScrollVisibility();
 });
