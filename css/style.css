@@ -1094,6 +1094,37 @@ Story
   .side-scroll-viewport {
     height: 350px;
   }
+  .longimg {
+    height: 180px;
+  }
+  .news-separator-vertical-border {
+    border-right: none;
+    border-bottom: 1px solid var(--kb-border);
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+  .sidebar-column {
+    position: static;
+    top: auto;
+    margin-bottom: 1rem; /* optional spacing */
+  }
+
+  .sidebar-ad {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar-ad img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1109,4 +1140,262 @@ Story
   .small-news-card h5 {
     font-size: 18px;
   }
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+/* ---- shared vertical/horizontal separators (mimics Bootstrap borders in source) ---- */
+.news-separator-vertical-border {
+  border-right: 1px solid var(--kb-border);
+}
+.news-separator-horizontal-border {
+  border-top: 1px solid var(--kb-border);
+  margin: 14px 0;
+}
+
+/* ---- category block wrapper ---- */
+.category-block {
+  padding: 18px 16px;
+  border-bottom: 8px solid var(--kb-bg);
+}
+
+/* ---- category header : icon + name + arrow link ---- */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--kb-orange);
+}
+.category-header img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.category-header span.cat-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--kb-text);
+}
+.category-header .cat-more {
+  margin-left: auto;
+  color: var(--kb-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.category-header .cat-more:hover {
+  color: var(--kb-orange);
+}
+.category-ad {
+  margin: 25px 0;
+  text-align: center;
+}
+.sidebar-column {
+  position: sticky;
+  top: 90px;
+}
+.category-ad .img_ad {
+  width: 300px;
+  height: 250px;
+  display: inline-block;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+
+/* ---- generic image wrapper ---- */
+.imgWrep {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ddd;
+}
+.imgWrep img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.common-card-content:hover .imgWrep img,
+.flex-content:hover .imgWrep img {
+  transform: scale(1.04);
+}
+
+/* ---- title / summary / time typography ---- */
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 8px 0 4px;
+  color: var(--kb-text);
+}
+.title:hover a,
+.title a:hover {
+  color: var(--kb-red) !important;
+}
+.longimg {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* পুরো ফ্লেক্স-কন্টেন্টে হোভার করলে ইমেজ জুম হবে */
+.flex-content:hover .longimg {
+  transform: scale(1.04);
+}
+.summery {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.time {
+  font-size: 0.75rem;
+  color: var(--kb-muted);
+}
+.sholder {
+  color: var(--kb-red);
+  font-weight: 600;
+}
+
+/* ---- common-card-content : image on top, text below ---- */
+.common-card-content {
+  height: 100%;
+}
+.common-card-content .image-lead .imgWrep {
+  padding-top: 60%;
+}
+.common-card-content .image-lead .imgWrep img {
+  position: absolute;
+  inset: 0;
+}
+.common-card-content .image-lead {
+  position: relative;
+}
+
+/* ---- flex-content : image beside text (used in national/business middle col) ---- */
+.flex-content .d-flex {
+  gap: 12px;
+}
+.flex-content .imgWrep {
+  width: 120px;
+  height: 82px;
+  flex: 0 0 auto;
+}
+.flex-content .imgWrep img {
+  position: absolute;
+  inset: 0;
+}
+.flex-content .imgWrep {
+  position: relative;
+}
+.flex-content .title {
+  font-size: 0.92rem;
+  margin-top: 0;
+}
+
+/* right-image variant (business sidebar): image right, text left */
+#flex-right-image .d-flex {
+  align-items: flex-start;
+  gap: 12px;
+}
+#flex-right-image .imgWrep {
+  width: 120px;
+  height: 82px;
+}
+
+/* ---- sub2-lead : arrow-bullet text-only list item ---- */
+.sub2-lead-content .title {
+  font-size: 0.92rem;
+  margin: 0;
+}
+.sub2-lead-content .title i {
+  color: var(--kb-orange);
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+
+/* ---- world section : background-image "long" lead ---- */
+.longimg {
+  width: 100%;
+  height: 230px;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 4px;
+}
+
+/* ---- sports section ---- */
+.sports-upcoming {
+  background: #fff;
+  border: 1px solid var(--kb-border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sports-upcoming-header {
+  background: var(--kb-orange);
+  color: #3d3c3c !important; /* Forces the text to stay white */
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.sports-upcoming > div:first-child {
+  background: var(--kb-orange);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: center;
+}
+.upcoming-scroll {
+  max-height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+.upcoming-scroll-track {
+  display: flex;
+  flex-direction: column;
+  animation: events-scroll-up 22s linear infinite;
+}
+.upcoming-scroll:hover .upcoming-scroll-track {
+  animation-play-state: paused;
+}
+@keyframes events-scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.upcoming-scroll .event-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--kb-border);
+}
+.upcoming-scroll .event-row img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.upcoming-scroll .event-row h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
 }

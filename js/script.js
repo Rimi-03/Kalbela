@@ -375,3 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const track = document.querySelector(".upcoming-scroll-track");
+if (track) {
+  track.innerHTML += track.innerHTML;
+}
