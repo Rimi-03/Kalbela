@@ -693,6 +693,190 @@ HAMBURGER MENU
 .font-10 {
   font-size: 10px !important;
 }
+/* Color Background Configuration */
+.gallery-section {
+  background-color: #222222;
+}
+.gallery-wrap {
+  background-color: #222222;
+}
+
+/* Base Responsive Image Canvas Framework */
+.main-gallery-img {
+  height: 480px;
+  background-color: #111;
+}
+
+/* Floating Elements Inside Main Slider Canvas */
+.share-column-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+.social-overlay-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
+  border-radius: 4px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.social-overlay-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.expand-icon-overlay {
+  position: absolute;
+  bottom: 45px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  opacity: 0.8;
+}
+.expand-icon-overlay:hover {
+  opacity: 1;
+}
+
+/* Center Bottom Title Banner Overlay */
+.lead-caption-bar-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: #ffffff;
+  padding: 15px 10px 10px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 4;
+}
+
+/* Carousel Control Custom Layout Rules */
+.custom-nav-btn {
+  width: 40px !important;
+  opacity: 0 !important;
+  transition: opacity 0.25s ease-in-out !important;
+}
+.lead-carousel:hover .custom-nav-btn {
+  opacity: 0.7 !important;
+}
+.custom-nav-btn:hover {
+  opacity: 1 !important;
+}
+.custom-nav-btn i {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Thumbstrip Row Configuration */
+.gallery-mini-thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+.gallery-mini-thumb:hover,
+.gallery-mini-thumb.active {
+  opacity: 1;
+  border-color: #ffffff;
+}
+
+/* Sidebar Right Block Construction */
+.side-gallery-img {
+  height: 120px;
+  background-color: #111;
+}
+.side-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 20px 8px 6px 8px;
+  z-index: 2;
+}
+.overlay-headline {
+  font-size: 13px !important;
+  font-weight: bold;
+  color: #ff9800; /* Golden amber style */
+  line-height: 1.3;
+}
+
+/* CSS Utilities */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.font-20 {
+  font-size: 20px !important;
+}
+
+/* ডানপাশের স্ক্রল ভিউপোর্ট এরিয়া */
+.side-scroll-viewport {
+  height: 480px; /* প্রধান ইমেজের উচ্চতার সাথে মেলানোর জন্য */
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+/* কাস্টম স্ক্রলবার স্টাইল (Webkit ব্রাউজারের জন্য) */
+.side-scroll-viewport::-webkit-scrollbar {
+  width: 12px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-thumb {
+  background: #555;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* স্ক্রলবারের ওপরের ও নিচের অ্যারো বাটন */
+.side-scroll-viewport::-webkit-scrollbar-button:single-button {
+  background-color: #333;
+  display: block;
+  height: 12px;
+  width: 12px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23fff'><polygon points='50,0 0,100 100,100'/></svg>");
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23fff'><polygon points='0,0 100,0 50,100'/></svg>");
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 @media (max-width: 1199px) {
   /* Prevent mega-menu container blowout on mid-range laptop screen configurations */
@@ -900,6 +1084,15 @@ Story
   }
   .border-end-md {
     border-right: 1px solid #dee2e6 !important;
+  }
+  .main-gallery-img {
+    height: 280px;
+  }
+  .news-separator-vertical-border {
+    border-right: 1px solid #e6e6e6;
+  }
+  .side-scroll-viewport {
+    height: 350px;
   }
 }
 

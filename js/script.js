@@ -329,3 +329,49 @@ document.addEventListener("DOMContentLoaded", function () {
   updateDynamicDates();
   handleScrollVisibility();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselEl = document.getElementById("leadCarousel");
+  const captionEl = document.getElementById("leadCaption");
+  const thumbStrip = document.getElementById("thumbStrip");
+
+  if (!carouselEl || !captionEl) return;
+
+  // Synchronize Overlayed Text Strings on Slide Event Loops
+  carouselEl.addEventListener("slide.bs.carousel", (event) => {
+    const nextSlide = event.relatedTarget;
+    const captionText = nextSlide.getAttribute("data-caption");
+    if (captionText) {
+      captionEl.textContent = captionText;
+    }
+
+    // Toggle Active States across Thumb Panel
+    if (thumbStrip) {
+      const index = event.to;
+      const thumbs = thumbStrip.querySelectorAll(".gallery-mini-thumb");
+      thumbs.forEach((thumb, i) => {
+        if (i === index) {
+          thumb.classList.add("active");
+        } else {
+          thumb.classList.remove("active");
+        }
+      });
+    }
+  });
+
+  // Make thumbnails clickable to navigate the slider
+  if (thumbStrip) {
+    thumbStrip.addEventListener("click", (e) => {
+      const targetThumb = e.target.closest(".gallery-mini-thumb");
+      if (!targetThumb) return;
+
+      const slideIndex = parseInt(
+        targetThumb.getAttribute("data-slide-to"),
+        10,
+      );
+      const carouselInstance =
+        bootstrap.Carousel.getOrCreateInstance(carouselEl);
+      carouselInstance.to(slideIndex);
+    });
+  }
+});
