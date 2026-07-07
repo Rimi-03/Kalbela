@@ -1,18 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Array of your local ad objects
   const ads = [
-    {
-      image: "images/ad1.jpg",
-      url: "https://example.com/sponsor-1",
-    },
-    {
-      image: "images/ad2.jpg",
-      url: "https://example.com/sponsor-2",
-    },
-    {
-      image: "images/ad3.jpg",
-      url: "https://example.com/sponsor-3",
-    },
+    { image: "assests/images/ad1.jpg" },
+    { image: "assests/images/ad1.avif" },
+    { image: "assests/images/ad2.jpg" },
+    { image: "assests/images/ad3.jpg" },
+    { image: "assests/images/ad4.jpg" },
+    { image: "assests/images/ad5.jpeg" },
+    { image: "assests/images/ad6.jpg" },
   ];
 
   // Pick a random ad index
@@ -175,6 +170,103 @@ function updateDynamicDates() {
     megaMenuDateEl.textContent = bnDateStr;
   }
 }
+
+//slider function
+document.addEventListener("DOMContentLoaded", () => {
+  const prevBtn = document.querySelector(".slider-nav .prev-btn");
+  const nextBtn = document.querySelector(".slider-nav .next-btn");
+  const tabs = document.querySelectorAll("#storiesTab .tab-btn");
+  const panels = document.querySelectorAll(".tab-panel-stories");
+
+  // Helper function to find the visible/active container
+  function getActiveSlider() {
+    const activePanel = Array.from(panels).find(
+      (panel) => panel.style.display !== "none",
+    );
+    return activePanel ? activePanel.querySelector(".stories-slider") : null;
+  }
+
+  // Update visibility flags dynamically
+  function updateNavButtons() {
+    const slider = getActiveSlider();
+    if (!slider) return;
+
+    const scrollLeft = slider.scrollLeft;
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+    // Left conditions: Hide if fully scrolled to start
+    if (scrollLeft <= 2) {
+      prevBtn.classList.add("d-none");
+    } else {
+      prevBtn.classList.remove("d-none");
+    }
+
+    // Right conditions: Hide if fully scrolled to end
+    if (scrollLeft >= maxScrollLeft - 2) {
+      nextBtn.classList.add("d-none");
+    } else {
+      nextBtn.classList.remove("d-none");
+    }
+  }
+
+  // Button Click Events
+  nextBtn.addEventListener("click", () => {
+    const slider = getActiveSlider();
+    if (slider) {
+      slider.scrollBy({ left: 240, behavior: "smooth" });
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const slider = getActiveSlider();
+    if (slider) {
+      slider.scrollBy({ left: -240, behavior: "smooth" });
+    }
+  });
+
+  // Watch programmatic changes or manual finger swiping
+  document.querySelectorAll(".stories-slider").forEach((slider) => {
+    slider.addEventListener("scroll", updateNavButtons);
+  });
+
+  // Handle Tab Swapping and Navigation Re-evaluation
+  tabs.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // 1. Reset active classes on tabs and parent elements
+      tabs.forEach((t) => {
+        t.classList.remove("active");
+        const parentLi = t.closest(".nav-item");
+        if (parentLi) parentLi.classList.remove("active");
+      });
+
+      // 2. Set active class on clicked tab items
+      btn.classList.add("active");
+      const currentParentLi = btn.closest(".nav-item");
+      if (currentParentLi) currentParentLi.classList.add("active");
+
+      // 3. Toggle panel views
+      const targetId = currentParentLi
+        ? currentParentLi.getAttribute("data-id")
+        : "";
+      panels.forEach((panel) => {
+        if (panel.getAttribute("data") === `${targetId}-view`) {
+          panel.style.display = "block";
+        } else {
+          panel.style.display = "none";
+        }
+      });
+
+      // 4. Update arrows once the panel layouts adjust
+      setTimeout(updateNavButtons, 50);
+    });
+  });
+
+  // Initial Check on Load
+  window.addEventListener("resize", updateNavButtons);
+  setTimeout(updateNavButtons, 200);
+});
 
 function handleScrollVisibility() {
   let lastScrollTop = 0;

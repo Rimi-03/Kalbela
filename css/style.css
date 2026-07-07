@@ -375,6 +375,169 @@ HAMBURGER MENU
   color: #c40000;
 }
 
+/* ==========================================================================
+   SPORTS SPECIAL SECTION MATCHING STYLING
+   ========================================================================== */
+
+.sp-worldcup-section {
+  background-color: rgb(4, 74, 128);
+  font-family: "SolaimanLipi", sans-serif;
+}
+
+/* Centered Title Styling */
+.sp-menu-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.sp-menu-title h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Images & Sizing Elements */
+.sp-worldcup-section .image-lead {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sp-worldcup-section .news-img {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+/* Ensures the middle main featured image scales up relative to column height */
+.sp-worldcup-section .main-lead-img {
+  aspect-ratio: auto;
+  max-height: 380px;
+}
+
+/* Typography & Titles */
+.sp-worldcup-section .title {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sp-worldcup-section .title a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.sp-worldcup-section .lead-news .main-title a,
+.sp-worldcup-section .main-title a {
+  font-size: 22px;
+}
+
+.sp-worldcup-section .title a:hover {
+  color: #ffca28 !important; /* Soft gold hover */
+}
+
+/*====================================
+        Secondary News Section
+=====================================*/
+
+.small-news-card {
+  transition: 0.25s;
+}
+
+.small-news-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: 0.35s;
+}
+
+.small-news-card:hover img {
+  transform: scale(1.04);
+}
+
+.small-news-card a {
+  text-decoration: none;
+}
+
+.small-news-card h5 {
+  font-size: 1.12rem;
+  line-height: 1.45;
+  font-weight: 700;
+  margin: 0;
+}
+
+.small-news-card h5 a {
+  color: #111;
+  transition: 0.25s;
+}
+
+.small-news-card:hover h5 a {
+  color: #d10000;
+}
+
+.tab_bar_block_stories .tab-btn {
+  border-bottom: 2px solid #ebebeb !important;
+  border-radius: 0;
+}
+.tab_bar_block_stories li {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ebebeb;
+  bottom: -2px;
+  cursor: pointer;
+}
+.tab_bar_block_stories li.active {
+  border-bottom: 3px solid #c3282d !important;
+}
+
+/* Slider navigation layout positioning */
+.slider-nav .nav-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s,
+    opacity 0.2s;
+}
+
+.slider-nav .nav-btn:hover {
+  background-color: #c3282d;
+  color: #fff;
+  border-color: #c3282d;
+}
+
+.slider-nav .prev-btn {
+  left: 10px;
+}
+
+.slider-nav .next-btn {
+  right: 10px;
+}
+
+/* Ensure parents manage positioning correctly */
+.tab_block_stories {
+  position: relative;
+}
+
+/* Prevent text/items from squishing inside the slider */
+.custom-slider .story-item {
+  flex: 0 0 auto;
+}
+
 .footer-links a {
   color: #212529;
   text-decoration: none;
@@ -456,6 +619,152 @@ HAMBURGER MENU
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+  .separator-border-right {
+    border-right: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-right: 20px;
+  }
+  .separator-border-left {
+    border-left: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+  }
+
+  .small-news-card {
+    padding-right: 18px;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  .row > .col-lg-4:last-child .small-news-card {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .border-end-divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+  }
+}
+
+/*==============================
+RIGHT SIDEBAR
+==============================*/
+
+.sidebar-ad img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/*==============================
+Stories Card
+==============================*/
+
+.stories-card {
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+/* Tabs */
+
+.stories-tabs .nav-link {
+  border: none;
+
+  color: #333;
+
+  font-weight: 700;
+
+  border-bottom: 3px solid transparent;
+
+  border-radius: 0;
+}
+
+.stories-tabs .nav-link.active {
+  color: #c40000;
+
+  border-color: #c40000;
+}
+
+/*==========================
+Horizontal Slider
+==========================*/
+
+.stories-slider {
+  display: flex;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.stories-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/*==========================
+Story
+==========================*/
+
+.story-item {
+  flex: 0 0 220px;
+}
+
+.story-cover {
+  position: relative;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.story-cover img {
+  width: 100%;
+
+  height: 310px;
+
+  object-fit: cover;
+}
+
+.play-btn,
+.photo-icon {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+
+  color: #fff;
+}
+
+.views {
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+.story-item h6 {
+  margin-top: 12px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -489,5 +798,9 @@ HAMBURGER MENU
 
   #top-nav ul li a {
     font-size: 14px; /* Slightly compact fonts for tight rows */
+  }
+
+  .small-news-card h5 {
+    font-size: 18px;
   }
 }
