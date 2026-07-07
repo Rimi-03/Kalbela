@@ -420,111 +420,413 @@
       </section>
     </header>
 
-    <!-- Main Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
-      <div class="container">
-        <!-- Mobile Toggle -->
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainMenu"
+    <section id="top-nav" class="border-bottom py-2">
+      <div class="container-fluid">
+        <!-- Centered flex wrapper for the entire inline group -->
+        <div
+          class="d-flex justify-content-center align-items-center position-relative"
         >
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- Menu -->
-
-        <div class="collapse navbar-collapse" id="mainMenu">
-          <ul class="navbar-nav mx-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">
-                <i class="fa-solid fa-house text-dark"></i>
+          <!-- One single list ensures the menu button stays inline on desktop and wraps natively on mobile -->
+          <ul
+            class="d-flex flex-wrap align-items-center justify-content-center gap-3 list-unstyled m-0 p-0 text-nowrap"
+          >
+            <li>
+              <a
+                class="text-decoration-none text-dark px-1"
+                aria-label="home"
+                href="#"
+              >
+                <i class="fa-solid fa-house"></i>
               </a>
             </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/all-news"
+                >সর্বশেষ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/national"
+                >জাতীয়</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/politics"
+                >রাজনীতি</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/country-news"
+                >সারাদেশ</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/world"
+                >বিশ্ব</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/sports"
+                >খেলা</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/dainikshiksha"
+                >শিক্ষা</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/business-news"
+                >বাণিজ্য</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/entertainment"
+                >বিনোদন</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="https://www.kalbela.com/opinion"
+                >মতামত</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-decoration-none text-dark fw-bold px-1"
+                href="/video-gallery"
+                >ভিডিও</a
+              >
+            </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">সর্বশেষ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">জাতীয়</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">রাজনীতি</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">সারাদেশ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">বিশ্ব</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">খেলা</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">শিক্ষা</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">বাণিজ্য</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">বিনোদন</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">মতামত</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">আইন-আদালত</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">ভিডিও</a>
+            <!-- Hamburger menu explicitly placed inside the same row -->
+            <li class="dropdown_menu_hover dropdownAllMenuIcon position-static">
+              <a
+                href="#"
+                class="dropdownAllMenuBut text-dark fs-5 text-decoration-none px-1"
+              >
+                <i class="fa-solid fa-bars open_icon"></i>
+              </a>
+              <!-- Clean isolated panel container -->
+              <div
+                class="all-mega-menu-panel all-menu shadow position-absolute"
+                style="
+                  display: none;
+                  top: 100%;
+                  right: 0;
+                  left: 0;
+                  z-index: 1050;
+                  background: #fff;
+                "
+              >
+                <div class="row m-0">
+                  <!-- Date Header -->
+                  <div class="col-12 p-0 mb-3">
+                    <div class="date-desc fw-bold text-dark text-start">
+                      মঙ্গলবার, ০৭ জুলাই ২০২৬, ২৩ আষাঢ় ১৪৩৩
+                    </div>
+                  </div>
+
+                  <div class="col-12 p-0">
+                    <div class="border-bottom mb-3"></div>
+                  </div>
+
+                  <!-- Mega Menu Links Grid -->
+                  <div class="col-12 p-0 px-2">
+                    <ul
+                      class="list-unstyled row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-7 g-3 m-0 style-dropdown-links"
+                    >
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/all-news"
+                          >সর্বশেষ</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/national"
+                          >জাতীয়</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/politics"
+                          >রাজনীতি</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/country-news"
+                          >সারাদেশ</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/world"
+                          >বিশ্ব</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/sports"
+                          >খেলা</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/dainikshiksha"
+                          >শিক্ষা</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/business-news"
+                          >বাণিজ্য</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/entertainment"
+                          >বিনোদন</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/opinion"
+                          >মতামত</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/court-law"
+                          >আইন-আদালত</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/crime"
+                          >অপরাধ</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/health"
+                          >স্বাস্থ্য</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/religion"
+                          >ধর্ম</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/capital"
+                          >রাজধানী</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/art-literature"
+                          >শিল্প-সাহিত্য</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/probash"
+                          >প্রবাস</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/technology"
+                          >প্রযুক্তি</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/job-news"
+                          >চাকরি</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/chittagong-sarabela"
+                          >চট্টগ্রাম সারাবেলা</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/lifestyle"
+                          >লাইফস্টাইল</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/women-children"
+                          >নারী-শিশু</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/legal-advice"
+                          >আইন ও পরামর্শ</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/social-media"
+                          >সোশ্যাল মিডিয়া</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/strange-news"
+                          >বিচিত্র</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/corporate"
+                          >কর্পোরেট</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/environment-climate"
+                          >পরিবেশ ও জলবায়ু</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/psi"
+                          >পিএসআই</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/rommobela"
+                          >রম্যবেলা</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="https://www.kalbela.com/election"
+                          >নির্বাচন</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-decoration-none text-dark d-block"
+                          href="/podcast"
+                          >অডিও</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <div class="col-12 p-0 mt-4">
+                      <div class="border-bottom mb-3"></div>
+                    </div> -->
+
+                  <!-- Bottom Media Links Footer Row -->
+                  <div class="col-12 p-0">
+                    <div
+                      class="d-flex flex-wrap justify-content-center align-items-center gap-4 py-2 footer-media-links"
+                    >
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2"
+                      >
+                        <i class="fa-brands fa-instagram text-danger fs-5"></i>
+                        ভিডিও স্টোরি
+                      </a>
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2"
+                      >
+                        <i class="fa-solid fa-book-open text-primary fs-5"></i>
+                        ফটো স্টোরি
+                      </a>
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2"
+                      >
+                        <i class="fa-regular fa-image text-danger fs-5"></i>
+                        ফটোগ্যালারি
+                      </a>
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2"
+                      >
+                        <i class="fa-solid fa-video text-danger fs-5"></i>
+                        ভিডিও গ্যালারি
+                      </a>
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-bold d-flex align-items-center gap-2"
+                      >
+                        <i class="fa-solid fa-cloud text-warning fs-5"></i>
+                        অডিও
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
-
-          <!-- Right Icons -->
-
-          <div class="menu-wrapper">
-            <button class="menu-btn" id="menuToggle">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-
-            <div class="all-menu" id="allMenu">
-              <div class="menu-header">
-                <span>সোমবার, ০৬ জুলাই ২০২৬</span>
-              </div>
-
-              <hr />
-
-              <div class="menu-grid">
-                <a href="#">সর্বশেষ</a>
-                <a href="#">জাতীয়</a>
-                <a href="#">রাজনীতি</a>
-                <a href="#">সারাদেশ</a>
-                <a href="#">বিশ্ব</a>
-
-                <a href="#">খেলা</a>
-                <a href="#">শিক্ষা</a>
-                <a href="#">বাণিজ্য</a>
-                <a href="#">বিনোদন</a>
-                <a href="#">মতামত</a>
-
-                <a href="#">আইন-আদালত</a>
-                <a href="#">অপরাধ</a>
-                <a href="#">স্বাস্থ্য</a>
-                <a href="#">ধর্ম</a>
-                <a href="#">রাজধানী</a>
-
-                <a href="#">প্রযুক্তি</a>
-                <a href="#">চাকরি</a>
-                <a href="#">লাইফস্টাইল</a>
-                <a href="#">নারী-শিশু</a>
-                <a href="#">ভিডিও</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </nav>
+    </section>
 
     <footer class="bg-white pt-5 pb-4 border-top text-dark font-solaiman">
       <div class="container">
@@ -654,6 +956,7 @@
       </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
