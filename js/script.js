@@ -171,7 +171,7 @@ function updateDynamicDates() {
   }
 }
 
-//slider function
+//slider function for top main head
 document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector(".slider-nav .prev-btn");
   const nextBtn = document.querySelector(".slider-nav .next-btn");
@@ -266,6 +266,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial Check on Load
   window.addEventListener("resize", updateNavButtons);
   setTimeout(updateNavButtons, 200);
+});
+
+//video slider
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".video-slider-track");
+  const prevBtn = document.querySelector(".video-prev-btn");
+  const nextBtn = document.querySelector(".video-next-btn");
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  function updateVideoButtons() {
+    const scrollLeft = track.scrollLeft;
+    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+
+    if (scrollLeft <= 2) {
+      prevBtn.classList.add("d-none");
+    } else {
+      prevBtn.classList.remove("d-none");
+    }
+
+    if (scrollLeft >= maxScrollLeft - 2) {
+      nextBtn.classList.add("d-none");
+    } else {
+      nextBtn.classList.remove("d-none");
+    }
+  }
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({ left: track.clientWidth / 2, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({ left: -track.clientWidth / 2, behavior: "smooth" });
+  });
+
+  track.addEventListener("scroll", updateVideoButtons);
+  window.addEventListener("resize", updateVideoButtons);
+  setTimeout(updateVideoButtons, 200);
 });
 
 function handleScrollVisibility() {
