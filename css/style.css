@@ -1673,3 +1673,60 @@ Story
   margin: 0;
   padding: 8px 0;
 }
+.btn-arch {
+  padding: 10px 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid #f28749;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Hover effect for buttons that are NOT currently active */
+.btn-arch:not(.active):hover {
+  background-color: #f28749;
+  color: #fff;
+  border-color: #d97236;
+}
+
+/* Active button styles stay locked in place */
+.btn-arch.active {
+  background: #fff;
+  border: 2px solid #f28749;
+  color: #000;
+  cursor: default; /* Optional: indicates it's already selected */
+}
+/* Forces the edition buttons side-by-side */
+.edition-toggle.row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.edition-toggle .col-6 {
+  width: 50% !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+
+/* Forces the month and year dropdowns side-by-side */
+.datePicker.d-flex {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.datePicker select.w-50 {
+  width: 50% !important;
+}
+
+/* Prevents text from breaking into two lines inside buttons or selectors */
+.btn-arch,
+.datePicker select {
+  white-space: nowrap;
+}

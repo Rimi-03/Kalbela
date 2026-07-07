@@ -380,3 +380,131 @@ const track = document.querySelector(".upcoming-scroll-track");
 if (track) {
   track.innerHTML += track.innerHTML;
 }
+
+//calendar
+document.addEventListener("DOMContentLoaded", function () {
+  const monthSelect = document.getElementById("monthSelect");
+  const yearSelect = document.getElementById("yearSelect");
+  const calendarBody = document.getElementById("calendarBody");
+  const editionButtons = document.querySelectorAll(".btn-arch");
+
+  // State Management
+  let currentEdition = "online-edition";
+  const today = new Date();
+  let selectedMonth = today.getMonth(); // 0-11
+  let selectedYear = today.getFullYear();
+
+  const bnNums = [
+    "০০",
+    "০১",
+    "০২",
+    "০৩",
+    "০৪",
+    "০৫",
+    "০৬",
+    "০৭",
+    "০৮",
+    "০৯",
+    "১০",
+    "১১",
+    "১২",
+    "১৩",
+    "১৪",
+    "১৫",
+    "১৬",
+    "১৭",
+    "১৮",
+    "১৯",
+    "২০",
+    "২১",
+    "২২",
+    "২৩",
+    "২৪",
+    "২৫",
+    "২৬",
+    "২৭",
+    "২৮",
+    "২৯",
+    "৩০",
+    "৩১",
+  ];
+
+  // Initialize Selectors
+  monthSelect.value = selectedMonth;
+  yearSelect.value = selectedYear;
+
+  function generateCalendar(month, year) {
+    calendarBody.innerHTML = "";
+
+    // Day mapping where Saturday is index 0 to match calendar grid headers
+    // JS defaults: Sun=0, Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6
+    const firstDayIndexJS = new Date(year, month, 1).getDay();
+    const firstDayIndex = (firstDayIndexJS + 1) % 7;
+
+    const totalDays = new Date(year, month + 1, 0).getDate();
+
+    let dateCounter = 1;
+    let html = "";
+
+    for (let i = 0; i < 6; i++) {
+      // Max 6 rows
+      let rowHtml = "<tr>";
+      let addedAnyDate = false;
+
+      for (let j = 0; j < 7; j++) {
+        if (i === 0 && j < firstDayIndex) {
+          rowHtml += "<td></td>";
+        } else if (dateCounter > totalDays) {
+          rowHtml += "<td></td>";
+        } else {
+          addedAnyDate = true;
+          const loopDate = new Date(year, month, dateCounter);
+          const isFuture = loopDate > today;
+          const isToday = loopDate.toDateString() === today.toDateString();
+
+          const formattedMonth = String(month + 1).padStart(2, "0");
+          const formattedDay = String(dateCounter).padStart(2, "0");
+          const archiveUrl = `https://www.kalbela.com/archive/${currentEdition}/${year}/${formattedMonth}/${formattedDay}`;
+
+          if (isFuture) {
+            rowHtml += `<td><a href="javascript:" class="disabled">${bnNums[dateCounter]}</a></td>`;
+          } else if (isToday) {
+            rowHtml += `<td><a href="${archiveUrl}" class="active" target="_blank">${bnNums[dateCounter]}</a></td>`;
+          } else {
+            rowHtml += `<td><a href="${archiveUrl}" target="_blank">${bnNums[dateCounter]}</a></td>`;
+          }
+          dateCounter++;
+        }
+      }
+      rowHtml += "</tr>";
+
+      if (addedAnyDate) {
+        html += rowHtml;
+      }
+    }
+    calendarBody.innerHTML = html;
+  }
+
+  // Event Listeners for controls
+  monthSelect.addEventListener("change", (e) => {
+    selectedMonth = parseInt(e.target.value);
+    generateCalendar(selectedMonth, selectedYear);
+  });
+
+  yearSelect.addEventListener("change", (e) => {
+    selectedYear = parseInt(e.target.value);
+    generateCalendar(selectedMonth, selectedYear);
+  });
+
+  editionButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      editionButtons.forEach((btn) => btn.classList.remove("active"));
+      e.target.classList.add("active");
+      currentEdition = e.target.getAttribute("data-type");
+      generateCalendar(selectedMonth, selectedYear);
+    });
+  });
+
+  // Initial Run
+  generateCalendar(selectedMonth, selectedYear);
+});
