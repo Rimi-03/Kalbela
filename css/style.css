@@ -878,277 +878,6 @@ HAMBURGER MENU
   background-position: center;
 }
 
-@media (max-width: 1199px) {
-  /* Prevent mega-menu container blowout on mid-range laptop screen configurations */
-  .all-menu {
-    width: 95vw;
-    left: 50% !important;
-    transform: translateX(-50%);
-    right: auto;
-  }
-  .menu-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 991px) {
-  .quick-links {
-    margin-top: 20px;
-    gap: 0;
-  }
-
-  .quick-links .nav-link {
-    padding: 0.4rem 0.6rem;
-  }
-  .social-mega {
-    width: 100%;
-    left: 0 !important;
-    transform: none;
-  }
-
-  .menu-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  .separator-border-right {
-    border-right: 1px dashed rgba(255, 255, 255, 0.15);
-    padding-right: 20px;
-  }
-  .separator-border-left {
-    border-left: 1px dashed rgba(255, 255, 255, 0.15);
-    padding-left: 20px;
-  }
-
-  .small-news-card {
-    padding-right: 18px;
-    border-right: 1px solid #e8e8e8;
-  }
-
-  .row > .col-lg-4:last-child .small-news-card {
-    border-right: none;
-    padding-right: 0;
-  }
-
-  .border-end-divider {
-    border-right: 1px solid rgba(255, 255, 255, 0.7);
-  }
-}
-
-/*==============================
-RIGHT SIDEBAR
-==============================*/
-
-.sidebar-ad img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/*==============================
-Stories Card
-==============================*/
-
-.stories-card {
-  border-radius: 10px;
-
-  overflow: hidden;
-}
-
-/* Tabs */
-
-.stories-tabs .nav-link {
-  border: none;
-
-  color: #333;
-
-  font-weight: 700;
-
-  border-bottom: 3px solid transparent;
-
-  border-radius: 0;
-}
-
-.stories-tabs .nav-link.active {
-  color: #c40000;
-
-  border-color: #c40000;
-}
-
-/*==========================
-Horizontal Slider
-==========================*/
-
-.stories-slider {
-  display: flex;
-
-  gap: 15px;
-
-  overflow-x: auto;
-
-  scrollbar-width: none;
-}
-
-.stories-slider::-webkit-scrollbar {
-  display: none;
-}
-
-/*==========================
-Story
-==========================*/
-
-.story-item {
-  flex: 0 0 220px;
-}
-
-.story-cover {
-  position: relative;
-
-  border-radius: 10px;
-
-  overflow: hidden;
-}
-
-.story-cover img {
-  width: 100%;
-
-  height: 310px;
-
-  object-fit: cover;
-}
-
-.play-btn,
-.photo-icon {
-  position: absolute;
-
-  left: 50%;
-
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: 50px;
-
-  color: #fff;
-}
-
-.views {
-  position: absolute;
-
-  top: 10px;
-
-  right: 10px;
-
-  background: rgba(0, 0, 0, 0.55);
-
-  color: #fff;
-
-  padding: 5px 10px;
-
-  border-radius: 6px;
-
-  font-size: 13px;
-}
-
-.story-item h6 {
-  margin-top: 12px;
-
-  font-size: 15px;
-
-  line-height: 1.5;
-
-  font-weight: 700;
-}
-
-@media (max-width: 768px) {
-  .quick-links {
-    white-space: nowrap;
-    scrollbar-width: none;
-  }
-
-  .quick-links::-webkit-scrollbar {
-    display: none;
-  }
-  .menu-dropdown {
-    width: 320px;
-  }
-  .all-mega-menu-panel {
-    width: 100% !important;
-    left: 0 !important;
-    transform: none !important;
-    padding: 24px !important;
-  }
-  .style-dropdown-links li a {
-    font-size: 15px !important;
-  }
-  .video-slide-item {
-    flex: 0 0 calc(25% - 12px); /* Displays 4 items smoothly on desktops */
-  }
-  .border-end-md {
-    border-right: 1px solid #dee2e6 !important;
-  }
-  .main-gallery-img {
-    height: 280px;
-  }
-  .news-separator-vertical-border {
-    border-right: 1px solid #e6e6e6;
-  }
-  .side-scroll-viewport {
-    height: 350px;
-  }
-  .longimg {
-    height: 180px;
-  }
-  .news-separator-vertical-border {
-    border-right: none;
-    border-bottom: 1px solid var(--kb-border);
-    padding-bottom: 14px;
-    margin-bottom: 14px;
-  }
-  .category-header span.cat-name {
-    font-size: 0.95rem;
-  }
-  .flex-content .imgWrep {
-    width: 96px;
-    height: 68px;
-  }
-  /* .sidebar-column {
-    position: static;
-    top: auto;
-    margin-bottom: 1rem; /* optional spacing 
-  }
-
-  .sidebar-ad {
-    width: 100%;
-    text-align: center;
-  }
-
-  .sidebar-ad img {
-    width: 100%;
-    height: auto;
-  } */
-  .category-header span.cat-name {
-    font-size: 0.95rem;
-  }
-  .flex-content .imgWrep {
-    width: 96px;
-    height: 68px;
-  }
-}
-
-@media (max-width: 576px) {
-  /* Clean dual column grid scaling for small phone layouts */
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #top-nav ul li a {
-    font-size: 14px; /* Slightly compact fonts for tight rows */
-  }
-
-  .small-news-card h5 {
-    font-size: 18px;
-  }
-}
-
 .page-wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -1352,7 +1081,7 @@ Story
 }
 .sports-upcoming-header {
   background: var(--kb-orange);
-  color: #3d3c3c !important; /* Forces the text to stay white */
+  color: #181818 !important; /* Forces the text to stay white */
   font-weight: 700;
   padding: 8px 0;
   text-align: center;
@@ -1673,20 +1402,6 @@ Story
   margin: 0;
   padding: 8px 0;
 }
-.btn-arch {
-  padding: 10px 4px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border: 1px solid #f28749;
-  background: #fff;
-  color: #000;
-  border-radius: 6px;
-  cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
-}
 
 /* Hover effect for buttons that are NOT currently active */
 .btn-arch:not(.active):hover {
@@ -1702,31 +1417,337 @@ Story
   color: #000;
   cursor: default; /* Optional: indicates it's already selected */
 }
-/* Forces the edition buttons side-by-side */
+/* Forces the edition buttons side-by-side with a clean gap */
 .edition-toggle.row {
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: nowrap !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  gap: 8px !important; /* Creates the space between the buttons */
 }
 
 .edition-toggle .col-6 {
-  width: 50% !important;
-  flex: 0 0 50% !important;
-  max-width: 50% !important;
+  width: calc(50% - 4px) !important; /* Adjusts width to account for the gap */
+  flex: 0 0 calc(50% - 4px) !important;
+  max-width: calc(50% - 4px) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* Forces the month and year dropdowns side-by-side */
 .datePicker.d-flex {
   display: flex !important;
   flex-direction: row !important;
+  gap: 8px !important;
 }
 
 .datePicker select.w-50 {
-  width: 50% !important;
+  width: calc(50% - 4px) !important;
 }
 
-/* Prevents text from breaking into two lines inside buttons or selectors */
-.btn-arch,
+/* Fixes button padding to prevent text from overflowing or getting clipped */
+.btn-arch {
+  padding: 10px 4px;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 2px !important; /* Tiny side padding prevents border clipping */
+  font-size: 0.75rem !important; /* Lowered from 0.82rem to force long words inside the lines */
+  letter-spacing: -0.3px !important; /* Tightens text spacing slightly for a clean fit */
+  box-sizing: border-box !important;
+  width: 100% !important;
+  overflow: hidden !important; /* Dynamic safety catch */
+  font-weight: bold;
+  border: 1px solid #f28749;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Prevents text from breaking into two lines inside selectors */
 .datePicker select {
   white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+  /* Prevent mega-menu container blowout on mid-range laptop screen configurations */
+  .all-menu {
+    width: 95vw;
+    left: 50% !important;
+    transform: translateX(-50%);
+    right: auto;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .quick-links {
+    margin-top: 20px;
+    gap: 0;
+  }
+
+  .quick-links .nav-link {
+    padding: 0.4rem 0.6rem;
+  }
+  .social-mega {
+    width: 100%;
+    left: 0 !important;
+    transform: none;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .separator-border-right {
+    border-right: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-right: 20px;
+  }
+  .separator-border-left {
+    border-left: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+  }
+
+  .small-news-card {
+    padding-right: 18px;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  .row > .col-lg-4:last-child .small-news-card {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .border-end-divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+  }
+}
+
+/*==============================
+RIGHT SIDEBAR
+==============================*/
+
+.sidebar-ad img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/*==============================
+Stories Card
+==============================*/
+
+.stories-card {
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+/* Tabs */
+
+.stories-tabs .nav-link {
+  border: none;
+
+  color: #333;
+
+  font-weight: 700;
+
+  border-bottom: 3px solid transparent;
+
+  border-radius: 0;
+}
+
+.stories-tabs .nav-link.active {
+  color: #c40000;
+
+  border-color: #c40000;
+}
+
+/*==========================
+Horizontal Slider
+==========================*/
+
+.stories-slider {
+  display: flex;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.stories-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/*==========================
+Story
+==========================*/
+
+.story-item {
+  flex: 0 0 220px;
+}
+
+.story-cover {
+  position: relative;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.story-cover img {
+  width: 100%;
+
+  height: 310px;
+
+  object-fit: cover;
+}
+
+.play-btn,
+.photo-icon {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+
+  color: #fff;
+}
+
+.views {
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+.story-item h6 {
+  margin-top: 12px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .quick-links {
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .quick-links::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-dropdown {
+    width: 320px;
+  }
+  .all-mega-menu-panel {
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    padding: 24px !important;
+  }
+  .style-dropdown-links li a {
+    font-size: 15px !important;
+  }
+  .video-slide-item {
+    flex: 0 0 calc(25% - 12px); /* Displays 4 items smoothly on desktops */
+  }
+  .border-end-md {
+    border-right: 1px solid #dee2e6 !important;
+  }
+  .main-gallery-img {
+    height: 280px;
+  }
+  .news-separator-vertical-border {
+    border-right: 1px solid #e6e6e6;
+  }
+  .side-scroll-viewport {
+    height: 350px;
+  }
+  .longimg {
+    height: 180px;
+  }
+  .news-separator-vertical-border {
+    border-right: none;
+    border-bottom: 1px solid var(--kb-border);
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+  .edition-toggle.row {
+    flex-wrap: wrap !important; /* Allows items to shift if room gets tight */
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 576px) {
+  .edition-toggle.row {
+    flex-direction: column !important;
+  }
+
+  .edition-toggle .col-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .datePicker.d-flex {
+    flex-direction: column !important;
+  }
+
+  .datePicker select.w-50 {
+    width: 100% !important;
+  }
+  /* Clean dual column grid scaling for small phone layouts */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #top-nav ul li a {
+    font-size: 14px; /* Slightly compact fonts for tight rows */
+  }
+
+  .small-news-card h5 {
+    font-size: 18px;
+  }
 }
