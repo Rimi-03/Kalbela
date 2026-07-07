@@ -1110,10 +1110,10 @@ Story
     width: 96px;
     height: 68px;
   }
-  .sidebar-column {
+  /* .sidebar-column {
     position: static;
     top: auto;
-    margin-bottom: 1rem; /* optional spacing */
+    margin-bottom: 1rem; /* optional spacing 
   }
 
   .sidebar-ad {
@@ -1124,6 +1124,13 @@ Story
   .sidebar-ad img {
     width: 100%;
     height: auto;
+  } */
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
   }
 }
 
@@ -1192,7 +1199,7 @@ Story
 .category-header .cat-more:hover {
   color: var(--kb-orange);
 }
-.category-ad {
+/* .category-ad {
   margin: 25px 0;
   text-align: center;
 }
@@ -1208,7 +1215,7 @@ Story
   border-radius: 0;
   box-shadow: none;
   object-fit: cover;
-}
+} */
 
 /* ---- generic image wrapper ---- */
 .imgWrep {
@@ -1241,11 +1248,6 @@ Story
 .title:hover a,
 .title a:hover {
   color: var(--kb-red) !important;
-}
-.longimg {
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
 }
 
 /* পুরো ফ্লেক্স-কন্টেন্টে হোভার করলে ইমেজ জুম হবে */
@@ -1329,6 +1331,9 @@ Story
 
 /* ---- world section : background-image "long" lead ---- */
 .longimg {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
   width: 100%;
   height: 230px;
   background-size: cover !important;
@@ -1398,4 +1403,273 @@ Story
   font-size: 0.85rem;
   font-weight: 600;
   margin: 0;
+}
+
+.ad-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #999;
+  font-size: 0.75rem;
+  min-height: 60px;
+}
+.ad-slot.ad-rect {
+  min-height: 250px;
+}
+
+/* the two "creative" banners seen in the screenshot, built without external ad scripts */
+.ad-banner-youtube {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff4e6;
+  border: 1px solid #f0c896;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 16px 0;
+}
+.ad-banner-youtube .kb-logo {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--kb-text);
+  letter-spacing: 0.5px;
+}
+.ad-banner-youtube .kb-logo span {
+  color: var(--kb-red);
+}
+.ad-banner-youtube .yt-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #ff0000;
+}
+.ad-banner-youtube .yt-badge i {
+  font-size: 1.4rem;
+}
+.ad-banner-youtube .icons {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  color: #666;
+  font-size: 1rem;
+}
+.ad-banner-youtube .handle {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.ad-banner-generic {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #111e3d;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 16px 0;
+}
+.ad-banner-generic .brand {
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.ad-banner-generic .msg {
+  font-size: 0.85rem;
+  color: #dfe6ff;
+}
+.ad-banner-generic .cta {
+  margin-left: auto;
+  background: #ffd400;
+  color: #111e3d;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Right sidebar widgets
+   ============================================================ */
+.sidebar-widget {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #fff;
+  padding: 12px; /* Adds the inner white border spacing seen in the design */
+}
+.sidebar-widget-title {
+  background: transparent; /* Changed from var(--kb-orange) */
+  color: #1e293b; /* Dark text color instead of white */
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0 0 15px 12px; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid #f28749; /* The orange vertical indicator bar */
+  margin-bottom: 15px;
+}
+.sidebar-widget-title i {
+  display: none; /* Hides the original icon if your mockup uses a plain border line */
+}
+
+/* Update body padding since container now handles it */
+.sidebar-widget-body {
+  padding: 0;
+}
+
+/* আমার এলাকার সংবাদ */
+.area-news-widget select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #334155;
+}
+.area-news-widget button {
+  width: 100%;
+  background: #f28749; /* Exact soft orange shade from your mockup image */
+  border: 1px solid #d97236;
+  color: #000; /* Dark text/icon color inside the button */
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.area-news-widget button i {
+  margin-left: 6px;
+}
+/* ই-পেপার and আর্কাইভ */
+.epaper-widget,
+.archive-widget {
+  border: 1px solid #f28749;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.epaper-widget .sidebar-widget-title,
+.archive-widget .sidebar-widget-title {
+  background: #f28749; /* Solid orange background */
+  color: #111; /* Dark title text */
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px;
+  justify-content: center; /* Center aligns the text horizontally */
+  border-left: none;
+  margin-bottom: 0;
+}
+.epaper-widget .sidebar-widget-title i,
+.archive-widget .sidebar-widget-title i {
+  display: none;
+}
+.archive-widget {
+  background: #e2e8f0; /* Matches the gray background fill in the mockup */
+}
+.archive-widget .sidebar-widget-body {
+  padding: 16px;
+}
+
+/* 2. E-paper Widget Layout */
+.epaper-widget .sidebar-widget-body {
+  padding: 12px;
+}
+.epaper-widget img {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* 3. Archive Edition Toggles */
+.archive-widget .edition-toggle {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+.archive-widget .edition-toggle button {
+  flex: 1;
+  padding: 12px 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: 1px solid #f28749;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+}
+.archive-widget .edition-toggle button.active {
+  background: #fff;
+  border: 2px solid #f28749;
+  color: #000;
+}
+
+/* 4. Select dropdown inputs stacked right-staggered */
+.archive-widget select {
+  width: 60%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  border: 1px solid #718096;
+  border-radius: 6px;
+  background: #fff;
+}
+/* Pushes the year dropdown to align right */
+.archive-widget .d-flex {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.archive-widget .d-flex select:last-child {
+  align-self: flex-end;
+}
+
+/* 5. Calendar Grid Setup */
+.archive-calendar {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #f7fafc;
+  margin-top: 10px;
+}
+.archive-calendar th {
+  background: #edf2f7;
+  color: #000;
+  padding: 8px 0;
+  font-weight: bold;
+  border: 1px solid #cbd5e1;
+}
+.archive-calendar td {
+  padding: 8px 0;
+  border: 1px solid #cbd5e1;
+  font-weight: 500;
+}
+.archive-calendar td a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Future/Disabled Dates (Soft Orange Text) */
+.archive-calendar td a.disabled {
+  color: #fca5a5;
+  pointer-events: none;
+}
+/* Active Highlight (Square Orange block) */
+.archive-calendar td a.active {
+  background: #f28749;
+  color: #fff !important;
+  border-radius: 0; /* Changed from 50% circle to crisp square block */
+  margin: 0;
+  padding: 8px 0;
 }
