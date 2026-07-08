@@ -509,306 +509,107 @@ document.addEventListener("DOMContentLoaded", function () {
   generateCalendar(selectedMonth, selectedYear);
 });
 
-// Data Objects from React
-const latestNews = [
-  {
-    id: 1,
-    title: "আর্জেন্টিনার প্রতিপক্ষ মিসরের ভাগ্য বদলেছেন যে যমজ দুই ভাই",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "বর্জ্য ব্যবস্থাপনায় ডিএসসিসির 'ক্লিন কেয়ার' অ্যাপ চালু",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "ফ্রান্স প্রেসিডেন্টের সফরের মধ্যেই সিরিয়ায় জোড়া বিস্ফোরণ",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "গাজীপুর সিটি করপোরেশনে মশাবাহিত রোগ প্রতিরোধে সমন্বয় সভা",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "যিনি ফিলিস্তিনিদের কষ্ট অনুভব করেন না, তিনি মানুষ নন: মিসরের কোচ",
-    link: "#",
-  },
-  {
-    id: 6,
-    title:
-      "প্রধানমন্ত্রীর সঙ্গে ক্যান্সার আক্রান্ত সন্তানসহ জুলাইয়ে শহীদের মায়ের সাক্ষাৎ",
-    link: "#",
-  },
-  {
-    id: 7,
-    title: "پاکستان کے پولیس پوسٹ پر دہشت گردانہ حملہ، ۹ پولیس اہلکار ہلاک",
-    link: "#",
-  },
-  {
-    id: 8,
-    title: "মাটির নিচে লুকিয়ে রাখা ২৯ লাখ টাকার স্বর্ণালংকার চুরি",
-    link: "#",
-  },
-  {
-    id: 9,
-    title:
-      "জমিসংক্রান্ত বিরোধের জেরে হামলায় আহত ১০, প্রধান অভিযুক্তসহ গ্রেপ্তার ৫",
-    link: "#",
-  },
-  {
-    id: 10,
-    title: "নানা সীমাবদ্ধতায় ধুঁকছে চাঁদপুর ২৫০ শয্যা হাসপাতাল",
-    link: "#",
-  },
-  {
-    id: 11,
-    title: "জর্জিনার পাঠানো উপহার নিয়ে যা বললেন মেসির স্ত্রী",
-    link: "#",
-  },
-  {
-    id: 12,
-    title: "৪২ ঘণ্টা পার হলেও মেলেনি নিখোঁজ ৬ জেলের সন্ধান",
-    link: "#",
-  },
-  {
-    id: 13,
-    title: "বৈরী আবহাওয়ায় চট্টগ্রামে নামতে পারেনি ৩ ফ্লাইট",
-    link: "#",
-  },
-  { id: 14, title: "ভিসা নিয়ে বড় সুখবর দিল সৌদি আরব", link: "#" },
-  {
-    id: 15,
-    title: "পানিসম্পদ উন্নয়নে বাংলাদেশকে সহযোগিতা করতে চায় নেদারল্যান্ডস",
-    link: "#",
-  },
-  {
-    id: 16,
-    title: "মিসরের বিপক্ষে জিতলে洍আর্জেন্টিনার পরবর্তী খেলা কবে, প্রতিপক্ষ কে?",
-    link: "#",
-  },
-  {
-    id: 17,
-    title: "সাভারে এনসিপির সমাবেশে বিস্ফোরণ, সাবেক যুবলীগ নেতাসহ আটক ২",
-    link: "#",
-  },
-  { id: 18, title: "ডেঙ্গুর তথ্য জানেন না সিলেটের সিভিল সার্জন", link: "#" },
-  {
-    id: 19,
-    title: "ঢাকা-কক্সবাজার ট্রেন চলাচল বন্ধ, মাঝপথে আটকা পর্যটক এক্সপ্রেস",
-    link: "#",
-  },
-  {
-    id: 20,
-    title: "ব্রাজিলের বিদায়ে আর্জেন্টিনা কোচের সতর্কবার্তা",
-    link: "#",
-  },
-];
+document.addEventListener("DOMContentLoaded", function () {
+  /* ---- সর্বশেষ / জনপ্রিয় : Dynamic Tab Switching ---- */
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const viewAllBtn = document.getElementById("tabViewAllBtn");
 
-const popularNews = [
-  { id: 1, title: "খামেনির শেষ বিদায়ে দেখা গেল আহমাদিনেজাদকে", link: "#" },
-  { id: 2, title: "এনসিপির ৫ নেতা গ্রেপ্তার", link: "#" },
-  { id: 3, title: "এক উপদেষ্টাসহ আওয়ামী লীগের ৪ নেতার পদত্যাগ", link: "#" },
-  { id: 4, title: "দেশের সব মাদ্রাসার জন্য জরুরি নির্দেশনা জারি", link: "#" },
-  {
-    id: 5,
-    title: "আর্জেন্টিনা-পর্তুগাল ২০৩০ বিশ্বকাপ খেলবে বাছাইপর্ব ছাড়াই",
-    link: "#",
-  },
-  {
-    id: 6,
-    title:
-      "জজ-নির্বাহী ম্যাজিস্ট্রেট দম্পতির বাড়িতে দুর্ধর্ষ চুরি, ৩২ লাখ টাকার সম্পদ লুট",
-    link: "#",
-  },
-  {
-    id: 7,
-    title: "হাইকোর্টের রায়ে দায়িত্বে ফিরছেন ৮ ইউপি চেয়ারম্যান",
-    link: "#",
-  },
-  {
-    id: 8,
-    title: "বিশ্বকাপ ব্যর্থতার পর কোচকে নিয়ে ব্রাজিলের চূড়ান্ত সিদ্ধান্ত",
-    link: "#",
-  },
-  {
-    id: 9,
-    title: "ডিজি ছাড়া ইসিতে এনআইডি সেবা বন্ধ, সেবা মিলবে মাঠে",
-    link: "#",
-  },
-  {
-    id: 10,
-    title: "তুরস্ককে এফ-৩৫ যুদ্ধবিমান কর্মসূচিতে ফেরাতে প্রস্তুত ট্রাম্প",
-    category: "নিউইয়র্ক টাইমসের প্রতিবেদন",
-    link: "#",
-  },
-  {
-    id: 11,
-    title: "আর্জেন্টিনাসহ ২০৩০ বিশ্বকাপ নিশ্চিত করল যেসব দল",
-    link: "#",
-  },
-  {
-    id: 12,
-    title:
-      "প্রধানমন্ত্রীর সঙ্গে সাক্ষাৎ, যা বললেন ভোক্তা অধিকারের জব্বার মণ্ডল",
-    link: "#",
-  },
-  { id: 13, title: "আর্জেন্টিনা-মিশর ম্যাচে কে জিতবে, জানাল এআই", link: "#" },
-  { id: 14, title: "এনসিপির সমাবেশস্থলে ককটেল বিস্ফোরণ, আহত ৩", link: "#" },
-  { id: 15, title: "মিসর ম্যাচের আগে স্বস্তির খবর পেল আর্জেন্টিনা", link: "#" },
-  { id: 16, title: "পরিবেশ সচিবকে প্রত্যাহার", link: "#" },
-  { id: 17, title: "মারা গেলেন আফগান ক্রিকেটার শাপুর জাদরান", link: "#" },
-  {
-    id: 18,
-    title: "৩০ লাখ টাকা পেল কারখানায় হাত হারানো সেই নাঈম",
-    category: "৬ বছরের আইনি লড়াই",
-    link: "#",
-  },
-  {
-    id: 19,
-    title: "মেয়াদ শেষের আগেই নিয়োগ বাতিল ডেপুটি গভর্নরের",
-    link: "#",
-  },
-  {
-    id: 20,
-    title: "ফাইনালের আগে বদলে যাচ্ছে বিশ্বকাপের অফিসিয়াল বল; কিন্তু কেন?",
-    link: "#",
-  },
-];
+  // Mapping for data-tab to their respective "View All" button settings
+  const btnMap = {
+    "latest-tab": {
+      text: "সর্বশেষ সব খবর",
+      href: "https://www.kalbela.com/latest-news"
+    },
+    "popular-tab": {
+      text: "জনপ্রিয় সব খবর",
+      href: "https://www.kalbela.com/popular-news"
+    }
+  };
 
-// Number conversion Helper
-function engToBngNum(str) {
-  const numStr = str.toString();
-  const bengaliDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
-  return numStr.replace(/[0-9]/g, (d) => bengaliDigits[parseInt(d)]);
-}
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-tab");
 
-// --- 1. Opinion Column logic ---
-let currentOpinionSlide = 0;
+      // 1. Switch active tab appearance
+      document.querySelectorAll(".tab-btn").forEach((b) => {
+        b.classList.remove("active");
+        b.style.borderBottom = "none";
+        b.style.color = "#6c757d"; // grey
+      });
 
-function changeOpinionSlide(index) {
-  // Select the actual slides and navigation paging dots inside the #static_opinion container
-  const slides = document.querySelectorAll("#static_opinion .slides > li");
-  const dots = document.querySelectorAll("#static_opinion .flex-control-nav a");
+      btn.classList.add("active");
+      btn.style.borderBottom = "3px solid #000";
+      btn.style.color = "#000";
 
-  if (slides.length === 0 || dots.length === 0) return;
+      // 2. Show correct panel using d-none
+      document.querySelectorAll(".tab-panel").forEach((p) => p.classList.add("d-none"));
+      document.getElementById(targetId).classList.remove("d-none");
 
-  // Remove the active states from the currently visible slide and dot
-  slides[currentOpinionSlide].classList.remove("flex-active-slide");
-  // Optional if you want to explicitly drop display style during active switches
-  slides[currentOpinionSlide].style.display = "none";
-  dots[currentOpinionSlide].classList.remove("flex-active");
+      // 3. Update the top-right button
+      if(viewAllBtn && btnMap[targetId]) {
+        viewAllBtn.innerText = btnMap[targetId].text;
+        viewAllBtn.href = btnMap[targetId].href;
+        // Add the arrow icon back after text update
+        viewAllBtn.innerHTML += ' <i class="fa-solid fa-arrow-right ms-1 text-danger" style="font-size: 0.7rem;"></i>';
+      }
+    });
+  });
 
-  // Update tracking index
-  currentOpinionSlide = index;
-
-  // Add the active states to the target slide and dot
-  slides[currentOpinionSlide].classList.add("flex-active-slide");
-  slides[currentOpinionSlide].style.display = "block";
-  dots[currentOpinionSlide].classList.add("flex-active");
-}
-
-// --- 2. Online Poll Logic (Real-time Percentages & Layout Transitions) ---
-let hasVoted = false;
-
-function submitVote(index, percentage) {
-  if (hasVoted) return;
-  hasVoted = true;
-
-  // Check the selected option input safely
-  const selectedRadio = document.getElementById(`opt${index}`);
-  if (selectedRadio) {
-    selectedRadio.checked = true;
+  /* ---- অনলাইন জরিপ : client-side voting simulation ---- */
+  const bnDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+  function toBanglaNumber(str) {
+    return String(str).replace(/[0-9]/g, (d) => bnDigits[d]);
   }
 
-  // Disable all radio buttons across the polling block
-  const inputs = document.querySelectorAll(
-    '.options_block input[type="radio"]',
-  );
-  inputs.forEach((input) => {
-    input.disabled = true;
-  });
+  const pollOptionsEl = document.getElementById("pollOptions");
+  if (pollOptionsEl) {
+    const optionLis = Array.from(pollOptionsEl.querySelectorAll("li"));
+    let voted = false;
 
-  // Reveal percentages and trigger the progress bar fill animation
-  const items = document.querySelectorAll(".options_block li");
-  items.forEach((item, idx) => {
-    const votesDiv = item.querySelector(".votes");
-    const progressBg = item.querySelector(".progress-bg");
-
-    // Reveal the results block container
-    if (votesDiv) {
-      votesDiv.style.display = "block";
+    function renderPoll() {
+      const total = optionLis.reduce(
+        (sum, li) => sum + Number(li.dataset.votes),
+        0,
+      );
+      optionLis.forEach((li) => {
+        const votes = Number(li.dataset.votes);
+        const pct = total > 0 ? (votes * 100) / total : 0;
+        li.querySelector(".poll-option-fill").style.width =
+          pct.toFixed(2) + "%";
+        li.querySelector(".poll-option-pct").textContent =
+          toBanglaNumber(pct.toFixed(2)) + "%";
+      });
+      document.getElementById("pollTotal").textContent =
+        "মোট ভোটদাতাঃ " + toBanglaNumber(total.toLocaleString("en-US")) + " জন";
     }
 
-    // Allocate current poll tracking distributions (e.g., Yes: 60.01%, No: 35.35%, No Comment: 4.63%)
-    if (progressBg) {
-      let pct = idx === 0 ? 60.01 : idx === 1 ? 35.35 : 4.63;
-      progressBg.style.width = pct + "%";
-    }
-  });
-}
+    optionLis.forEach((li) => {
+      const radio = li.querySelector('input[type="radio"]');
+      radio.addEventListener("change", () => {
+        if (voted) return;
+        voted = true;
+        li.dataset.votes = Number(li.dataset.votes) + 1;
+        optionLis.forEach((l) => (l.querySelector("input").disabled = true));
+        renderPoll();
+      });
+    });
 
-function copyPollLink() {
-  navigator.clipboard.writeText(window.location.href);
-  const toast = document.getElementById("copy-toast");
-  toast.style.display = "block";
-  setTimeout(() => {
-    toast.style.display = "none";
-  }, 2000);
-}
-
-// --- 3. Latest/Popular Tab Logic ---
-function renderNews(type) {
-  const container = document.getElementById("news-list-container");
-  const newsData = type === "latest" ? latestNews : popularNews;
-  let htmlContent = "";
-
-  newsData.forEach((item, index) => {
-    const categorySpan = item.category
-      ? `<span class="sholder">${item.category} / </span>`
-      : "";
-
-    htmlContent += `
-      <div class="sub2-lead-content">
-        <div class="d-flex align-items-center">
-          <!-- Left Aligned Circular Serial Number Badge -->
-          <div class="news_sl_badge">
-            <span>${engToBngNum(index + 1)}</span>
-          </div>
-          <!-- Right Aligned News Title Text Block -->
-          <div class="flex-fill ps-3">
-            <h4 class="title">
-              ${categorySpan}${item.title}
-            </h4>
-          </div>
-        </div>
-        <a class="link" href="${item.link}"></a>
-      </div>
-    `;
-  });
-  container.innerHTML = htmlContent;
-
-  // Update full width footer button title
-  const footerLink = document.getElementById("all-news-link");
-  footerLink.textContent =
-    type === "latest" ? "সর্বশেষ সব খবর" : "জনপ্রিয় সব খবর";
-}
-
-function switchTab(type) {
-  document.getElementById("tab-latest").classList.remove("active");
-  document.getElementById("tab-popular").classList.remove("active");
-
-  if (type === "latest") {
-    document.getElementById("tab-latest").classList.add("active");
-  } else {
-    document.getElementById("tab-popular").classList.add("active");
+    renderPoll();
   }
-  renderNews(type);
-}
 
-// Initial Load
-window.onload = function () {
-  renderNews("latest");
-};
+  const pollCopyLink = document.getElementById("pollCopyLink");
+  const pollCopiedMsg = document.getElementById("pollCopiedMsg");
+  if (pollCopyLink) {
+    pollCopyLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const url = "https://www.kalbela.com/opinion-poll/276";
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).catch(() => {});
+      }
+      pollCopiedMsg.style.display = "block";
+      setTimeout(() => {
+        pollCopiedMsg.style.display = "none";
+      }, 2000);
+    });
+  }
+});

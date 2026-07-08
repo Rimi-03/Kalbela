@@ -1500,6 +1500,285 @@ HAMBURGER MENU
   white-space: nowrap;
 }
 
+/* ============================================================
+   মতামত : opinion carousel
+   ============================================================ */
+.opinion-widget-title,
+.poll-widget-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--kb-red);
+}
+.opinion-widget-title img,
+.poll-widget-title img {
+  width: 20px;
+  height: 20px;
+}
+
+.opinion-item {
+  background: #fff9e1;
+  border-bottom: 3px solid #d60000;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.opinion-item .opinion-avatar {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--kb-red);
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin-right: 12px;
+  position: relative;
+}
+.opinion-item .opinion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.opinion-item .rpt {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+.opinion-item .rpt_dg {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+.opinion-item .title {
+  font-size: 0.95rem;
+  margin: 6px 0 6px;
+}
+.opinion-item:hover .title {
+  color: #1a73e8;
+}
+.opinion-item .summery {
+  font-size: 0.8rem;
+  -webkit-line-clamp: 3;
+}
+
+.opinion-dots {
+  position: static;
+  margin-top: 4px;
+}
+.opinion-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  opacity: 1;
+  border: none;
+}
+.opinion-dots button.active {
+  background: var(--kb-red);
+}
+
+/* ============================================================
+   অনলাইন জরিপ : poll widget
+   ============================================================ */
+.poll-card {
+  border: 1px solid var(--kb-border);
+  border-radius: 6px;
+  padding: 12px;
+}
+.poll-time {
+  font-size: 0.78rem;
+  color: var(--kb-muted);
+  margin-bottom: 8px;
+}
+.poll-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+.poll-question {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--kb-text);
+}
+.poll-question:hover {
+  color: var(--kb-red);
+}
+.poll-options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+.poll-options li {
+  margin-bottom: 10px;
+}
+.poll-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.poll-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+.poll-option-title {
+  font-size: 0.82rem;
+  flex: 0 0 90px;
+}
+.poll-option-bar {
+  flex: 1 1 auto;
+  height: 20px;
+  background: #f0f0f0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.poll-option-fill {
+  display: block;
+  height: 100%;
+  background: skyblue;
+  transition: width 0.4s ease;
+}
+.poll-option-pct {
+  font-size: 0.78rem;
+  flex: 0 0 52px;
+  text-align: right;
+}
+.poll-total {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--kb-text);
+  margin-bottom: 10px;
+}
+.poll-share {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.poll-share a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+.poll-share a:hover {
+  background: var(--kb-orange);
+  color: #fff;
+}
+.poll-copied-msg {
+  display: none;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #fff;
+  background: #000a;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin: 8px auto 0;
+  width: fit-content;
+}
+
+/* ============================================================
+   সর্বশেষ / জনপ্রিয় : tabbed ranked list
+   ============================================================ */
+.tab-buttons {
+  display: flex;
+  gap: 18px;
+  border-bottom: 2px solid var(--kb-border);
+  margin-bottom: 12px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab-btn:hover {
+  color: #000;
+}
+.tab-btn.active {
+  color: var(--kb-red);
+  border-bottom-color: var(--kb-red);
+}
+.tab-panel {
+  display: block;
+}
+.tab-panel.d-none {
+  display: none !important;
+}
+.tab-panel.active {
+  display: block;
+}
+
+.ranked-list {
+  list-style: none;
+  counter-reset: ranked;
+  padding: 0;
+  margin: 0;
+}
+.ranked-list li {
+  counter-increment: ranked;
+  position: relative;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+.ranked-list li a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #212529;
+}
+.ranked-list li a:hover {
+  color: #d10000;
+}
+.ranked-list li a i {
+  color: var(--kb-orange);
+  margin-right: 6px;
+  font-size: 0.75rem;
+}
+.all-news-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--kb-orange);
+}
+.all-news-link:hover {
+  color: var(--kb-red);
+}
+.news_sl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background-color: #f1f3f5;
+  color: #555;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
 @media (max-width: 1200px) {
   .video-slide-item {
     flex: 0 0 25%;
@@ -1756,6 +2035,13 @@ Story
   .video-slide-item {
     flex: 0 0 60%;
     min-width: 60%;
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
   }
 }
 
