@@ -331,47 +331,168 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // ===== LEAD CAROUSEL (Existing) =====
   const carouselEl = document.getElementById("leadCarousel");
   const captionEl = document.getElementById("leadCaption");
   const thumbStrip = document.getElementById("thumbStrip");
 
-  if (!carouselEl || !captionEl) return;
+  if (carouselEl && captionEl) {
+    // Synchronize Overlayed Text Strings on Slide Event Loops
+    carouselEl.addEventListener("slide.bs.carousel", (event) => {
+      const nextSlide = event.relatedTarget;
+      const captionText = nextSlide.getAttribute("data-caption");
+      if (captionText) {
+        captionEl.textContent = captionText;
+      }
 
-  // Synchronize Overlayed Text Strings on Slide Event Loops
-  carouselEl.addEventListener("slide.bs.carousel", (event) => {
-    const nextSlide = event.relatedTarget;
-    const captionText = nextSlide.getAttribute("data-caption");
-    if (captionText) {
-      captionEl.textContent = captionText;
-    }
+      // Toggle Active States across Thumb Panel
+      if (thumbStrip) {
+        const index = event.to;
+        const thumbs = thumbStrip.querySelectorAll(".gallery-mini-thumb");
+        thumbs.forEach((thumb, i) => {
+          if (i === index) {
+            thumb.classList.add("active");
+          } else {
+            thumb.classList.remove("active");
+          }
+        });
+      }
+    });
 
-    // Toggle Active States across Thumb Panel
+    // Make thumbnails clickable to navigate the slider
     if (thumbStrip) {
-      const index = event.to;
-      const thumbs = thumbStrip.querySelectorAll(".gallery-mini-thumb");
-      thumbs.forEach((thumb, i) => {
-        if (i === index) {
-          thumb.classList.add("active");
+      thumbStrip.addEventListener("click", (e) => {
+        const targetThumb = e.target.closest(".gallery-mini-thumb");
+        if (!targetThumb) return;
+
+        const slideIndex = parseInt(
+          targetThumb.getAttribute("data-slide-to"),
+          10,
+        );
+        const carouselInstance =
+          bootstrap.Carousel.getOrCreateInstance(carouselEl);
+        carouselInstance.to(slideIndex);
+      });
+    }
+  }
+
+  // ===== OPINION WIDGET CAROUSEL (Updated) =====
+  const opinionCarouselEl = document.getElementById("opinionCarousel");
+  const opinionDots = document.querySelectorAll(".opinion-dot");
+
+  if (opinionCarouselEl) {
+    // Initialize carousel with auto-slide enabled
+    const opinionCarousel = new bootstrap.Carousel(opinionCarouselEl, {
+      interval: 5000,
+      ride: "carousel",
+      touch: true, // Enable touch support
+    });
+
+    let isAutoSliding = true;
+
+    // Function to update dots
+    function updateDots(activeIndex) {
+      opinionDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+          dot.style.backgroundColor = "#222";
+          dot.classList.add("active");
         } else {
-          thumb.classList.remove("active");
+          dot.style.backgroundColor = "#d1d5db";
+          dot.classList.remove("active");
         }
       });
     }
-  });
 
-  // Make thumbnails clickable to navigate the slider
-  if (thumbStrip) {
-    thumbStrip.addEventListener("click", (e) => {
-      const targetThumb = e.target.closest(".gallery-mini-thumb");
-      if (!targetThumb) return;
+    // Update dots on slide start (for immediate feedback)
+    opinionCarouselEl.addEventListener("slide.bs.carousel", (event) => {
+      const activeIndex = event.to;
+      updateDots(activeIndex);
+    });
 
-      const slideIndex = parseInt(
-        targetThumb.getAttribute("data-slide-to"),
-        10,
+    // Update dots when slide completes (for reliability)
+    opinionCarouselEl.addEventListener("slid.bs.carousel", (event) => {
+      const activeIndex = event.to;
+      updateDots(activeIndex);
+    });
+
+    // Also update on any carousel change (for touch/swipe)
+    opinionCarouselEl.addEventListener("slid.bs.carousel", (event) => {
+      const activeIndex = event.to;
+      updateDots(activeIndex);
+    });
+
+    // Manual dot click - update visual state
+    opinionDots.forEach((dot) => {
+      dot.addEventListener("click", function () {
+        const index = parseInt(this.getAttribute("data-slide-to"), 10);
+        updateDots(index);
+
+        // Reset auto-slide timer when user manually clicks
+        if (isAutoSliding) {
+          opinionCarousel.cycle();
+        }
+      });
+    });
+
+    // Toggle auto-slide on double click of any dot
+    opinionDots.forEach((dot) => {
+      dot.addEventListener("dblclick", function (e) {
+        e.preventDefault();
+        toggleAutoSlide();
+      });
+    });
+
+    // Toggle function
+    function toggleAutoSlide() {
+      if (isAutoSliding) {
+        opinionCarousel.pause();
+        isAutoSliding = false;
+        // Visual feedback - change dot colors to indicate paused state
+        opinionDots.forEach((dot) => {
+          dot.style.opacity = "0.5";
+        });
+      } else {
+        opinionCarousel.cycle();
+        isAutoSliding = true;
+        opinionDots.forEach((dot) => {
+          dot.style.opacity = "1";
+        });
+        // Reset active dot
+        const activeIndex = opinionCarouselEl.querySelector(
+          ".carousel-item.active",
+        );
+        const index = Array.from(
+          opinionCarouselEl.querySelectorAll(".carousel-item"),
+        ).indexOf(activeIndex);
+        updateDots(index);
+      }
+    }
+
+    // Keyboard shortcut: Press 'Space' to toggle
+    document.addEventListener("keydown", (e) => {
+      if (e.key === " " && document.activeElement?.closest(".opinion-widget")) {
+        e.preventDefault();
+        toggleAutoSlide();
+      }
+    });
+
+    // MutationObserver to detect slide changes from any source (including touch)
+    const observer = new MutationObserver(() => {
+      const activeItem = opinionCarouselEl.querySelector(
+        ".carousel-item.active",
       );
-      const carouselInstance =
-        bootstrap.Carousel.getOrCreateInstance(carouselEl);
-      carouselInstance.to(slideIndex);
+      if (activeItem) {
+        const index = Array.from(
+          opinionCarouselEl.querySelectorAll(".carousel-item"),
+        ).indexOf(activeItem);
+        updateDots(index);
+      }
+    });
+
+    // Observe class changes on carousel items
+    const carouselItems = opinionCarouselEl.querySelectorAll(".carousel-item");
+    carouselItems.forEach((item) => {
+      observer.observe(item, { attributes: true, attributeFilter: ["class"] });
     });
   }
 });
