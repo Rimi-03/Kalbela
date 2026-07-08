@@ -518,12 +518,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnMap = {
     "latest-tab": {
       text: "সর্বশেষ সব খবর",
-      href: "https://www.kalbela.com/latest-news"
+      href: "https://www.kalbela.com/latest-news",
     },
     "popular-tab": {
       text: "জনপ্রিয় সব খবর",
-      href: "https://www.kalbela.com/popular-news"
-    }
+      href: "https://www.kalbela.com/popular-news",
+    },
   };
 
   tabButtons.forEach((btn) => {
@@ -542,15 +542,18 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.style.color = "#000";
 
       // 2. Show correct panel using d-none
-      document.querySelectorAll(".tab-panel").forEach((p) => p.classList.add("d-none"));
+      document
+        .querySelectorAll(".tab-panel")
+        .forEach((p) => p.classList.add("d-none"));
       document.getElementById(targetId).classList.remove("d-none");
 
       // 3. Update the top-right button
-      if(viewAllBtn && btnMap[targetId]) {
+      if (viewAllBtn && btnMap[targetId]) {
         viewAllBtn.innerText = btnMap[targetId].text;
         viewAllBtn.href = btnMap[targetId].href;
         // Add the arrow icon back after text update
-        viewAllBtn.innerHTML += ' <i class="fa-solid fa-arrow-right ms-1 text-danger" style="font-size: 0.7rem;"></i>';
+        viewAllBtn.innerHTML +=
+          ' <i class="fa-solid fa-arrow-right ms-1 text-danger" style="font-size: 0.7rem;"></i>';
       }
     });
   });
@@ -611,5 +614,19 @@ document.addEventListener("DOMContentLoaded", function () {
         pollCopiedMsg.style.display = "none";
       }, 2000);
     });
+  }
+});
+
+// Auto-highlight active navigation link
+document.addEventListener("DOMContentLoaded", function () {
+  // 1. Get the current page's file name (e.g., 'latest-news.html')
+  const currentPath = window.location.pathname.split("/").pop();
+
+  // 2. If the page is 'latest-news.html', apply the .nav-active class
+  if (currentPath === "latest-news.html") {
+    const latestNavItem = document.getElementById("nav-latest");
+    if (latestNavItem) {
+      latestNavItem.classList.add("nav-active");
+    }
   }
 });

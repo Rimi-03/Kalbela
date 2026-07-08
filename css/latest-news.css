@@ -204,6 +204,12 @@ Header Icons
   overflow: visible !important;
 }
 
+#top-nav ul li.nav-active a {
+  color: #c40000 !important; /* Makes the text red */
+  border-bottom: 3px solid #c40000; /* Adds a red underline */
+  padding-bottom: 2px;
+}
+
 #top-nav .all-mega-menu-panel {
   max-height: calc(
     100vh - 50px
