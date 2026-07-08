@@ -630,3 +630,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+//scroll to top and sticky ad
+document.addEventListener("DOMContentLoaded", function () {
+  // --- 1. Close Ad Footer Functionality ---
+  const closeBtn = document.getElementById("close-sticky-ad");
+  const adFooter = document.getElementById("sticky-ad-footer");
+
+  if (closeBtn && adFooter) {
+    closeBtn.addEventListener("click", function () {
+      adFooter.classList.add("hidden");
+      // When ad closes, move the Up button down to the very bottom
+      document.getElementById("scroll-to-top").style.bottom = "20px";
+    });
+  }
+
+  const upBtn = document.getElementById("scroll-to-top");
+
+  window.addEventListener("scroll", function () {
+    // If scrolled down more than 300px, show the button
+    if (window.scrollY > 300) {
+      upBtn.classList.add("show");
+    } else {
+      upBtn.classList.remove("show");
+    }
+  });
+
+  upBtn.addEventListener("click", function () {
+    // Smoothly scroll back to the top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});

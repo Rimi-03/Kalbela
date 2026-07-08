@@ -936,3 +936,78 @@ Header Icons
     min-width: 100% !important;
   }
 }
+
+#sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483646; /* Matches your existing high z-index */
+  background-color: rgba(250, 250, 250, 0.95);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px 0;
+  height: 95px; /* Matches your existing height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+}
+
+/* Hide the ad when the close button is clicked (added via JS later) */
+#sticky-ad-footer.hidden {
+  display: none !important;
+}
+
+/* --- Sticky Ad Footer Container --- */
+#sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483646; /* Matches your existing high z-index */
+  background-color: rgba(250, 250, 250, 0.95);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px 0;
+  height: 95px; /* Matches your existing height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+}
+
+/* Hide the ad when the close button is clicked (added via JS later) */
+#sticky-ad-footer.hidden {
+  display: none !important;
+}
+
+/* --- Floating Up (Scroll to Top) Button --- */
+#scroll-to-top {
+  position: fixed;
+  bottom: 115px; /* 95px ad height + 20px buffer */
+  right: 20px;
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1e3a8a; /* Dark blue like your footer button */
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-to-top:hover {
+  background-color: #0f2557;
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  display: flex; /* Shows when scrolled down */
+}
