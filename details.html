@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>সর্বশেষ সব খবর - কালবেলা</title>
+    <title>বিস্তারিত - কালবেলা</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -30,7 +30,7 @@
       href="https://www.kalbela.com/favicon.ico?v=10"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="css/latest-news.css" />
+    <link rel="stylesheet" href="css/details.css" />
   </head>
 
   <body>
@@ -955,604 +955,327 @@
 
     <div class="ad-slot">
       <img
-        src="https://dsp-media.eskimi.com/upload/182149_1415106523_c9b2a8d97f87d2175d67d1c284aff25e.gif"
+        src="https://s0.2mdn.net/dfp/2299148/5537847993/1764611733675/970x90.png"
         class="img-fluid rounded"
         alt="বিজ্ঞাপন"
       />
     </div>
-
-    <!-- ========================= BREADCRUMB ========================= -->
-    <div class="page-breadcrumb">
+    <!-- ══ PAGE CONTENT ══ -->
+    <div class="page-wrapper">
       <div class="container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="index.html"><i class="fa-solid fa-house"></i></a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              সর্বশেষ সব খবর
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
+        <div class="row g-3 justify-content-between">
+          <!-- ── MAIN ARTICLE COLUMN ── -->
+          <div class="col-md-9">
+            <div class="row g-3">
+              <!-- Left sidebar: breadcrumb + reporter + related -->
+              <div class="col-md-3">
+                <!-- Breadcrumb -->
+                <ul class="news-breadcrumb">
+                  <li>
+                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                  </li>
+                  <li><span class="sep">/</span></li>
+                  <li><a href="#">খেলা</a></li>
+                  <li><span class="sep">/</span></li>
+                  <li><a href="#" style="color: red">ফুটবল</a></li>
+                </ul>
 
-    <!-- ========================= MAIN CONTENT ========================= -->
-    <div class="page-content">
-      <div class="container">
-        <div class="row g-3">
-          <!-- ═══════════════════════════════════════════════
-               LEFT COLUMN: News Grid 8/12
-          ═══════════════════════════════════════════════ -->
-          <div class="col-12 col-md-8">
-            <div class="bg-white rounded border p-3">
-              <!-- 2-column news grid -->
-              <div class="news-two-col" id="news-container">
-                <!-- News Item 1 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306854_1783485394.webp"
-                            alt="দুই কর্মকর্তাকে বরখাস্ত করল ফিফা"
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            দুই কর্মকর্তাকে বরখাস্ত করল ফিফা
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:৩৬ এএম
-                        </div>
-                      </div>
-                    </div>
+                <!-- Reporter Info -->
+                <div class="rpt-info-block">
+                  <div class="rpt-name">
+                    <i class="fa-solid fa-circle-user me-2"></i>কালবেলা ডেস্ক
+                  </div>
+                  <div class="news-time-item">
+                    <svg width="13" viewBox="0 0 13.95 16">
+                      <path
+                        fill="#50b886"
+                        d="M13.65,5.2,7.78.27a1.26,1.26,0,0,0-1.56,0L.35,5.2c-.69.59-.2,1.59.79,1.59H12.86C13.85,6.79,14.34,5.79,13.65,5.2Z"
+                      />
+                      <path
+                        fill="#50b886"
+                        d="M.35,10.8l5.87,4.93a1.26,1.26,0,0,0,1.56,0l5.87-4.93c.69-.59.2-1.59-.79-1.59H1.14C.15,9.21-.34,10.21.35,10.8Z"
+                      />
+                    </svg>
+                    <span>প্রকাশ : ০৮ জুলাই ২০২৬, ০২:৩৬ পিএম</span>
+                  </div>
+                  <div class="news-time-item">
+                    <svg width="13" viewBox="0 0 13.95 16">
+                      <path
+                        fill="#50b886"
+                        d="M13.65,5.2,7.78.27a1.26,1.26,0,0,0-1.56,0L.35,5.2c-.69.59-.2,1.59.79,1.59H12.86C13.85,6.79,14.34,5.79,13.65,5.2Z"
+                      />
+                      <path
+                        fill="#ec7064"
+                        d="M.35,10.8l5.87,4.93a1.26,1.26,0,0,0,1.56,0l5.87-4.93c.69-.59.2-1.59-.79-1.59H1.14C.15,9.21-.34,10.21.35,10.8Z"
+                      />
+                    </svg>
+                    <span>আপডেট : ০৮ জুলাই ২০২৬, ০২:৪৬ পিএম</span>
+                  </div>
+                  <div class="edition-badge">
+                    <i class="fa-solid fa-square-pen me-2"></i>অনলাইন সংস্করণ
                   </div>
                 </div>
 
-                <!-- News Item 2 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
+                <!-- Related News -->
+                <div>
+                  <div class="related-title">
+                    <a href="#">এ সম্পর্কিত আরও খবর</a>
+                  </div>
+                  <div class="border-bottom mb-2"></div>
+                  <div class="related-news-box">
+                    <div class="related-item">
+                      <div class="d-flex">
+                        <div class="img-wrap">
                           <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306853_1783485284.webp"
+                            src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=150"
                             alt=""
                           />
                         </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            মিরপুরে স্বেচ্ছাসেবক দল নেতাকে গুলি, অস্ত্রসহ এক
-                            হামলাকারী আটক
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:৩৪ এএম
+                        <div class="flex-grow-1">
+                          <a href="#"
+                            ><h4 class="title">
+                              আর্জেন্টিনার জয়ে উচ্ছ্বসিত পূর্ণিমা, মেসিকে নিয়ে
+                              আবেগঘন পোস্ট
+                            </h4></a
+                          >
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- News Item 3 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
+                    <div class="related-item">
+                      <div class="d-flex">
+                        <div class="img-wrap">
                           <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306852_1783484537.webp"
+                            src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=150"
                             alt=""
                           />
                         </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            আর্জেন্টিনা সমর্থকদের মারধরে ব্রাজিল সমর্থক নিহত
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:২৩ এএম
+                        <div class="flex-grow-1">
+                          <a href="#"
+                            ><h4 class="title">
+                              আর্জেন্টিনা-মিশরের খেলা নিয়ে ভাসানী
+                              বিশ্ববিদ্যালয়ে দফায় দফায় সংঘর্ষ
+                            </h4></a
+                          >
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- News Item 4 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
+                    <div class="related-item">
+                      <div class="d-flex">
+                        <div class="img-wrap">
                           <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306851_1783484396.jpg"
+                            src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=150"
                             alt=""
                           />
                         </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">চীনে ভূমিধসে নিহত ২১</h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:২১ এএম
+                        <div class="flex-grow-1">
+                          <a href="#"
+                            ><h4 class="title">
+                              মিশরের গোল বাতিল, সালাহর পেনাল্টি ও ভিএআর নিয়ে
+                              তোলপাড়
+                            </h4></a
+                          >
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <!-- News Item 5 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
+                    <div class="related-item">
+                      <div class="d-flex">
+                        <div class="img-wrap">
                           <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306850_1783484066.webp"
+                            src="https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&w=150"
                             alt=""
                           />
                         </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            কমার পর আজ যে দামে বিক্রি হচ্ছে স্বর্ণ
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:১৪ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 6 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306849_1783483372.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            রাঙামাটিতে পাহাড় ধস, খোলা হয়েছে ২১২ আশ্রয়কেন্দ্র
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ১০:১১ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 7 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306848_1783482993.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ১৯ জেলায় বজ্রসহ ঝড়-বৃষ্টির সম্ভাবনা
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৫৬ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 8 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306847_1783482768.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ফ্রান্স ম্যাচের আগে মরক্কো শিবিরে দুঃসংবাদ
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৫২ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 9 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306846_1783482486.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            যুক্তরাষ্ট্রে বিষ্ণোই গ্যাং সদস্যসহ গ্রেপ্তার ২৪
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৪৮ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 10 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306845_1783482240.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            রেফারির বিরুদ্ধে ফিফায় অভিযোগ করল মিশর
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৪৪ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 11 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306844_1783482183.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            তথ্য চাইতে গিয়ে ব্যাংক কর্মকর্তার হাতে সাংবাদিক
-                            লাঞ্চিত
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৪৩ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 12 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306842_1783481485.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            রেললাইনে দেড় কিলোমিটারজুড়ে ছড়িয়ে ছিল ব্যবসায়ীর
-                            দেহাংশ
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৪১ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 13 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306843_1783481720.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ভেনেজুয়েলায় জোড়া ভূমিকম্পে মৃত বেড়ে ৩৬৮৫
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৩৯ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 14 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306841_1783481308.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            কোয়ার্টার ফাইনালে কে কার মুখোমুখি, খেলা কখন
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:৩০ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 15 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306840_1783480668.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ব্রাহ্মণপাড়ায় ৬১ প্রাথমিক বিদ্যালয়ে প্রধান শিক্ষক
-                            নেই, ব্যাহত শিক্ষা কার্যক্রম
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:২৩ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 16 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306839_1783480494.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ছেলে হত্যার মামলা প্রত্যাহার না করায় বাবাকে গুলি
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:২১ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 17 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306838_1783479758.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            মিরসরাইয়ের সব ঝরনায় পর্যটক প্রবেশ নিষিদ্ধ
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:০৫ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 18 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306837_1783479642.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            ফিফা সভাপতি ইনফান্তিনোর বিরুদ্ধে তদন্তের দাবি
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৯:০১ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 19 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306836_1783479404.webp"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            দয়া করে ফিলিস্তিনিদের বাঁচতে দিন, বিশ্বকাপে মিশরের
-                            কোচ
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৮:৫৬ এএম
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- News Item 20 -->
-                <div class="news-cell latest-most-news">
-                  <div class="news-item-block">
-                    <div class="flex-content">
-                      <a href="#">
-                        <div class="img-content">
-                          <img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/08/resize-105x70x1x0-image_306834_1783478280.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </a>
-                      <div class="flex-grow-1">
-                        <a href="#">
-                          <h4 class="title">
-                            একযোগে ইরানে ৮০টির বেশি লক্ষ্যবস্তুতে যুক্তরাষ্ট্রের
-                            হামলা
-                          </h4>
-                        </a>
-                        <div class="time">
-                          <i class="fa-regular fa-clock me-1"></i>০৮ জুলাই ২০২৬,
-                          ০৮:৪৪ এএম
+                        <div class="flex-grow-1">
+                          <a href="#"
+                            ><h4 class="title">
+                              মেসির আর্জেন্টিনাকে সুবিধা দিতে 'কারচুপি'? যা
+                              বলছেন ফুটবল বিশ্লেষকরা
+                            </h4></a
+                          >
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- end news-two-col -->
+              <!-- end left sidebar -->
 
-              <!-- Loading Spinner -->
-              <div class="loading-spinner" id="loading-spinner">
-                <i class="fa fa-spin fa-spinner"></i>
+              <!-- Main article content -->
+              <div class="col-md-9">
+                <div class="article-card">
+                  <!-- Headline -->
+                  <div class="article-headline">
+                    <h1>
+                      আর্জেন্টাইন সমর্থকরা দেখাল ইসরায়েলি পতাকা, ভাইরাল
+                      ছবি-ভিডিও ঘিরে তোলপাড়
+                    </h1>
+                  </div>
+
+                  <!-- Share row -->
+                  <div class="share-row">
+                    <a href="#" class="share-icon-btn fb" title="Facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a href="#" class="share-icon-btn msg" title="Messenger"
+                      ><i class="fa-brands fa-facebook-messenger"></i
+                    ></a>
+                    <a href="#" class="share-icon-btn wa" title="WhatsApp"
+                      ><i class="fa-brands fa-whatsapp"></i
+                    ></a>
+                    <a href="#" class="share-icon-btn tw" title="X (Twitter)"
+                      ><i class="fa-brands fa-x-twitter"></i
+                    ></a>
+                    <a href="#" class="share-icon-btn link" title="Copy Link"
+                      ><i class="fa-solid fa-copy"></i
+                    ></a>
+                    <a href="#" class="share-icon-btn print" title="Print"
+                      ><i class="fa-solid fa-print"></i
+                    ></a>
+
+                    <div class="font-resize">
+                      <span title="ছোট করুন">অ-</span>
+                      <span title="বড় করুন">অ+</span>
+                    </div>
+                  </div>
+
+                  <!-- Feature Image -->
+                  <div class="feature-image-wrap">
+                    <img
+                      src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=900"
+                      alt="আর্জেন্টিনা সমর্থকরা"
+                    />
+                    <div class="img-caption">ছবি : ভিডিও থেকে নেওয়া</div>
+                  </div>
+
+                  <!-- Article Body -->
+                  <div class="article-body" id="article-content">
+                    <p>
+                      বিশ্বকাপের নকআউট পর্বে আর্জেন্টিনা ও মিশরের ম্যাচে
+                      আর্জেন্টিনা সমর্থকদের গ্যালারিতে একটি ইসরায়েলি পতাকা দেখা
+                      যাওয়ার দাবি ঘিরে সামাজিক যোগাযোগমাধ্যমে ব্যাপক
+                      আলোচনা-সমালোচনার সৃষ্টি হয়েছে। সামাজিক যোগাযোগমাধ্যমে
+                      ছড়িয়ে পড়া কয়েকটি ছবি ও ভিডিওতে দেখা যায়, আর্জেন্টিনা
+                      সমর্থকদের অংশে একটি ইসরায়েলি পতাকা প্রদর্শন করা হয়েছে
+                      বলে দাবি করা হচ্ছে।
+                    </p>
+
+                    <p>
+                      এর আগে অস্ট্রেলিয়াকে হারিয়ে ইতিহাস গড়া জয়ের পর মিশরের
+                      প্রধান কোচ হোসাম হাসান মাঠে ফিলিস্তিনের পতাকা হাতে নিয়ে
+                      উদযাপন করেন। সে সময় স্টেডিয়ামজুড়ে 'ফ্রি প্যালেস্টাইন'
+                      স্লোগানও শোনা যায়। পরে তিনি সেই জয় ফিলিস্তিনের জনগণকে
+                      উৎসর্গ করেন এবং গাজায় নিহতদের প্রতি শোক প্রকাশ করেন।
+                    </p>
+
+                    <p>
+                      হোসাম হাসানের এই পদক্ষেপের সমালোচনা করেন ইসরায়েলের
+                      কয়েকজন ক্রীড়া ব্যক্তিত্ব। তবে ফিফা কোনো শাস্তিমূলক
+                      ব্যবস্থা নেয়নি। সংস্থাটি জানায়, ফিলিস্তিন ফুটবল
+                      অ্যাসোসিয়েশন ফিফার স্বীকৃত সদস্য হওয়ায় তাদের পতাকা
+                      প্রদর্শন টুর্নামেন্টের নিয়ম লঙ্ঘন করে না।
+                    </p>
+
+                    <p>
+                      এদিকে, ইসরায়েলি কোচ লিওর মোর ইয়োসেফের হোসাম হাসানের
+                      বিরুদ্ধে ব্যবস্থা নেওয়ার আহ্বান জানানো মন্তব্যও নতুন
+                      বিতর্কের জন্ম দেয়। আরব অঞ্চলের ক্রীড়া বিশ্লেষক ও
+                      মানবাধিকারকর্মীরা এ ধরনের বক্তব্যের সমালোচনা করে বলেন,
+                      আন্তর্জাতিক ফুটবলে রাজনৈতিক উত্তেজনা আরও বাড়িয়ে দিতে
+                      পারে এমন মন্তব্য থেকে বিরত থাকা উচিত।
+                    </p>
+                  </div>
+
+                  <!-- Tags -->
+                  <ul class="tags-list">
+                    <li><a href="#">আর্জেন্টিনা</a></li>
+                    <li><a href="#">সমর্থক</a></li>
+                    <li><a href="#">ইসরায়েলি পতাকা</a></li>
+                    <li><a href="#">বিশ্বকাপ ২০২৬</a></li>
+                    <li><a href="#">ফুটবল</a></li>
+                  </ul>
+
+                  <!-- Google News -->
+                  <div class="google-news-strip mt-3">
+                    <i
+                      class="fa-brands fa-google me-1"
+                      style="color: #4285f4"
+                    ></i>
+                    কালবেলা অনলাইন এর সর্বশেষ খবর পেতে
+                    <a href="#">Google News</a> ফিডটি অনুসরণ করুন
+                  </div>
+                </div>
+                <!-- end article-card -->
               </div>
+              <!-- end main article -->
+            </div>
+            <!-- end inner row -->
+          </div>
+          <!-- end col-md-9 -->
 
-              <!-- Load More Button -->
-              <div class="text-center mt-4 mb-2">
-                <button class="morebtn" id="load-more-btn" data-page="2">
-                  আরও
-                </button>
+          <!-- ── RIGHT SIDEBAR ── -->
+          <div class="col-md-3">
+            <!-- ad section  -->
+            <div class="text-center my-3">
+              <div
+                class="sidebar-ad d-inline-block"
+                style="
+                  min-width: 300px;
+                  min-height: 250px;
+                  background: #f8f9fa;
+                  border: 1px solid #eee;
+                "
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXRc4u0UpXlnuqONn3uIafQfXbqkFQjs7UotjuJWmjqhicR-LndgkSKTQ&s=10"
+                  class="img-fluid rounded"
+                  alt="বিজ্ঞাপন"
+                />
               </div>
             </div>
-          </div>
-          <!-- end left col -->
+            <div class="text-center my-3">
+              <div
+                class="sidebar-ad d-inline-block"
+                style="
+                  min-width: 300px;
+                  min-height: 250px;
+                  background: #f8f9fa;
+                  border: 1px solid #eee;
+                "
+              >
+                <img
+                  src="https://scontent.fdac154-1.fna.fbcdn.net/v/t39.30808-6/488722985_1082857467217082_7268484966024785861_n.jpg?stp=dst-jpg_tt6&cstp=mx1260x1200&ctp=s1260x1200&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=g9MZRJMq3MIQ7kNvwG9s-px&_nc_oc=AdrlLxcOnyRIV3Pp3hToheLOld0sky9R1lYjC7JsUS2hhJt1CLp9dH_3tazM1aMS7Bs&_nc_zt=23&_nc_ht=scontent.fdac154-1.fna&_nc_gid=PvdedYPcjCX37z4gRNZXpQ&_nc_ss=7b289&oh=00_AQDrU0wOBwcNysD_YP5UIDyVFMQaMbCn4wAjcWwvm2WRvg&oe=6A5283A6"
+                  class="img-fluid rounded"
+                  alt="বিজ্ঞাপন"
+                />
+              </div>
+            </div>
 
-          <!-- ═══════════════════════════════════════════════
-               RIGHT COLUMN: সর্বশেষ / জনপ্রিয় Tabs 4/12
-          ═══════════════════════════════════════════════ -->
-          <div class="col-12 col-md-4">
+            <!-- Sidebar Ad Container -->
+            <div class="text-center my-3">
+              <div class="sidebar-ad">
+                <div class="more-topics-header">
+                  <span class="more-topics-title">আরও দেখুন</span>
+                </div>
+                <div class="topic-list">
+                  <a href="#" class="topic-item">
+                    <span class="topic-name">Newspapers</span>
+                    <span class="topic-arrow">&#x203A;</span>
+                  </a>
+                  <a href="#" class="topic-item">
+                    <span class="topic-name">Islam</span>
+                    <span class="topic-arrow">&#x203A;</span>
+                  </a>
+                  <a href="#" class="topic-item">
+                    <span class="topic-name">Demographics</span>
+                    <span class="topic-arrow">&#x203A;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Latest / Popular Tabs -->
             <div class="tabs-widget bg-white border rounded p-3 shadow-sm">
               <!-- Tab Navigation -->
               <div
@@ -2454,15 +2177,26 @@
                 </div>
               </div>
             </div>
+            <!-- end tab-widget -->
           </div>
-          <!-- end right col -->
+          <!-- end right sidebar -->
         </div>
-        <!-- end row -->
+        <!-- end outer row -->
       </div>
-      <!-- end container-fluid -->
     </div>
-    <!-- end page-content -->
+    <!-- end page-wrapper -->
 
+    <div class="ad-slot">
+      <img
+        src="https://dsp-media.eskimi.com/upload/182149_1415106523_c9b2a8d97f87d2175d67d1c284aff25e.gif"
+        class="img-fluid rounded"
+        alt="বিজ্ঞাপন"
+      />
+    </div>
+    <div class="border_infinity"><div></div></div>
+    <div style="height: 400px; text-align: center">
+      <i class="fa fa-spin fa-spinner" style="font-size: 30px"></i>
+    </div>
     <footer class="site-footer">
       <!-- Top Nav Links -->
       <div class="border-bottom border-top">
