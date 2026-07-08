@@ -19,10 +19,8 @@
     />
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif+Bengali:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -1381,7 +1379,6 @@
                   border: 1px solid #eee;
                 "
               >
-                <!-- এখানে আপনার আসল গুগলের অ্যাড কোড বা ইমেজ বসাবেন -->
                 <img
                   src="https://tpc.googlesyndication.com/simgad/14683363709791443668"
                   class="img-fluid rounded"
@@ -1393,9 +1390,9 @@
             <!-- 2. Stories Card Section (ভিডিও ও ফটো স্টোরি) -->
             <div
               class="common-border-box border rounded-3 bg-white overflow-hidden mb-3"
+              style="max-height: 450px; overflow: hidden"
             >
               <div class="tab_block_stories position-relative">
-                <!-- Added position-relative -->
                 <!-- Tab Buttons -->
                 <div class="tab_bar_block_stories">
                   <ul
@@ -1458,11 +1455,15 @@
                 </div>
 
                 <!-- Tab Content Area -->
-                <div class="tab_block_view_stories p-2">
+                <div
+                  class="tab_block_view_stories p-2"
+                  style="max-height: 350px; overflow: hidden"
+                >
                   <!-- VIDEO STORIES TAB -->
                   <div data="video-view" class="tab-panel-stories">
                     <div
                       class="stories-slider d-flex flex-nowrap gap-2 overflow-x-auto pb-2 custom-slider"
+                      style="max-height: 330px; overflow-y: hidden"
                     >
                       <!-- Video Item 1 -->
                       <div
@@ -1479,7 +1480,7 @@
                               background: url(https://www.kalbela.com/assets/video_cover_photos/2026/07/02/cover_photo-5549.jpg);
                               background-size: cover;
                               background-position: center;
-                              height: 315px;
+                              height: 250px;
                             "
                           >
                             <div
@@ -1502,7 +1503,14 @@
                           </div>
                           <div
                             class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
+                            style="
+                              font-size: 14px;
+                              line-height: 1.3;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                            "
                           >
                             শিক্ষার্থীরাই সমস্যা বের করবে, তারাই সমাধান করবে:
                             শিক্ষা প্রতিমন্ত্রী
@@ -1524,7 +1532,7 @@
                               background: url(https://www.kalbela.com/assets/video_cover_photos/2026/07/02/cover_photo-5548.jpg);
                               background-size: cover;
                               background-position: center;
-                              height: 315px;
+                              height: 250px;
                             "
                           >
                             <div
@@ -1547,7 +1555,14 @@
                           </div>
                           <div
                             class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
+                            style="
+                              font-size: 14px;
+                              line-height: 1.3;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                            "
                           >
                             রোমের সড়কে বিএমডব্লিউতে আগুন, কালো ধোঁয়ায় ঢেকে
                             গেল এলাকা
@@ -1569,7 +1584,7 @@
                               background: url(https://www.kalbela.com/assets/video_cover_photos/2026/06/22/cover_photo-5506.jpg);
                               background-size: cover;
                               background-position: center;
-                              height: 315px;
+                              height: 250px;
                             "
                           >
                             <div
@@ -1592,98 +1607,17 @@
                           </div>
                           <div
                             class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
+                            style="
+                              font-size: 14px;
+                              line-height: 1.3;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                            "
                           >
                             'বেতন দে, নইলে মোদের বিষ দে'- স্লোগানে রাজপথে
                             শিক্ষকরা
-                          </div>
-                        </a>
-                      </div>
-                      <!-- Video Item 4 (Restored) -->
-                      <div
-                        class="story-item position-relative mb-3"
-                        style="width: 220px"
-                      >
-                        <a
-                          href="https://www.kalbela.com/video-stories/5470"
-                          class="text-decoration-none"
-                        >
-                          <div
-                            class="vidstocovr position-relative rounded"
-                            style="
-                              background: url(https://www.kalbela.com/assets/video_cover_photos/2026/06/11/cover_photo-5470.jpg);
-                              background-size: cover;
-                              background-position: center;
-                              height: 315px;
-                            "
-                          >
-                            <div
-                              class="play-icon position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center"
-                              style="width: 50px; height: 50px; z-index: 5"
-                            >
-                              <i
-                                class="fa-solid fa-circle-play text-white fs-1 shadow-sm"
-                              ></i>
-                            </div>
-                            <div
-                              class="video-hit position-absolute top-0 end-0 m-2 text-white px-2 py-1 rounded"
-                              style="
-                                background: rgba(0, 0, 0, 0.5);
-                                font-size: 12px;
-                              "
-                            >
-                              <i class="fa-solid fa-eye"></i> <span>6.5k</span>
-                            </div>
-                          </div>
-                          <div
-                            class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
-                          >
-                            ঢাবির বিজ্ঞান মেলা উদ্বোধনে এসে অতিথিদের সঙ্গে কুশল
-                            বিনিময় করলেন জুবাইদা রহমান
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- Video Item 5 (Restored) -->
-                      <div
-                        class="story-item position-relative mb-3"
-                        style="width: 220px"
-                      >
-                        <a
-                          href="https://www.kalbela.com/video-stories/5417"
-                          class="text-decoration-none"
-                        >
-                          <div
-                            class="vidstocovr position-relative rounded"
-                            style="
-                              background: url(https://www.kalbela.com/assets/video_cover_photos/2026/05/30/cover_photo-5417.jpg);
-                              background-size: cover;
-                              background-position: center;
-                              height: 315px;
-                            "
-                          >
-                            <img
-                              alt="play-icon"
-                              src="/assets/verified_icon/play-button-80X80.png"
-                              class="play-icon position-absolute top-50 start-50 translate-middle"
-                              style="width: 50px"
-                            />
-                            <div
-                              class="video-hit position-absolute top-0 end-0 m-2 text-white px-2 py-1 rounded"
-                              style="
-                                background: rgba(0, 0, 0, 0.5);
-                                font-size: 12px;
-                              "
-                            >
-                              <i class="fa-solid fa-eye"></i> <span>4.3k</span>
-                            </div>
-                          </div>
-                          <div
-                            class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
-                          >
-                            বাবা-মায়ের কবরে শ্রদ্ধা জানাতে এলেন তারেক রহমান
                           </div>
                         </a>
                       </div>
@@ -1698,6 +1632,7 @@
                   >
                     <div
                       class="stories-slider d-flex flex-nowrap gap-2 overflow-x-auto pb-2 custom-slider"
+                      style="max-height: 330px; overflow-y: hidden"
                     >
                       <!-- Photo Item 1 -->
                       <div
@@ -1714,7 +1649,7 @@
                               background: url(https://www.kalbela.com/assets/gallery/2024/10/10/1728564037.webp);
                               background-size: cover;
                               background-position: center;
-                              height: 315px;
+                              height: 250px;
                             "
                           >
                             <img
@@ -1725,7 +1660,14 @@
                           </div>
                           <div
                             class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
+                            style="
+                              font-size: 14px;
+                              line-height: 1.3;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                            "
                           >
                             ৬ বছর প্রেমের পর বিয়ে করছেন শিরিন শিলা
                           </div>
@@ -1746,7 +1688,7 @@
                               background: url(https://www.kalbela.com/assets/gallery/2024/03/22/1711116702.png);
                               background-size: cover;
                               background-position: center;
-                              height: 315px;
+                              height: 250px;
                             "
                           >
                             <img
@@ -1757,108 +1699,16 @@
                           </div>
                           <div
                             class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
+                            style="
+                              font-size: 14px;
+                              line-height: 1.3;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                            "
                           >
                             প্রিয়াঙ্কা চোপড়া
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- Photo Item 3 (Restored) -->
-                      <div
-                        class="story-item position-relative mb-3"
-                        style="width: 220px"
-                      >
-                        <a
-                          href="https://www.kalbela.com/photo-stories/187"
-                          class="text-decoration-none"
-                        >
-                          <div
-                            class="vidstocovr position-relative rounded"
-                            style="
-                              background: url(https://www.kalbela.com/assets/gallery/2024/03/16/1710573175.png);
-                              background-size: cover;
-                              background-position: center;
-                              height: 315px;
-                            "
-                          >
-                            <img
-                              src="/assets/verified_icon/photo-story.png"
-                              class="photo-icon position-absolute bottom-0 start-0 m-2"
-                              style="width: 30px"
-                            />
-                          </div>
-                          <div
-                            class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
-                          >
-                            বলিউডের ফিটনেস ফ্রিক অভিনেত্রী মালাইকা
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- Photo Item 4 (Restored) -->
-                      <div
-                        class="story-item position-relative mb-3"
-                        style="width: 220px"
-                      >
-                        <a
-                          href="https://www.kalbela.com/photo-stories/185"
-                          class="text-decoration-none"
-                        >
-                          <div
-                            class="vidstocovr position-relative rounded"
-                            style="
-                              background: url(https://www.kalbela.com/assets/gallery/2024/03/14/1710396032.png);
-                              background-size: cover;
-                              background-position: center;
-                              height: 315px;
-                            "
-                          >
-                            <img
-                              src="/assets/verified_icon/photo-story.png"
-                              class="photo-icon position-absolute bottom-0 start-0 m-2"
-                              style="width: 30px"
-                            />
-                          </div>
-                          <div
-                            class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
-                          >
-                            অনন্য রুপে সুহানা খান।
-                          </div>
-                        </a>
-                      </div>
-
-                      <!-- Photo Item 5 (Restored) -->
-                      <div
-                        class="story-item position-relative mb-3"
-                        style="width: 220px"
-                      >
-                        <a
-                          href="https://www.kalbela.com/photo-stories/182"
-                          class="text-decoration-none"
-                        >
-                          <div
-                            class="vidstocovr position-relative rounded"
-                            style="
-                              background: url(https://www.kalbela.com/assets/gallery/2024/03/11/1710157818.png);
-                              background-size: cover;
-                              background-position: center;
-                              height: 315px;
-                            "
-                          >
-                            <img
-                              src="/assets/verified_icon/photo-story.png"
-                              class="photo-icon position-absolute bottom-0 start-0 m-2"
-                              style="width: 30px"
-                            />
-                          </div>
-                          <div
-                            class="album_name text-dark fw-bold mt-2"
-                            style="font-size: 15px; line-height: 1.4"
-                          >
-                            জ্যাকুলিন ফার্নান্দেজ
                           </div>
                         </a>
                       </div>
@@ -1879,7 +1729,6 @@
                   border: 1px solid #eee;
                 "
               >
-                <!-- এখানে আপনার আসল গুগলের ২য় অ্যাড কোড বা ছবি বসাবেন -->
                 <img
                   src="https://scontent.fdac154-1.fna.fbcdn.net/v/t39.30808-6/488722985_1082857467217082_7268484966024785861_n.jpg?stp=dst-jpg_tt6&cstp=mx1260x1200&ctp=s1260x1200&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=g9MZRJMq3MIQ7kNvwG9s-px&_nc_oc=AdrlLxcOnyRIV3Pp3hToheLOld0sky9R1lYjC7JsUS2hhJt1CLp9dH_3tazM1aMS7Bs&_nc_zt=23&_nc_ht=scontent.fdac154-1.fna&_nc_gid=PvdedYPcjCX37z4gRNZXpQ&_nc_ss=7b289&oh=00_AQDrU0wOBwcNysD_YP5UIDyVFMQaMbCn4wAjcWwvm2WRvg&oe=6A5283A6"
                   class="img-fluid rounded"
@@ -1893,7 +1742,7 @@
     </section>
 
     <section class="bg-white mt-3">
-      <div class="container-fluid">
+      <div class="container">
         <!-- Video Gallery Slider Section -->
         <div class="row">
           <div class="col-md-12">
@@ -2106,433 +1955,324 @@
       </div>
     </section>
 
-    <section class="gallery-section py-4 my-3">
-      <div class="container-fluid">
-        <div class="gallery-wrap p-3">
-          <!-- Section Heading -->
+    <section class="bg-white py-4">
+      <div class="container">
+        <!-- AD Placeholder (Hidden on small screens, centered) -->
+        <div class="text-center mb-4 d-none d-lg-block">
           <div
-            class="section-heading mb-3 pb-2 border-bottom border-secondary d-flex align-items-center gap-2 text-white"
+            style="
+              background: #f0f0f0;
+              width: 100%;
+              max-width: 970px;
+              height: 90px;
+              margin: 0 auto;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px dashed #ccc;
+            "
           >
-            <i class="fa-regular fa-images fs-4"></i>
-            <span class="fw-bold font-20">ফটোগ্যালারি</span>
+            (Advertisement Banner 970x90)
           </div>
+        </div>
 
-          <div class="row g-3">
-            <!-- MAIN ALBUM -->
-            <div class="col-12 col-md-9 border-end border-secondary pe-md-3">
-              <div class="lead-album position-relative">
-                <!-- Main Presentation Carousel Wrapper -->
-                <div
-                  id="leadCarousel"
-                  class="carousel slide lead-carousel position-relative"
-                  data-bs-ride="false"
-                >
-                  <div class="carousel-inner">
-                    <div
-                      class="carousel-item"
-                      data-caption="কৃষ্ণচূড়া গাছের লাল আবহে সেজেছে প্রকৃতি।"
-                    >
-                      <a
-                        href="https://www.kalbela.com/photo-gallery/others/290"
-                      >
-                        <img
-                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
-                          alt="কৃষ্ণচূড়া গাছের লাল আবহে সেজেছে প্রকৃতি।"
-                          class="d-block w-100 object-fit-cover main-gallery-img"
-                        />
-                      </a>
-                    </div>
+        <div class="row g-4">
+          <!-- ==================== COLUMN 1: মতামত (Opinion) ==================== -->
+          <div class="col-md-4">
+            <div class="common-border-box" id="opinion-section">
+              <div class="menu-link">
+                <img
+                  src="https://via.placeholder.com/20x20/d60000/ffffff?text=★"
+                  alt="icon"
+                  draggable="false"
+                />
+                <span>মতামত</span>
+              </div>
 
-                    <div
-                      class="carousel-item active"
-                      data-caption="কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।"
-                    >
-                      <a
-                        href="https://www.kalbela.com/photo-gallery/others/290"
-                      >
-                        <img
-                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629698.webp"
-                          alt="কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।"
-                          class="d-block w-100 object-fit-cover main-gallery-img"
-                        />
-                      </a>
-                    </div>
-
-                    <div
-                      class="carousel-item"
-                      data-caption="ঝরে পড়া কৃষ্ণচূড়া ফুলের পাপড়ি।"
-                    >
-                      <a
-                        href="https://www.kalbela.com/photo-gallery/others/290"
-                      >
-                        <img
-                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629711.webp"
-                          alt="ঝরে পড়া কৃষ্ণচূড়া ফুলের পাপড়ি।"
-                          class="d-block w-100 object-fit-cover main-gallery-img"
-                        />
-                      </a>
-                    </div>
+              <!-- Opinion Item 1 -->
+              <div class="opinion-card">
+                <div class="flex-shrink-0 text-center">
+                  <div class="opinion-img-wrap mx-auto">
+                    <img
+                      src="https://via.placeholder.com/80/333/fff?text=Photo"
+                      alt="Author"
+                    />
                   </div>
-
-                  <!-- Right Floating Vertical Social Action Strip -->
-                  <div class="share-column-overlay">
-                    <a
-                      class="social-overlay-btn fb"
-                      href="https://www.facebook.com/sharer.php?u=https://www.kalbela.com/photo-gallery/others/290"
-                      target="_blank"
-                      title="Share on Facebook"
-                      ><i class="fa-brands fa-facebook-f"></i
-                    ></a>
-                    <a
-                      class="social-overlay-btn ig"
-                      href="https://www.instagram.com/?url=https://www.kalbela.com/photo-gallery/others/290"
-                      target="_blank"
-                      title="Share on Instagram"
-                      ><i class="fa-brands fa-instagram"></i
-                    ></a>
-                    <a
-                      class="social-overlay-btn tw"
-                      href="https://www.twitter.com/share?url=https://www.kalbela.com/photo-gallery/others/290"
-                      target="_blank"
-                      title="Share on Twitter"
-                      ><i class="fa-brands fa-x-twitter"></i
-                    ></a>
-                  </div>
-
-                  <!-- Bottom Right Expand Icon Overlay -->
-                  <i
-                    class="fa-solid fa-expand expand-icon-overlay"
-                    title="Expand View"
-                  ></i>
-
-                  <!-- Bottom Centered Text Caption Overlay Bar -->
-                  <p
-                    class="lead-caption-bar-overlay m-0 text-center"
-                    id="leadCaption"
-                  >
-                    কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।
-                  </p>
-
-                  <!-- Floating Slider Interface Controls -->
-                  <button
-                    class="carousel-control-prev custom-nav-btn"
-                    type="button"
-                    data-bs-target="#leadCarousel"
-                    data-bs-slide="prev"
-                  >
-                    <i class="fa-solid fa-chevron-left"></i>
-                  </button>
-                  <button
-                    class="carousel-control-next custom-nav-btn"
-                    type="button"
-                    data-bs-target="#leadCarousel"
-                    data-bs-slide="next"
-                  >
-                    <i class="fa-solid fa-chevron-right"></i>
-                  </button>
                 </div>
-
-                <!-- Interactive Action Panel and Thumbnail Row -->
-                <div class="d-flex flex-column align-items-center mt-2 gap-2">
-                  <div class="share-row-text text-secondary small fw-medium">
-                    <i class="fa-regular fa-share-from-square me-1"></i>Share
-                  </div>
-
-                  <div
-                    class="thumb-strip-container d-flex gap-2"
-                    id="thumbStrip"
+                <div class="opinion-content">
+                  <a href="#"
+                    ><h4>
+                      সরকারি ব্যানারে ছবি সরানোর পেছনের রহস্য ও তারেক রহমানের
+                      ব্র্যান্ডিং!
+                    </h4></a
                   >
-                    <img
-                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
-                      data-slide-to="0"
-                      alt="thumb"
-                      class="gallery-mini-thumb"
-                    />
-                    <img
-                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629698.webp"
-                      data-slide-to="1"
-                      class="gallery-mini-thumb active"
-                      alt="thumb"
-                    />
-                    <img
-                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629711.webp"
-                      data-slide-to="2"
-                      alt="thumb"
-                      class="gallery-mini-thumb"
-                    />
-                  </div>
+                  <p>
+                    নতুন বাংলাদেশের প্রধানমন্ত্রী তারেক রহমান। অনেক আশা নিয়ে
+                    জাতি তাকে প্রধানমন্ত্রী নির্বাচিত করেছে। দীর্ঘ ফ্যাসিবাদী
+                    শাসন ও লুটপাটে জীর্ণ অর্থনীতি...
+                  </p>
                 </div>
               </div>
+
+              <!-- Opinion Item 2 -->
+              <div class="opinion-card">
+                <div class="flex-shrink-0 text-center">
+                  <div class="opinion-img-wrap mx-auto">
+                    <img
+                      src="https://via.placeholder.com/80/555/fff?text=SI"
+                      alt="Author"
+                    />
+                  </div>
+                  <small
+                    class="d-block mt-1"
+                    style="font-size: 12px; font-weight: bold"
+                    >এস আই শরীফ</small
+                  >
+                </div>
+                <div class="opinion-content">
+                  <a href="#"><h4>ঝরে পড়ার ‘মহামারি’ থামবে কবে</h4></a>
+                  <p>
+                    দেশে শিক্ষার অগ্রগতির গল্প আমরা প্রায়ই শুনি এবং বলি।
+                    সাক্ষরতার হার বেড়েছে, স্কুলে ভর্তি বেড়েছে, নতুন নতুন ভবন
+                    হয়েছে...
+                  </p>
+                </div>
+              </div>
+
+              <!-- Opinion Item 3 -->
+              <div class="opinion-card">
+                <div class="flex-shrink-0 text-center">
+                  <div class="opinion-img-wrap mx-auto">
+                    <img
+                      src="https://via.placeholder.com/80/777/fff?text=News"
+                      alt="Author"
+                    />
+                  </div>
+                </div>
+                <div class="opinion-content">
+                  <a href="#"
+                    ><h4>
+                      জুলাইয়ের চেতনা : ন্যায়ভিত্তিক রাষ্ট্র প্রতিষ্ঠার অঙ্গীকার
+                    </h4></a
+                  >
+                  <p>
+                    বাংলাদেশের রাষ্ট্রগঠনের ইতিহাস মূলত অধিকার, ন্যায়বিচার ও
+                    মর্যাদা প্রতিষ্ঠার দীর্ঘ সংগ্রামের ইতিহাস। ভাষা আন্দোলন থেকে
+                    শুরু করে...
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pagination dots -->
+              <div class="text-center mt-2">
+                <span
+                  class="badge bg-dark rounded-circle"
+                  style="width: 10px; height: 10px; padding: 0"
+                ></span>
+                <span
+                  class="badge bg-secondary rounded-circle"
+                  style="width: 10px; height: 10px; padding: 0"
+                ></span>
+                <span
+                  class="badge bg-secondary rounded-circle"
+                  style="width: 10px; height: 10px; padding: 0"
+                ></span>
+              </div>
             </div>
+          </div>
 
-            <!-- SIDEBAR -->
-            <div class="col-12 col-md-3">
-              <div class="side-scroll-viewport" id="sideScrollViewport">
+          <!-- ==================== COLUMN 2: অনলাইন জরিপ (Online Poll) ==================== -->
+          <div class="col-md-4">
+            <div class="common-border-box" id="poll-section">
+              <div class="poll-header">
+                <img
+                  src="https://via.placeholder.com/20x20/b32819/ffffff?text=✓"
+                  alt="icon"
+                />
+                <span>অনলাইন জরিপ</span>
+              </div>
+
+              <div class="poll-date">
+                <i class="fa-regular fa-clock me-1"></i> ০৪ জুলাই ২০২৬, ০৮:১৪
+                এএম
+                <span class="float-end" style="cursor: pointer"
+                  ><i class="fa-solid fa-download"></i
+                ></span>
+              </div>
+
+              <div class="poll-img">
+                <img
+                  src="https://via.placeholder.com/600x300/102e42/ffffff?text=Argentina+Football+Team"
+                  alt="Poll Image"
+                />
+              </div>
+
+              <div class="poll-question">
+                আর্জেন্টিনার জালে কেপ-ভার্দে গোল দেওয়ায় শিশু চিকিৎসক ডা.
+                মাহফুজার রহমান বাঁধনের আগামী এক বছর বিনামূল্যে রোগী দেখার
+                ঘোষণাটিকে কি দারুণ মানবিক উদ্যোগ বলে মনে করেন?
+              </div>
+
+              <div class="poll-options">
+                <label> <input type="radio" name="poll_option" /> হ্যাঁ </label>
+                <label> <input type="radio" name="poll_option" /> না </label>
+                <label>
+                  <input type="radio" name="poll_option" /> মন্তব্য নেই
+                </label>
+              </div>
+
+              <div class="poll-total-votes">মোট ভোটদাতাঃ ১,৬৮৩ জন</div>
+
+              <div class="social-icons">
+                <a href="#" class="fb-share"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="#" class="msg-share"
+                  ><i class="fa-brands fa-facebook-messenger"></i
+                ></a>
+                <a href="#" class="wa-share"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== COLUMN 3: সর্বশেষ/জনপ্রিয় (Tabs) ==================== -->
+          <div class="col-md-4">
+            <div class="common-border-box" id="news-tabs">
+              <!-- Tab Navigation -->
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="latest-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#latest"
+                    type="button"
+                    role="tab"
+                  >
+                    সর্বশেষ
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="popular-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#popular"
+                    type="button"
+                    role="tab"
+                  >
+                    জনপ্রিয়
+                  </button>
+                </li>
+              </ul>
+
+              <!-- Tab Contents -->
+              <div class="tab-content" id="myTabContent">
+                <!-- Latest News Tab -->
                 <div
-                  class="other-album-list side-scroll-track"
-                  id="sideScrollTrack"
+                  class="tab-pane fade show active"
+                  id="latest"
+                  role="tabpanel"
                 >
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album active"
-                    data-id="0"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          রাজবাড়ীর পথে আগুনরাঙা কৃষ্ণচূড়া
-                        </h4>
-                      </div>
+                  <div class="news-item">
+                    <div class="news-sl">১</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >আর্জেন্টিনার প্রতিপক্ষ মিসরের ভাগ্য বদলেছেন যে যমজ দুই
+                        ভাই</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">২</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >বর্জ্য ব্যবস্থাপনায় ডিএসসিসির ‘ক্লিন কেয়ার’ অ্যাপ
+                        চালু</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৩</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >ফ্রান্স প্রেসিডেন্টের সফরের মধ্যেই সিরিয়ায় জোড়া
+                        বিস্ফোরণ</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৪</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >গাজীপুর সিটি করপোরেশনে মশাবাহিত রোগ প্রতিরোধে সমন্বয়
+                        সভা</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৫</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >যিনি ফিলিস্তিনিদের কষ্ট অনুভব করেন না, তিনি মানুষ নন:
+                        মিসরের কোচ</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৬</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >প্রধানমন্ত্রীর সঙ্গে ক্যান্সার আক্রান্ত সন্তানসহ
+                        জুলাইয়ে শহীদের মায়ের সাক্ষাৎ, চাকরির আশ্বাস</a
+                      >
                     </div>
                   </div>
 
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="1"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/04/29/1777463885.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/04/29/1777463885.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          কুয়াকাটায় পর্যটকদের বাঁধভাঙা উল্লাস
-                        </h4>
-                      </div>
+                  <a href="#" class="view-all-btn">সর্বশেষ সব খবর</a>
+                </div>
+
+                <!-- Popular News Tab -->
+                <div class="tab-pane fade" id="popular" role="tabpanel">
+                  <div class="news-item">
+                    <div class="news-sl">১</div>
+                    <div class="news-title">
+                      <a href="#">খামেনির শেষ বিদায়ে দেখা গেল আহমাদিনেজাদকে</a>
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">২</div>
+                    <div class="news-title">
+                      <a href="#">এনসিপির ৫ নেতা গ্রেপ্তার</a>
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৩</div>
+                    <div class="news-title">
+                      <a href="#">এক উপদেষ্টাসহ আওয়ামী লীগের ৪ নেতার পদত্যাগ</a>
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৪</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >দেশের সব মাদ্রাসার জন্য জরুরি নির্দেশনা জারি</a
+                      >
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-sl">৫</div>
+                    <div class="news-title">
+                      <a href="#"
+                        >আর্জেন্টিনা-পর্তুগাল ২০৩০ বিশ্বকাপ খেলবে বাছাইপর্ব
+                        ছাড়াই</a
+                      >
                     </div>
                   </div>
 
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="2"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original=""
-                          src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%27200%27%20height%3D%27120%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23333%27%2F%3E%3C%2Fsvg%3E"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          কালবৈশাখীর তাণ্ডবে কৃষকের দুঃসহ লড়াই
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="3"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/04/14/1776174163.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/04/14/1776174163.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          চট্টগ্রামে বৈশাখ উদযাপন
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="4"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/04/04/1775281978.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/04/04/1775281978.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          খরচ কম, লাভ বেশি: সূর্যমুখী চাষে কৃষকদের ঝোঁক
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="5"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/04/01/1775055624.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/04/01/1775055624.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          ডিজেল না পাওয়ায় কর্ণফুলী নদীর তীরে অসংখ্য ট্রলার
-                          নোঙর করে রাখা হয়েছে।
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="6"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/03/23/1774269837.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/03/23/1774269837.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          কক্সবাজার এখন উৎসবের নগরী
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="7"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/03/12/1773292048.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/03/12/1773292048.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          ত্রয়োদশ জাতীয় সংসদের প্রথম অধিবেশন
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="8"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/02/13/1770972646.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/02/13/1770972646.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          বিএনপি চেয়ারম্যান তারেক রহমান নৌবাহিনী সদর দপ্তর
-                          মসজিদে জুমার নামাজ আদায় করেন।
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="sub2-lead-content mb-3 home-photo-album"
-                    data-id="9"
-                  >
-                    <div
-                      class="img-content position-relative text-center rounded overflow-hidden"
-                    >
-                      <span class="imgWrep">
-                        <img
-                          alt="photo"
-                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
-                          data-original="//www.kalbela.com/assets/gallery/2026/01/05/1767598134.webp"
-                          src="//www.kalbela.com/assets/gallery/2026/01/05/1767598134.webp"
-                        />
-                        <i
-                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
-                        ></i>
-                      </span>
-                      <div class="side-title-overlay text-start">
-                        <h4 class="title overlay-headline m-0 text-truncate-2">
-                          কমছে মধু বৃক্ষ খেজুর গাছ ও গাছি
-                        </h4>
-                      </div>
-                    </div>
-                  </div>
+                  <a href="#" class="view-all-btn">জনপ্রিয় সব খবর</a>
                 </div>
               </div>
             </div>
@@ -3943,6 +3683,441 @@
       <!-- /.container-fluid (group 3) -->
     </div>
     <!-- /.page-wrap -->
+
+    <section class="gallery-section py-4 my-3">
+      <div class="container-fluid">
+        <div class="gallery-wrap p-3">
+          <!-- Section Heading -->
+          <div
+            class="section-heading mb-3 pb-2 border-bottom border-secondary d-flex align-items-center gap-2 text-white"
+          >
+            <i class="fa-regular fa-images fs-4"></i>
+            <span class="fw-bold font-20">ফটোগ্যালারি</span>
+          </div>
+
+          <div class="row g-3">
+            <!-- MAIN ALBUM -->
+            <div class="col-12 col-md-9 border-end border-secondary pe-md-3">
+              <div class="lead-album position-relative">
+                <!-- Main Presentation Carousel Wrapper -->
+                <div
+                  id="leadCarousel"
+                  class="carousel slide lead-carousel position-relative"
+                  data-bs-ride="false"
+                >
+                  <div class="carousel-inner">
+                    <div
+                      class="carousel-item"
+                      data-caption="কৃষ্ণচূড়া গাছের লাল আবহে সেজেছে প্রকৃতি।"
+                    >
+                      <a
+                        href="https://www.kalbela.com/photo-gallery/others/290"
+                      >
+                        <img
+                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
+                          alt="কৃষ্ণচূড়া গাছের লাল আবহে সেজেছে প্রকৃতি।"
+                          class="d-block w-100 object-fit-cover main-gallery-img"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="carousel-item active"
+                      data-caption="কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।"
+                    >
+                      <a
+                        href="https://www.kalbela.com/photo-gallery/others/290"
+                      >
+                        <img
+                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629698.webp"
+                          alt="কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।"
+                          class="d-block w-100 object-fit-cover main-gallery-img"
+                        />
+                      </a>
+                    </div>
+
+                    <div
+                      class="carousel-item"
+                      data-caption="ঝরে পড়া কৃষ্ণচূড়া ফুলের পাপড়ি।"
+                    >
+                      <a
+                        href="https://www.kalbela.com/photo-gallery/others/290"
+                      >
+                        <img
+                          src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629711.webp"
+                          alt="ঝরে পড়া কৃষ্ণচূড়া ফুলের পাপড়ি।"
+                          class="d-block w-100 object-fit-cover main-gallery-img"
+                        />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Right Floating Vertical Social Action Strip -->
+                  <div class="share-column-overlay">
+                    <a
+                      class="social-overlay-btn fb"
+                      href="https://www.facebook.com/sharer.php?u=https://www.kalbela.com/photo-gallery/others/290"
+                      target="_blank"
+                      title="Share on Facebook"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a
+                      class="social-overlay-btn ig"
+                      href="https://www.instagram.com/?url=https://www.kalbela.com/photo-gallery/others/290"
+                      target="_blank"
+                      title="Share on Instagram"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a
+                      class="social-overlay-btn tw"
+                      href="https://www.twitter.com/share?url=https://www.kalbela.com/photo-gallery/others/290"
+                      target="_blank"
+                      title="Share on Twitter"
+                      ><i class="fa-brands fa-x-twitter"></i
+                    ></a>
+                  </div>
+
+                  <!-- Bottom Right Expand Icon Overlay -->
+                  <i
+                    class="fa-solid fa-expand expand-icon-overlay"
+                    title="Expand View"
+                  ></i>
+
+                  <!-- Bottom Centered Text Caption Overlay Bar -->
+                  <p
+                    class="lead-caption-bar-overlay m-0 text-center"
+                    id="leadCaption"
+                  >
+                    কৃষ্ণচূড়া ফুলের সমারোহ দেখতে ভিড় জমাচ্ছেন দর্শনার্থীরা।
+                  </p>
+
+                  <!-- Floating Slider Interface Controls -->
+                  <button
+                    class="carousel-control-prev custom-nav-btn"
+                    type="button"
+                    data-bs-target="#leadCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button
+                    class="carousel-control-next custom-nav-btn"
+                    type="button"
+                    data-bs-target="#leadCarousel"
+                    data-bs-slide="next"
+                  >
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+
+                <!-- Interactive Action Panel and Thumbnail Row -->
+                <div class="d-flex flex-column align-items-center mt-2 gap-2">
+                  <div class="share-row-text text-secondary small fw-medium">
+                    <i class="fa-regular fa-share-from-square me-1"></i>Share
+                  </div>
+
+                  <div
+                    class="thumb-strip-container d-flex gap-2"
+                    id="thumbStrip"
+                  >
+                    <img
+                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
+                      data-slide-to="0"
+                      alt="thumb"
+                      class="gallery-mini-thumb"
+                    />
+                    <img
+                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629698.webp"
+                      data-slide-to="1"
+                      class="gallery-mini-thumb active"
+                      alt="thumb"
+                    />
+                    <img
+                      src="https://www.kalbela.com/assets/gallery/2026/05/01/1777629711.webp"
+                      data-slide-to="2"
+                      alt="thumb"
+                      class="gallery-mini-thumb"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="col-12 col-md-3">
+              <div class="side-scroll-viewport" id="sideScrollViewport">
+                <div
+                  class="other-album-list side-scroll-track"
+                  id="sideScrollTrack"
+                >
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album active"
+                    data-id="0"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/05/01/1777629686.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          রাজবাড়ীর পথে আগুনরাঙা কৃষ্ণচূড়া
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="1"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/04/29/1777463885.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/04/29/1777463885.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          কুয়াকাটায় পর্যটকদের বাঁধভাঙা উল্লাস
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="2"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original=""
+                          src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%27200%27%20height%3D%27120%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Crect%20width%3D%27100%25%27%20height%3D%27100%25%27%20fill%3D%27%23333%27%2F%3E%3C%2Fsvg%3E"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          কালবৈশাখীর তাণ্ডবে কৃষকের দুঃসহ লড়াই
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="3"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/04/14/1776174163.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/04/14/1776174163.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          চট্টগ্রামে বৈশাখ উদযাপন
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="4"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/04/04/1775281978.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/04/04/1775281978.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          খরচ কম, লাভ বেশি: সূর্যমুখী চাষে কৃষকদের ঝোঁক
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="5"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/04/01/1775055624.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/04/01/1775055624.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          ডিজেল না পাওয়ায় কর্ণফুলী নদীর তীরে অসংখ্য ট্রলার
+                          নোঙর করে রাখা হয়েছে।
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="6"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/03/23/1774269837.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/03/23/1774269837.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          কক্সবাজার এখন উৎসবের নগরী
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="7"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/03/12/1773292048.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/03/12/1773292048.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          ত্রয়োদশ জাতীয় সংসদের প্রথম অধিবেশন
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="8"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/02/13/1770972646.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/02/13/1770972646.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          বিএনপি চেয়ারম্যান তারেক রহমান নৌবাহিনী সদর দপ্তর
+                          মসজিদে জুমার নামাজ আদায় করেন।
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="sub2-lead-content mb-3 home-photo-album"
+                    data-id="9"
+                  >
+                    <div
+                      class="img-content position-relative text-center rounded overflow-hidden"
+                    >
+                      <span class="imgWrep">
+                        <img
+                          alt="photo"
+                          class="img-fluid thumb_img lazy side-gallery-img w-100 object-fit-cover"
+                          data-original="//www.kalbela.com/assets/gallery/2026/01/05/1767598134.webp"
+                          src="//www.kalbela.com/assets/gallery/2026/01/05/1767598134.webp"
+                        />
+                        <i
+                          class="fa-regular fa-images position-absolute end-0 bottom-0 text-white p-2 fs-6 z-3"
+                        ></i>
+                      </span>
+                      <div class="side-title-overlay text-start">
+                        <h4 class="title overlay-headline m-0 text-truncate-2">
+                          কমছে মধু বৃক্ষ খেজুর গাছ ও গাছি
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer
       data-added-inside="1"

@@ -1,5 +1,3 @@
-/* ফন্ট ও টেক্সট সাইজ */
-/* --- Fixes the whole page font and overrides Bootstrap defaults --- */
 /* --- Fixes the whole page font without breaking icon libraries --- */
 html,
 body,
@@ -19,67 +17,8 @@ body {
   color: #212529;
   -webkit-text-size-adjust: 100%;
 }
-/* Fixes top nav text size and makes them bold */
-#top-nav ul li a,
-.menu-links a {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  line-weight: 1.2 !important;
-}
 
-/* Fixes sub-navigation / quick links bar below header */
-.quick-links a {
-  font-size: 15px !important;
-  font-weight: 600 !important;
-}
-/* Bold headings for main news items, side grids, and category streams */
-.title,
-.title a,
-.small-news-card h5 a,
-.overlay-headline {
-  font-size: 1.15rem !important; /* Calibrated Bengali title display scale */
-  font-weight: 700 !important;
-  line-height: 1.45 !important;
-}
-
-/* Featured / Lead News Headings (Large text) */
-.lead-news .main-title a,
-.main-title a,
-.sp-menu-title h2 a {
-  font-size: 24px !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-}
-/* Softens description text weights to match reading layouts */
-.summery {
-  font-size: 0.9rem !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-  color: #3f3f46 !important;
-}
-/* Category blocks and widget title rules */
-.category-header span.cat-name,
-.sidebar-widget-title {
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
-}
-
-/* Small dropdown panels and select items text adjustments */
-.archive-widget select,
-.area-news-widget select,
-.btn-arch {
-  font-size: 0.85rem !important;
-  font-weight: 600 !important;
-}
-
-/* Calendar numerical layouts */
-.archive-calendar th,
-.archive-calendar td {
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-}
-
-/* Fixes Bootstrap custom CSS variables */
+/* Fixes Bootstrap custom CSS variables that ignore the font family */
 :root {
   --bs-body-font-family:
     "SolaimanLipi", "Noto Serif Bengali", sans-serif !important;
@@ -87,16 +26,9 @@ body {
   --pollOptionRadioBgActive: #e3e4e8;
   --pollOptionRadioBorder: #c7cad1;
   --pollOptionRadioBorderActive: #c7cad1;
-  --bs-font-sans-serif:
-    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-font-size: 1rem !important;
+  --bs-body-font-weight: 400 !important;
+  --bs-body-line-height: 1.5 !important;
 }
 
 header section.py-3 {
@@ -634,48 +566,72 @@ HAMBURGER MENU
 /* Container Layout */
 .video-slider-container {
   position: relative;
+  overflow: hidden;
   width: 100%;
 }
 
 /* Scrollable Horizontal Track */
 .video-slider-track {
   display: flex;
-  gap: 16px;
+  gap: 14px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Hides scrollbar on Firefox */
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  padding-bottom: 5px;
 }
 .video-slider-track::-webkit-scrollbar {
-  display: none; /* Hides scrollbar on Chrome, Safari, and Opera */
+  display: none;
 }
 
 /* Individual Slides */
 .video-slide-item {
-  flex: 0 0 280px; /* Locked slide item width */
-  scroll-snap-align: start;
+  flex: 0 0 calc((100% - 70px) / 6);
+  min-width: calc((100% - 70px) / 6);
 }
 
+.video-slider-nav {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  transform: translateY(-50%);
+  z-index: 20;
+
+  pointer-events: none;
+}
 /* Video Thumbnail Box */
 .vid-single {
-  width: 100%;
-  height: 160px;
-  background-color: #f1f1f1;
+  height: 150px;
   border-radius: 6px;
   overflow: hidden;
 }
 
+.vid-single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.vid-single:hover img {
+  transform: scale(1.05);
+}
 /* Play Icon Positioning Overlay */
 .play-icon-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 40px;
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 .vid-single:hover .play-icon-overlay {
   transform: translate(-50%, -50%) scale(1.1);
@@ -684,14 +640,13 @@ HAMBURGER MENU
 
 /* Title Styling */
 .video-title {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #111;
   margin-top: 10px;
-  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Truncates title to exactly two lines cleanly */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -701,17 +656,17 @@ HAMBURGER MENU
 
 /* Slider Controls Button Layout */
 .video-slider-nav button {
-  position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  pointer-events: auto;
+
+  width: 42px;
+  height: 42px;
+
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  cursor: pointer;
+  border: none;
+
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1021,23 +976,6 @@ HAMBURGER MENU
 .category-header .cat-more:hover {
   color: var(--kb-orange);
 }
-/* .category-ad {
-  margin: 25px 0;
-  text-align: center;
-}
-.sidebar-column {
-  position: sticky;
-  top: 90px;
-}
-.category-ad .img_ad {
-  width: 300px;
-  height: 250px;
-  display: inline-block;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  object-fit: cover;
-} */
 
 /* ---- generic image wrapper ---- */
 .imgWrep {
@@ -1562,6 +1500,12 @@ HAMBURGER MENU
   white-space: nowrap;
 }
 
+@media (max-width: 1200px) {
+  .video-slide-item {
+    flex: 0 0 25%;
+    min-width: 25%;
+  }
+}
 @media (max-width: 1199px) {
   /* Prevent mega-menu container blowout on mid-range laptop screen configurations */
   .all-menu {
@@ -1615,6 +1559,10 @@ HAMBURGER MENU
 
   .border-end-divider {
     border-right: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .video-slide-item {
+    flex: 0 0 33.333%;
+    min-width: 33.333%;
   }
 }
 
@@ -1804,6 +1752,11 @@ Story
     width: 96px;
     height: 68px;
   }
+
+  .video-slide-item {
+    flex: 0 0 60%;
+    min-width: 60%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1835,5 +1788,9 @@ Story
 
   .small-news-card h5 {
     font-size: 18px;
+  }
+  .video-slide-item {
+    flex: 0 0 82%;
+    min-width: 82%;
   }
 }
