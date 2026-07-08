@@ -1,0 +1,1013 @@
+/* 1. Normal/Regular Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Normal.ttf") format("truetype");
+  font-weight: 400; /* normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Bold Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Bold.ttf") format("truetype");
+  font-weight: 700; /* bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 3. Thin Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Thin.ttf") format("truetype");
+  font-weight: 300; /* light/thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Font Application Rules */
+body,
+.tabs-widget {
+  font-family: "SolaimanLipi", Arial, sans-serif !important;
+}
+
+header section.py-3 {
+  position: relative;
+  z-index: 1200; /* বুটস্ট্র্যাপের sticky-top (1020) এর চেয়ে বেশি রাখা হয়েছে */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #c00000;
+}
+.ad-wrapper {
+  max-width: 970px; /* Maximum size matching Kalbela's desktop ad */
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Ensures images look sharp and don't distort */
+.ad-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ======================
+Top Bar
+====================== */
+
+.top-links .nav-link {
+  color: #555;
+  padding: 0.2rem 0.75rem;
+  font-size: 14px;
+}
+
+.top-links .nav-link:hover {
+  color: #c00000;
+}
+
+/*=====================
+MID HEADER
+=====================*/
+
+.quick-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-links::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  padding: 8px 10px;
+  display: inline-block;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.quick-links a:hover {
+  color: #c40000;
+}
+
+/*==============================
+SOCIAL MEGA MENU
+===============================*/
+
+.social-mega {
+  width: 100%;
+  max-width: 800px;
+  left: 50% !important;
+  top: 50% !important; /* Forces it right below the header row */
+  transform: translateX(-50%) !important;
+  border-radius: 12px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.25s;
+}
+
+.social-item i {
+  width: 22px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.social-item:hover {
+  background: #f8f9fa;
+  color: #c40000;
+}
+
+.social-mega h6 {
+  font-weight: 700;
+}
+
+.social-mega hr {
+  margin: 1.5rem 0;
+}
+
+.goog-te-banner-frame,
+.goog-te-banner,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ======================
+Header Icons
+====================== */
+
+.header-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.header-icon:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   MAIN NAVBAR RESPONSIVE WRAPPING & DROPDOWN FIXES
+   ========================================================================== */
+
+#top-nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+  z-index: 1060; /* Keeps it above standard page elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: visible !important;
+}
+
+#top-nav ul li.nav-active a {
+  color: #c40000 !important; /* Makes the text red */
+  border-bottom: 3px solid #c40000; /* Adds a red underline */
+  padding-bottom: 2px;
+}
+
+#top-nav .all-mega-menu-panel {
+  max-height: calc(
+    100vh - 50px
+  ); /* Restricts the menu from spilling below the user's viewport */
+  overflow-y: auto; /* Adds a clean, independent scrollbar inside the menu grid if it has too many links on small devices */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  padding: 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Adjust based on your site width */
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.sticky-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px; /* Space between date and home icon */
+  border-right: 1px solid #ddd; /* Match the divider line in image 1 */
+  padding-right: 15px;
+}
+
+.sticky-logo {
+  height: 32px; /* Adjust size to match your font height */
+  width: auto;
+}
+
+.sticky-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #333;
+  font-family: sans-serif; /* Use your site's Bengali font */
+}
+
+.sticky-date .day {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Ensure the primary wrapper allows children links to naturally wrap dynamically */
+#top-nav .flex-wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  row-gap: 8px; /* Adds elegant breathing room if lines split on small widths */
+}
+
+#top-nav ul li a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  transition: color 0.2s ease-in-out;
+}
+
+#top-nav ul li a:hover {
+  color: #c40000 !important;
+}
+
+/* Base Panel Styling */
+.all-mega-menu-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 50% !important;
+  width: 96vw !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px !important;
+  margin-top: 12px; /* Leaves clean room for the indicator arrow */
+  z-index: 99999 !important;
+  max-width: 1200px !important;
+  transform: translateX(-50%) !important;
+  box-sizing: border-box;
+}
+
+/* Elegant Top Pointer Arrow CSS */
+.all-mega-menu-panel::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 18px; /* Perfectly positions arrow below the right-side hamburger button */
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  border-left: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+  z-index: 1;
+}
+
+.style-dropdown-links li {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Link Hover/Typography Styling */
+.style-dropdown-links li a {
+  font-size: 13px !important; /* Reduced base mobile sizing to match reference design line breaks */
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333333 !important;
+  transition: color 0.15s ease-in-out;
+  text-align: left;
+  white-space: normal !important; /* Allows multi-word strings to drop down cleanly instead of colliding */
+  word-break: break-word;
+  display: block;
+}
+
+.style-dropdown-links li a:hover {
+  color: #dc3545 !important; /* Changes theme accent color on cursor hover */
+}
+/* ── PAGE WRAPPER ── */
+.page-wrapper {
+  background: #fff;
+  /* background: #f5f5f5; */
+  padding: 15px 0 30px;
+}
+
+/* ── BREADCRUMB ── */
+.news-breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+.news-breadcrumb li a {
+  color: #333;
+  font-weight: 600;
+}
+.news-breadcrumb li a:hover {
+  color: #c00000;
+}
+.news-breadcrumb .sep {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* ── REPORTER INFO ── */
+.rpt-info-block {
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.rpt-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+.news-time-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 3px;
+}
+.news-time-item svg {
+  flex-shrink: 0;
+}
+.edition-badge {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ── RELATED NEWS ── */
+.related-title {
+  display: inline-block;
+  border-left: 5px solid #959595;
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 12px 0 8px;
+  line-height: 20px;
+}
+.related-news-box {
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background: #fff;
+  padding: 8px;
+}
+.related-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #e2e2e2;
+}
+.related-item:last-child {
+  border-bottom: none;
+}
+.related-item .d-flex {
+  gap: 8px;
+}
+.related-item .img-wrap {
+  width: 75px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.related-item .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.related-item h4.title {
+  font-size: 13px;
+  line-height: 19px;
+  margin: 0;
+  color: #222;
+  font-weight: 600;
+}
+.related-item:hover h4.title {
+  color: #c00000;
+}
+
+/* ── ARTICLE AREA ── */
+.article-card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+}
+
+.article-headline h1 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* Share row */
+.share-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns everything to the right side */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.share-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Centers the icon */
+  width: 36px; /* Forces perfect square base */
+  height: 36px; /* Forces perfect square base */
+  border-radius: 50%; /* Makes it a perfect circle */
+  font-size: 16px; /* Increases icon size slightly inside circle */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.share-icon-btn:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* Updated Brand Background Colors */
+.share-icon-btn.fb {
+  background: #4267b2;
+}
+.share-icon-btn.msg {
+  background: #006aff;
+}
+.share-icon-btn.wa {
+  background: #25d366;
+}
+.share-icon-btn.tw {
+  background: #000000;
+} /* Matches current X styling in image */
+.share-icon-btn.link {
+  background: #1f6036;
+} /* Dark green copy link color */
+.share-icon-btn.print {
+  background: #222222;
+}
+
+/* Font resizing buttons container */
+.font-resize {
+  display: flex;
+  gap: 8px;
+}
+
+.font-resize span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #333333;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Feature image */
+.feature-image-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+.feature-image-wrap img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+.img-caption {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  padding: 7px 8px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e2e2e2;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Article body */
+.article-body p {
+  font-size: 18px;
+  line-height: 32px;
+  color: #222;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+/* Tags */
+.tags-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags-list li a {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #eee;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #333;
+  transition: background 0.2s;
+}
+.tags-list li a:hover {
+  background: #d8d8d8;
+  color: #000;
+}
+
+/* Google News strip */
+.google-news-strip {
+  background: #f5f5f5;
+  border: 1px solid #e6e6e6;
+  padding: 8px 12px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.google-news-strip a {
+  color: #1a73e8;
+  font-weight: 600;
+}
+.google-news-strip a:hover {
+  text-decoration: underline;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 18px;
+  border-bottom: 2px solid var(--kb-border);
+  margin-bottom: 12px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab-btn:hover {
+  color: #000;
+}
+.tab-btn.active {
+  color: var(--kb-red);
+  border-bottom-color: var(--kb-red);
+}
+.tab-panel {
+  display: block;
+}
+.tab-panel.d-none {
+  display: none !important;
+}
+.tab-panel.active {
+  display: block;
+}
+
+.ranked-list {
+  list-style: none;
+  counter-reset: ranked;
+  padding: 0;
+  margin: 0;
+}
+.ranked-list li {
+  counter-increment: ranked;
+  position: relative;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+.ranked-list li a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #212529;
+}
+.ranked-list li a:hover {
+  color: #d10000;
+}
+.ranked-list li a i {
+  color: var(--kb-orange);
+  margin-right: 6px;
+  font-size: 0.75rem;
+}
+.all-news-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--kb-orange);
+}
+.all-news-link:hover {
+  color: var(--kb-red);
+}
+.news_sl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background-color: #f1f3f5;
+  color: #555;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.sholder {
+  font-size: 11px;
+  color: #888;
+  font-style: italic;
+}
+.ad-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  color: #999;
+  font-size: 0.75rem;
+  min-height: 60px;
+}
+
+.border_infinity {
+  position: relative;
+  height: 45px;
+  background: url(/assests/images/small-logo.png) no-repeat center center;
+  background-size: 35px;
+  margin: 20px 0;
+}
+/* Creates the full-width middle horizontal line */
+.border_infinity::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px; /* Thickness of the line */
+  background-color: #e6e4e4; /* Color of the line */
+  transform: translateY(-50%);
+  z-index: -1; /* Places the line safely behind your logo image */
+}
+
+/* ── FOOTER ── */
+/* Top Nav Links */
+.site-footer .bottom-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.site-footer .bottom-navigation a {
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.site-footer .bottom-navigation a:hover {
+  color: #c40000;
+}
+
+/* Address section */
+.site-footer .site-address {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+.site-footer .site-address .sompadok {
+  font-weight: 700;
+  color: #111;
+}
+.site-footer .site-address address {
+  margin-bottom: 0;
+}
+.site-footer .site-address .contact-info {
+  margin-bottom: 0;
+}
+
+/* Social, Newsletter, App section titles */
+.site-footer #footer-social .title {
+  display: flex !important;
+  align-items: center;
+  font-weight: bold;
+  color: #000;
+  font-size: 14px;
+}
+.site-footer #footer-social .title .title-text {
+  margin-top: 2px;
+  margin-left: 8px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+}
+.site-footer #footer-social .title .title-text:hover {
+  color: #1a73e8;
+}
+
+/* Social Icons */
+.site-footer .social-links {
+  gap: 15px;
+}
+.site-footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+.site-footer .social-links a:hover {
+  transform: scale(1.1);
+}
+.site-footer .social-links .facebook {
+  background: #1877f2;
+}
+.site-footer .social-links .youtube {
+  background: #ff0000;
+}
+.site-footer .social-links .twitter {
+  background: #000000;
+}
+.site-footer .social-links .linkedin {
+  background: #0077b5;
+}
+.site-footer .social-links .instagram {
+  background: #e1306c;
+}
+
+/* Newsletter text */
+.site-footer .newsletter-desc {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* App Links */
+.site-footer .app-links a {
+  display: block;
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 4px;
+  transition: color 0.2s;
+}
+.site-footer .app-links a:hover {
+  color: #c40000;
+}
+
+/* Copyright Bar */
+.site-footer .copyright-bar {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Footer Tweaks */
+@media (max-width: 768px) {
+  .site-footer .bottom-navigation {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .site-footer .bottom-navigation a {
+    font-size: 13px;
+  }
+  .site-footer #footer-social .row > div {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .site-footer .social-links {
+    justify-content: center;
+  }
+  .site-footer .copyright-bar .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+.sidebar-ad,
+.tabs-widget {
+  display: block;
+  width: 100%;
+  max-width: 300px; /* Adjust based on your main layout */
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e4e7ed;
+  border-radius: 8px;
+  overflow: hidden; /* Keeps the header background within rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.more-topics-header {
+  background-color: #edf3fc; /* Light blue header background */
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e4e7ed;
+}
+
+.more-topics-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.topic-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 1px solid #f0f2f5;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+/* Remove bottom border from the last item */
+.topic-item:last-child {
+  border-bottom: none;
+}
+
+.topic-item:hover {
+  background-color: #f8fafc;
+  color: #000;
+}
+
+.topic-arrow {
+  font-size: 24px;
+  line-height: 1;
+  color: #888;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .topic-tags {
+    gap: 6px;
+  }
+
+  .topic-tag {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+  .sidebar-ad {
+    min-width: 100% !important;
+  }
+}
+
+#sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483646; /* Matches your existing high z-index */
+  background-color: rgba(250, 250, 250, 0.95);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px 0;
+  height: 95px; /* Matches your existing height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+}
+
+/* Hide the ad when the close button is clicked (added via JS later) */
+#sticky-ad-footer.hidden {
+  display: none !important;
+}
+
+/* --- Sticky Ad Footer Container --- */
+#sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483646; /* Matches your existing high z-index */
+  background-color: rgba(250, 250, 250, 0.95);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px 0;
+  height: 95px; /* Matches your existing height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+}
+
+/* Hide the ad when the close button is clicked (added via JS later) */
+#sticky-ad-footer.hidden {
+  display: none !important;
+}
+
+/* --- Floating Up (Scroll to Top) Button --- */
+#scroll-to-top {
+  position: fixed;
+  bottom: 115px; /* 95px ad height + 20px buffer */
+  right: 20px;
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1e3a8a; /* Dark blue like your footer button */
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-to-top:hover {
+  background-color: #0f2557;
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  display: flex; /* Shows when scrolled down */
+}

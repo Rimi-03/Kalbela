@@ -1,0 +1,2138 @@
+/* Define the font face at the top of style.css */
+/* ==========================================================================
+   SOLAIMAN LIPI LOCAL FONT LOADING FIX
+   ========================================================================== */
+
+/* 1. Normal/Regular Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Normal.ttf") format("truetype");
+  font-weight: 400; /* normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Bold Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Bold.ttf") format("truetype");
+  font-weight: 700; /* bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 3. Thin Weight */
+@font-face {
+  font-family: "SolaimanLipi";
+  src: url("../assests/font/SolaimanLipi-Thin.ttf") format("truetype");
+  font-weight: 300; /* light/thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Font Application Rules */
+body,
+.tabs-widget {
+  font-family: "SolaimanLipi", Arial, sans-serif !important;
+}
+
+header section.py-3 {
+  position: relative;
+  z-index: 1200; /* বুটস্ট্র্যাপের sticky-top (1020) এর চেয়ে বেশি রাখা হয়েছে */
+}
+
+.ad-wrapper {
+  max-width: 970px; /* Maximum size matching Kalbela's desktop ad */
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Ensures images look sharp and don't distort */
+.ad-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ======================
+Top Bar
+====================== */
+
+.top-links .nav-link {
+  color: #555;
+  padding: 0.2rem 0.75rem;
+  font-size: 14px;
+}
+
+.top-links .nav-link:hover {
+  color: #c00000;
+}
+
+/*=====================
+MID HEADER
+=====================*/
+
+.quick-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-links::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  padding: 8px 10px;
+  display: inline-block;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.quick-links a:hover {
+  color: #c40000;
+}
+
+/*==============================
+SOCIAL MEGA MENU
+===============================*/
+
+.social-mega {
+  width: 100%;
+  max-width: 800px;
+  left: 50% !important;
+  top: 50% !important; /* Forces it right below the header row */
+  transform: translateX(-50%) !important;
+  border-radius: 12px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: #222;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.25s;
+}
+
+.social-item i {
+  width: 22px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.social-item:hover {
+  background: #f8f9fa;
+  color: #c40000;
+}
+
+.social-mega h6 {
+  font-weight: 700;
+}
+
+.social-mega hr {
+  margin: 1.5rem 0;
+}
+
+.goog-te-banner-frame,
+.goog-te-banner,
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ======================
+Header Icons
+====================== */
+
+.header-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.header-icon:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   MAIN NAVBAR RESPONSIVE WRAPPING & DROPDOWN FIXES
+   ========================================================================== */
+
+#top-nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+  z-index: 1060; /* Keeps it above standard page elements */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #e0e0e0;
+  overflow: visible !important;
+}
+
+#top-nav .all-mega-menu-panel {
+  max-height: calc(
+    100vh - 50px
+  ); /* Restricts the menu from spilling below the user's viewport */
+  overflow-y: auto; /* Adds a clean, independent scrollbar inside the menu grid if it has too many links on small devices */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+  padding: 20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px; /* Adjust based on your site width */
+  margin: 0 auto;
+  padding: 10px 15px;
+}
+
+.sticky-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px; /* Space between date and home icon */
+  border-right: 1px solid #ddd; /* Match the divider line in image 1 */
+  padding-right: 15px;
+}
+
+.sticky-logo {
+  height: 32px; /* Adjust size to match your font height */
+  width: auto;
+}
+
+.sticky-date {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #333;
+  font-family: sans-serif; /* Use your site's Bengali font */
+}
+
+.sticky-date .day {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Ensure the primary wrapper allows children links to naturally wrap dynamically */
+#top-nav .flex-wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  row-gap: 8px; /* Adds elegant breathing room if lines split on small widths */
+}
+
+#top-nav ul li a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  transition: color 0.2s ease-in-out;
+}
+
+#top-nav ul li a:hover {
+  color: #c40000 !important;
+}
+
+/* Base Panel Styling */
+.all-mega-menu-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 50% !important;
+  width: 96vw !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px !important;
+  margin-top: 12px; /* Leaves clean room for the indicator arrow */
+  z-index: 99999 !important;
+  max-width: 1200px !important;
+  transform: translateX(-50%) !important;
+  box-sizing: border-box;
+}
+
+/* Elegant Top Pointer Arrow CSS */
+.all-mega-menu-panel::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 18px; /* Perfectly positions arrow below the right-side hamburger button */
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  border-left: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+  z-index: 1;
+}
+
+.style-dropdown-links li {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Link Hover/Typography Styling */
+.style-dropdown-links li a {
+  font-size: 13px !important; /* Reduced base mobile sizing to match reference design line breaks */
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333333 !important;
+  transition: color 0.15s ease-in-out;
+  text-align: left;
+  white-space: normal !important; /* Allows multi-word strings to drop down cleanly instead of colliding */
+  word-break: break-word;
+  display: block;
+}
+
+.style-dropdown-links li a:hover {
+  color: #dc3545 !important; /* Changes theme accent color on cursor hover */
+}
+
+/* Bottom Footer Links Area spacing styling */
+.footer-media-links a {
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+.footer-media-links a:hover {
+  opacity: 0.8;
+}
+
+/*=========================
+HAMBURGER MENU
+=========================*/
+
+.menu-btn {
+  color: #333;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 12px;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  color: #c40000;
+  background: #f5f5f5;
+  box-shadow: none;
+}
+
+.menu-dropdown {
+  width: 700px;
+  border: none;
+  border-radius: 10px;
+}
+
+.menu-dropdown .dropdown-item {
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  transition: 0.25s;
+}
+
+.menu-dropdown .dropdown-item:hover {
+  color: #c40000;
+  background: #f8f8f8;
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-header {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.menu-grid a {
+  color: #222;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.menu-grid a:hover {
+  background: #f5f5f5;
+  color: #c40000;
+}
+
+/* ==========================================================================
+   SPORTS SPECIAL SECTION MATCHING STYLING
+   ========================================================================== */
+
+.sp-worldcup-section {
+  background-color: rgb(4, 74, 128);
+}
+
+/* Centered Title Styling */
+.sp-menu-title h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.sp-menu-title h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Images & Sizing Elements */
+.sp-worldcup-section .image-lead {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sp-worldcup-section .news-img {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  display: block;
+}
+
+/* Ensures the middle main featured image scales up relative to column height */
+.sp-worldcup-section .main-lead-img {
+  aspect-ratio: auto;
+  max-height: 380px;
+}
+
+/* Typography & Titles */
+.sp-worldcup-section .title {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sp-worldcup-section .title a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.sp-worldcup-section .lead-news .main-title a,
+.sp-worldcup-section .main-title a {
+  font-size: 22px;
+}
+
+.sp-worldcup-section .title a:hover {
+  color: #ffca28 !important; /* Soft gold hover */
+}
+
+/*====================================
+        Secondary News Section
+=====================================*/
+
+.small-news-card {
+  transition: 0.25s;
+}
+
+.small-news-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: 0.35s;
+}
+
+.small-news-card:hover img {
+  transform: scale(1.04);
+}
+
+.small-news-card a {
+  text-decoration: none;
+}
+
+.small-news-card h5 {
+  font-size: 1.12rem;
+  line-height: 1.45;
+  font-weight: 700;
+  margin: 0;
+}
+
+.small-news-card h5 a {
+  color: #111;
+  transition: 0.25s;
+}
+
+.small-news-card:hover h5 a {
+  color: #d10000;
+}
+
+.tab_bar_block_stories .tab-btn {
+  border-bottom: 2px solid #ebebeb !important;
+  border-radius: 0;
+}
+.tab_bar_block_stories li {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ebebeb;
+  bottom: -2px;
+  cursor: pointer;
+}
+.tab_bar_block_stories li.active {
+  border-bottom: 3px solid #c3282d !important;
+}
+
+/* Slider navigation layout positioning */
+.slider-nav .nav-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s,
+    opacity 0.2s;
+}
+
+.slider-nav .nav-btn:hover {
+  background-color: #c3282d;
+  color: #fff;
+  border-color: #c3282d;
+}
+
+.slider-nav .prev-btn {
+  left: 10px;
+}
+
+.slider-nav .next-btn {
+  right: 10px;
+}
+
+/* Ensure parents manage positioning correctly */
+.tab_block_stories {
+  position: relative;
+}
+
+/* Prevent text/items from squishing inside the slider */
+.custom-slider .story-item {
+  flex: 0 0 auto;
+}
+
+/* Container Layout */
+.video-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Scrollable Horizontal Track */
+.video-slider-track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  padding-bottom: 5px;
+}
+.video-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Slides */
+.video-slide-item {
+  flex: 0 0 calc((100% - 70px) / 4);
+  min-width: calc((100% - 70px) / 4);
+}
+
+.video-slider-nav {
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  transform: translateY(-50%);
+  z-index: 20;
+
+  pointer-events: none;
+}
+/* Video Thumbnail Box */
+.vid-single {
+  height: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.vid-single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.vid-single:hover img {
+  transform: scale(1.05);
+}
+/* Play Icon Positioning Overlay */
+.play-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 48px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.vid-single:hover .play-icon-overlay {
+  transform: translate(-50%, -50%) scale(1.1);
+  color: #fff;
+}
+
+/* Title Styling */
+.video-title {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #212529 !important; /* Forces black text */
+  text-decoration: none;
+}
+.video-title:hover {
+  color: #dc3545;
+}
+
+/* Slider Controls Button Layout */
+.video-slider-nav button {
+  pointer-events: auto;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-slider-nav .video-prev-btn {
+  left: -10px;
+}
+.video-slider-nav .video-next-btn {
+  right: -10px;
+}
+.video-slider-nav button:hover {
+  background-color: #c3282d;
+  color: #fff;
+  border-color: #c3282d;
+}
+
+/* Footer Link Interaction Configurations */
+.bottom-navigation a {
+  transition: color 0.2s ease;
+}
+.bottom-navigation a:hover {
+  color: #c3282d !important;
+}
+
+/* Social Circular Button Grouping Rules */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+.social-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.social-btn.fb {
+  background-color: #1877f2;
+}
+.social-btn.yt {
+  background-color: #ff0000;
+}
+.social-btn.tw {
+  background-color: #000000;
+}
+.social-btn.ln {
+  background-color: #0077b5;
+}
+.social-btn.ig {
+  background-color: #e1306c;
+}
+
+/* Mobile Store Interaction Rules */
+.app-link {
+  transition: color 0.2s ease;
+}
+.app-link:hover {
+  color: #198754 !important;
+}
+
+/* Base Helpers */
+.font-14 {
+  font-size: 14px !important;
+}
+.font-10 {
+  font-size: 10px !important;
+}
+/* Color Background Configuration */
+.gallery-section {
+  background-color: #222222;
+}
+.gallery-wrap {
+  background-color: #222222;
+}
+
+/* Base Responsive Image Canvas Framework */
+.main-gallery-img {
+  height: 480px;
+  background-color: #111;
+}
+
+/* Floating Elements Inside Main Slider Canvas */
+.share-column-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+.social-overlay-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
+  border-radius: 4px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.social-overlay-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.expand-icon-overlay {
+  position: absolute;
+  bottom: 45px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  opacity: 0.8;
+}
+.expand-icon-overlay:hover {
+  opacity: 1;
+}
+
+/* Center Bottom Title Banner Overlay */
+.lead-caption-bar-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  color: #ffffff;
+  padding: 15px 10px 10px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 4;
+}
+
+/* Carousel Control Custom Layout Rules */
+.custom-nav-btn {
+  width: 40px !important;
+  opacity: 0 !important;
+  transition: opacity 0.25s ease-in-out !important;
+}
+.lead-carousel:hover .custom-nav-btn {
+  opacity: 0.7 !important;
+}
+.custom-nav-btn:hover {
+  opacity: 1 !important;
+}
+.custom-nav-btn i {
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Thumbstrip Row Configuration */
+.gallery-mini-thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+.gallery-mini-thumb:hover,
+.gallery-mini-thumb.active {
+  opacity: 1;
+  border-color: #ffffff;
+}
+
+/* Sidebar Right Block Construction */
+.side-gallery-img {
+  height: 120px;
+  background-color: #111;
+}
+.side-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 20px 8px 6px 8px;
+  z-index: 2;
+}
+.overlay-headline {
+  font-size: 13px !important;
+  font-weight: bold;
+  color: #ff9800; /* Golden amber style */
+  line-height: 1.3;
+}
+
+/* CSS Utilities */
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.font-20 {
+  font-size: 20px !important;
+}
+
+/* ডানপাশের স্ক্রল ভিউপোর্ট এরিয়া */
+.side-scroll-viewport {
+  height: 480px; /* প্রধান ইমেজের উচ্চতার সাথে মেলানোর জন্য */
+  overflow-y: scroll;
+  padding-right: 5px;
+}
+
+/* কাস্টম স্ক্রলবার স্টাইল (Webkit ব্রাউজারের জন্য) */
+.side-scroll-viewport::-webkit-scrollbar {
+  width: 12px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-thumb {
+  background: #555;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* স্ক্রলবারের ওপরের ও নিচের অ্যারো বাটন */
+.side-scroll-viewport::-webkit-scrollbar-button:single-button {
+  background-color: #333;
+  display: block;
+  height: 12px;
+  width: 12px;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23fff'><polygon points='50,0 0,100 100,100'/></svg>");
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.side-scroll-viewport::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23fff'><polygon points='0,0 100,0 50,100'/></svg>");
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+/* ---- shared vertical/horizontal separators (mimics Bootstrap borders in source) ---- */
+.news-separator-vertical-border {
+  border-right: 1px solid var(--kb-border);
+}
+.news-separator-horizontal-border {
+  border-top: 1px solid var(--kb-border);
+  margin: 14px 0;
+}
+
+/* ---- category block wrapper ---- */
+.category-block {
+  padding: 18px 16px;
+  border-bottom: 8px solid var(--kb-bg);
+}
+
+/* ---- category header : icon + name + arrow link ---- */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid var(--kb-orange);
+}
+.category-header img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.category-header span.cat-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--kb-text);
+}
+.category-header .cat-more {
+  margin-left: auto;
+  color: var(--kb-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.category-header .cat-more:hover {
+  color: var(--kb-orange);
+}
+
+/* ---- generic image wrapper ---- */
+.imgWrep {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ddd;
+}
+.imgWrep img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.common-card-content:hover .imgWrep img,
+.flex-content:hover .imgWrep img {
+  transform: scale(1.04);
+}
+
+/* ---- title / summary / time typography ---- */
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 8px 0 4px;
+  color: var(--kb-text);
+}
+.title:hover a,
+.title a:hover {
+  color: var(--kb-red) !important;
+}
+
+/* পুরো ফ্লেক্স-কন্টেন্টে হোভার করলে ইমেজ জুম হবে */
+.flex-content:hover .longimg {
+  transform: scale(1.04);
+}
+.summery {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.time {
+  font-size: 0.75rem;
+  color: var(--kb-muted);
+}
+.sholder {
+  color: var(--kb-red);
+  font-weight: 600;
+}
+
+/* ---- common-card-content : image on top, text below ---- */
+.common-card-content {
+  height: 100%;
+}
+.common-card-content .image-lead .imgWrep {
+  padding-top: 60%;
+}
+.common-card-content .image-lead .imgWrep img {
+  position: absolute;
+  inset: 0;
+}
+.common-card-content .image-lead {
+  position: relative;
+}
+
+/* ---- flex-content : image beside text (used in national/business middle col) ---- */
+.flex-content .d-flex {
+  gap: 12px;
+}
+.flex-content .imgWrep {
+  width: 120px;
+  height: 82px;
+  flex: 0 0 auto;
+}
+.flex-content .imgWrep img {
+  position: absolute;
+  inset: 0;
+}
+.flex-content .imgWrep {
+  position: relative;
+}
+.flex-content .title {
+  font-size: 0.92rem;
+  margin-top: 0;
+}
+
+/* right-image variant (business sidebar): image right, text left */
+#flex-right-image .d-flex {
+  align-items: flex-start;
+  gap: 12px;
+}
+#flex-right-image .imgWrep {
+  width: 120px;
+  height: 82px;
+}
+
+/* ---- sub2-lead : arrow-bullet text-only list item ---- */
+.sub2-lead-content .title {
+  font-size: 0.92rem;
+  margin: 0;
+}
+.sub2-lead-content .title i {
+  color: var(--kb-orange);
+  margin-right: 6px;
+  font-size: 0.8rem;
+}
+
+/* ---- world section : background-image "long" lead ---- */
+.longimg {
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 230px;
+  background-size: cover !important;
+  background-position: center !important;
+  border-radius: 4px;
+}
+
+/* ---- sports section ---- */
+.sports-upcoming {
+  background: #fff;
+  border: 1px solid var(--kb-border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sports-upcoming-header {
+  background: var(--kb-orange);
+  color: #181818 !important; /* Forces the text to stay white */
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.upcoming-scroll {
+  max-height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+.upcoming-scroll-track {
+  display: flex;
+  flex-direction: column;
+  animation: events-scroll-up 22s linear infinite;
+}
+.upcoming-scroll:hover .upcoming-scroll-track {
+  animation-play-state: paused;
+}
+@keyframes events-scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+.upcoming-scroll .event-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--kb-border);
+}
+.upcoming-scroll .event-row img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.upcoming-scroll .event-row h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ad-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: #999;
+  font-size: 0.75rem;
+  min-height: 60px;
+}
+.ad-slot.ad-rect {
+  min-height: 250px;
+}
+
+/* the two "creative" banners seen in the screenshot, built without external ad scripts */
+.ad-banner-youtube {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff4e6;
+  border: 1px solid #f0c896;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 16px 0;
+}
+.ad-banner-youtube .kb-logo {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--kb-text);
+  letter-spacing: 0.5px;
+}
+.ad-banner-youtube .kb-logo span {
+  color: var(--kb-red);
+}
+.ad-banner-youtube .yt-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #ff0000;
+}
+.ad-banner-youtube .yt-badge i {
+  font-size: 1.4rem;
+}
+.ad-banner-youtube .icons {
+  margin-left: auto;
+  display: flex;
+  gap: 14px;
+  color: #666;
+  font-size: 1rem;
+}
+.ad-banner-youtube .handle {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.ad-banner-generic {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #111e3d;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin: 16px 0;
+}
+.ad-banner-generic .brand {
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.ad-banner-generic .msg {
+  font-size: 0.85rem;
+  color: #dfe6ff;
+}
+.ad-banner-generic .cta {
+  margin-left: auto;
+  background: #ffd400;
+  color: #111e3d;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Right sidebar widgets
+   ============================================================ */
+.sidebar-widget {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #fff;
+  padding: 12px; /* Adds the inner white border spacing seen in the design */
+}
+.sidebar-widget-title {
+  background: transparent; /* Changed from var(--kb-orange) */
+  color: #1e293b; /* Dark text color instead of white */
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0 0 15px 12px; /* Padding for spacing */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 4px solid #f28749; /* The orange vertical indicator bar */
+  margin-bottom: 15px;
+}
+.sidebar-widget-title i {
+  display: none; /* Hides the original icon if your mockup uses a plain border line */
+}
+
+/* Update body padding since container now handles it */
+.sidebar-widget-body {
+  padding: 0;
+}
+
+/* আমার এলাকার সংবাদ */
+.area-news-widget select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #334155;
+}
+.area-news-widget button {
+  width: 100%;
+  background: #f28749; /* Exact soft orange shade from your mockup image */
+  border: 1px solid #d97236;
+  color: #000; /* Dark text/icon color inside the button */
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.area-news-widget button i {
+  margin-left: 6px;
+}
+/* ই-পেপার and আর্কাইভ */
+.epaper-widget,
+.archive-widget {
+  border: 1px solid #f28749;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #fff;
+}
+.epaper-widget .sidebar-widget-title,
+.archive-widget .sidebar-widget-title {
+  background: #f28749; /* Solid orange background */
+  color: #111; /* Dark title text */
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px;
+  justify-content: center; /* Center aligns the text horizontally */
+  border-left: none;
+  margin-bottom: 0;
+}
+.epaper-widget .sidebar-widget-title i,
+.archive-widget .sidebar-widget-title i {
+  display: none;
+}
+.archive-widget {
+  background: #e2e8f0; /* Matches the gray background fill in the mockup */
+}
+.archive-widget .sidebar-widget-body {
+  padding: 16px;
+}
+
+/* 2. E-paper Widget Layout */
+.epaper-widget .sidebar-widget-body {
+  padding: 12px;
+}
+.epaper-widget img {
+  width: 100%;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+/* 3. Archive Edition Toggles */
+.archive-widget .edition-toggle {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+.archive-widget .edition-toggle button {
+  flex: 1;
+  padding: 12px 6px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: 1px solid #f28749;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+}
+.archive-widget .edition-toggle button.active {
+  background: #fff;
+  border: 2px solid #f28749;
+  color: #000;
+}
+
+/* 4. Select dropdown inputs stacked right-staggered */
+.archive-widget select {
+  width: 60%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  border: 1px solid #718096;
+  border-radius: 6px;
+  background: #fff;
+}
+/* Pushes the year dropdown to align right */
+.archive-widget .d-flex {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.archive-widget .d-flex select:last-child {
+  align-self: flex-end;
+}
+
+/* 5. Calendar Grid Setup */
+.archive-calendar {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  background: #f7fafc;
+  margin-top: 10px;
+}
+.archive-calendar th {
+  background: #edf2f7;
+  color: #000;
+  padding: 8px 0;
+  font-weight: bold;
+  border: 1px solid #cbd5e1;
+}
+.archive-calendar td {
+  padding: 8px 0;
+  border: 1px solid #cbd5e1;
+  font-weight: 500;
+}
+.archive-calendar td a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Future/Disabled Dates (Soft Orange Text) */
+.archive-calendar td a.disabled {
+  color: #fca5a5;
+  pointer-events: none;
+}
+/* Active Highlight (Square Orange block) */
+.archive-calendar td a.active {
+  background: #f28749;
+  color: #fff !important;
+  border-radius: 0; /* Changed from 50% circle to crisp square block */
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* Hover effect for buttons that are NOT currently active */
+.btn-arch:not(.active):hover {
+  background-color: #f28749;
+  color: #fff;
+  border-color: #d97236;
+}
+
+/* Active button styles stay locked in place */
+.btn-arch.active {
+  background: #fff;
+  border: 2px solid #f28749;
+  color: #000;
+  cursor: default; /* Optional: indicates it's already selected */
+}
+/* Forces the edition buttons side-by-side with a clean gap */
+.edition-toggle.row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  gap: 8px !important; /* Creates the space between the buttons */
+}
+
+.edition-toggle .col-6 {
+  width: calc(50% - 4px) !important; /* Adjusts width to account for the gap */
+  flex: 0 0 calc(50% - 4px) !important;
+  max-width: calc(50% - 4px) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Forces the month and year dropdowns side-by-side */
+.datePicker.d-flex {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 8px !important;
+}
+
+.datePicker select.w-50 {
+  width: calc(50% - 4px) !important;
+}
+
+/* Fixes button padding to prevent text from overflowing or getting clipped */
+.btn-arch {
+  padding: 10px 4px;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 2px !important; /* Tiny side padding prevents border clipping */
+  font-size: 0.75rem !important; /* Lowered from 0.82rem to force long words inside the lines */
+  letter-spacing: -0.3px !important; /* Tightens text spacing slightly for a clean fit */
+  box-sizing: border-box !important;
+  width: 100% !important;
+  overflow: hidden !important; /* Dynamic safety catch */
+  font-weight: bold;
+  border: 1px solid #f28749;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Prevents text from breaking into two lines inside selectors */
+.datePicker select {
+  white-space: nowrap;
+}
+
+/* ============================================================
+   মতামত : opinion carousel
+   ============================================================ */
+.opinion-widget-title,
+.poll-widget-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--kb-red);
+}
+.opinion-widget-title img,
+.poll-widget-title img {
+  width: 20px;
+  height: 20px;
+}
+
+.opinion-item {
+  background: #fff9e1;
+  border-bottom: 3px solid #d60000;
+  border-radius: 6px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.opinion-item .opinion-avatar {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--kb-red);
+  overflow: hidden;
+  flex: 0 0 auto;
+  margin-right: 12px;
+  position: relative;
+}
+.opinion-item .opinion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.opinion-item .rpt {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+.opinion-item .rpt_dg {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+.opinion-item .title {
+  font-size: 0.95rem;
+  margin: 6px 0 6px;
+}
+.opinion-item:hover .title {
+  color: #1a73e8;
+}
+.opinion-item .summery {
+  font-size: 0.8rem;
+  -webkit-line-clamp: 3;
+}
+
+.opinion-dots {
+  position: static;
+  margin-top: 4px;
+}
+.opinion-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  opacity: 1;
+  border: none;
+}
+.opinion-dots button.active {
+  background: var(--kb-red);
+}
+
+/* ============================================================
+   অনলাইন জরিপ : poll widget
+   ============================================================ */
+.poll-card {
+  border: 1px solid var(--kb-border);
+  border-radius: 6px;
+  padding: 12px;
+}
+.poll-time {
+  font-size: 0.78rem;
+  color: var(--kb-muted);
+  margin-bottom: 8px;
+}
+.poll-image {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+.poll-question {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--kb-text);
+}
+.poll-question:hover {
+  color: var(--kb-red);
+}
+.poll-options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+.poll-options li {
+  margin-bottom: 10px;
+}
+.poll-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.poll-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+.poll-option-title {
+  font-size: 0.82rem;
+  flex: 0 0 90px;
+}
+.poll-option-bar {
+  flex: 1 1 auto;
+  height: 20px;
+  background: #f0f0f0;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.poll-option-fill {
+  display: block;
+  height: 100%;
+  background: skyblue;
+  transition: width 0.4s ease;
+}
+.poll-option-pct {
+  font-size: 0.78rem;
+  flex: 0 0 52px;
+  text-align: right;
+}
+.poll-total {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--kb-text);
+  margin-bottom: 10px;
+}
+.poll-share {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.poll-share a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+.poll-share a:hover {
+  background: var(--kb-orange);
+  color: #fff;
+}
+.poll-copied-msg {
+  display: none;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #fff;
+  background: #000a;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin: 8px auto 0;
+  width: fit-content;
+}
+
+/* ============================================================
+   সর্বশেষ / জনপ্রিয় : tabbed ranked list
+   ============================================================ */
+.tab-buttons {
+  display: flex;
+  gap: 18px;
+  border-bottom: 2px solid var(--kb-border);
+  margin-bottom: 12px;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.tab-btn:hover {
+  color: #000;
+}
+.tab-btn.active {
+  color: var(--kb-red);
+  border-bottom-color: var(--kb-red);
+}
+.tab-panel {
+  display: block;
+}
+.tab-panel.d-none {
+  display: none !important;
+}
+.tab-panel.active {
+  display: block;
+}
+
+.ranked-list {
+  list-style: none;
+  counter-reset: ranked;
+  padding: 0;
+  margin: 0;
+}
+.ranked-list li {
+  counter-increment: ranked;
+  position: relative;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+.ranked-list li a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #212529;
+}
+.ranked-list li a:hover {
+  color: #d10000;
+}
+.ranked-list li a i {
+  color: var(--kb-orange);
+  margin-right: 6px;
+  font-size: 0.75rem;
+}
+.all-news-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--kb-orange);
+}
+.all-news-link:hover {
+  color: var(--kb-red);
+}
+.news_sl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  background-color: #f1f3f5;
+  color: #555;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+@media (max-width: 1200px) {
+  .video-slide-item {
+    flex: 0 0 25%;
+    min-width: 25%;
+  }
+}
+@media (max-width: 1199px) {
+  /* Prevent mega-menu container blowout on mid-range laptop screen configurations */
+  .all-menu {
+    width: 95vw;
+    left: 50% !important;
+    transform: translateX(-50%);
+    right: auto;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .quick-links {
+    margin-top: 20px;
+    gap: 0;
+  }
+
+  .quick-links .nav-link {
+    padding: 0.4rem 0.6rem;
+  }
+  .social-mega {
+    width: 100%;
+    left: 0 !important;
+    transform: none;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .separator-border-right {
+    border-right: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-right: 20px;
+  }
+  .separator-border-left {
+    border-left: 1px dashed rgba(255, 255, 255, 0.15);
+    padding-left: 20px;
+  }
+
+  .small-news-card {
+    padding-right: 18px;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  .row > .col-lg-4:last-child .small-news-card {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .border-end-divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  .video-slide-item {
+    flex: 0 0 calc((100% - 30px) / 3);
+    min-width: calc((100% - 30px) / 3);
+  }
+}
+
+/*==============================
+RIGHT SIDEBAR
+==============================*/
+
+.sidebar-ad img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/*==============================
+Stories Card
+==============================*/
+
+.stories-card {
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+/* Tabs */
+
+.stories-tabs .nav-link {
+  border: none;
+
+  color: #333;
+
+  font-weight: 700;
+
+  border-bottom: 3px solid transparent;
+
+  border-radius: 0;
+}
+
+.stories-tabs .nav-link.active {
+  color: #c40000;
+
+  border-color: #c40000;
+}
+
+/*==========================
+Horizontal Slider
+==========================*/
+
+.stories-slider {
+  display: flex;
+
+  gap: 15px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.stories-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/*==========================
+Story
+==========================*/
+
+.story-item {
+  flex: 0 0 220px;
+}
+
+.story-cover {
+  position: relative;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.story-cover img {
+  width: 100%;
+
+  height: 310px;
+
+  object-fit: cover;
+}
+
+.play-btn,
+.photo-icon {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 50px;
+
+  color: #fff;
+}
+
+.views {
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  color: #fff;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+.story-item h6 {
+  margin-top: 12px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .quick-links {
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .quick-links::-webkit-scrollbar {
+    display: none;
+  }
+  .menu-dropdown {
+    width: 320px;
+  }
+  .all-mega-menu-panel {
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    padding: 24px !important;
+  }
+  .style-dropdown-links li a {
+    font-size: 15px !important;
+  }
+  .video-slide-item {
+    flex: 0 0 calc(25% - 12px); /* Displays 4 items smoothly on desktops */
+  }
+  .border-end-md {
+    border-right: 1px solid #dee2e6 !important;
+  }
+  .main-gallery-img {
+    height: 280px;
+  }
+  .news-separator-vertical-border {
+    border-right: 1px solid #e6e6e6;
+  }
+  .side-scroll-viewport {
+    height: 350px;
+  }
+  .longimg {
+    height: 180px;
+  }
+  .news-separator-vertical-border {
+    border-right: none;
+    border-bottom: 1px solid var(--kb-border);
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+  .edition-toggle.row {
+    flex-wrap: wrap !important; /* Allows items to shift if room gets tight */
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+
+  .video-slide-item {
+    flex: 0 0 60%;
+    min-width: 60%;
+  }
+  .category-header span.cat-name {
+    font-size: 0.95rem;
+  }
+  .flex-content .imgWrep {
+    width: 96px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 576px) {
+  .edition-toggle.row {
+    flex-direction: column !important;
+  }
+
+  .edition-toggle .col-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .datePicker.d-flex {
+    flex-direction: column !important;
+  }
+
+  .datePicker select.w-50 {
+    width: 100% !important;
+  }
+  /* Clean dual column grid scaling for small phone layouts */
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #top-nav ul li a {
+    font-size: 14px; /* Slightly compact fonts for tight rows */
+  }
+
+  .small-news-card h5 {
+    font-size: 18px;
+  }
+  .video-slide-item {
+    flex: 0 0 82%;
+    min-width: 82%;
+  }
+}
+
+#sticky-ad-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483646; /* Matches your existing high z-index */
+  background-color: rgba(250, 250, 250, 0.95);
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px 0;
+  height: 95px; /* Matches your existing height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+}
+
+/* Hide the ad when the close button is clicked (added via JS later) */
+#sticky-ad-footer.hidden {
+  display: none !important;
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 115px; /* 95px ad height + 20px buffer */
+  right: 20px;
+  z-index: 9999;
+  display: none; /* Hidden by default */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #1e3a8a; /* Dark blue like your footer button */
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-to-top:hover {
+  background-color: #0f2557;
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  display: flex; /* Shows when scrolled down */
+}
