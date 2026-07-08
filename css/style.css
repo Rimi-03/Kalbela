@@ -105,7 +105,8 @@ SOCIAL MEGA MENU
 ===============================*/
 
 .social-mega {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 800px;
   left: 50% !important;
   top: 50% !important; /* Forces it right below the header row */
   transform: translateX(-50%) !important;
