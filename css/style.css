@@ -231,13 +231,17 @@ Header Icons
   align-items: center;
   gap: 8px;
   margin-right: 20px; /* Space between date and home icon */
-  border-right: 1px solid #ddd; /* Match the divider line in image 1 */
+  /* border-right: 1px solid #ddd; Match the divider line in image 1 */
   padding-right: 15px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .sticky-logo {
   height: 32px; /* Adjust size to match your font height */
   width: auto;
+  padding-right: 12px;
+  border-right: 1px solid #ddd;   /* Vertical line after logo */
 }
 
 .sticky-date {
@@ -247,12 +251,13 @@ Header Icons
   line-height: 1.2;
   color: #333;
   font-family: sans-serif; /* Use your site's Bengali font */
+  white-space: nowrap;
 }
 
-.sticky-date .day {
+/* .sticky-date .day {
   font-weight: bold;
   font-size: 14px;
-}
+} */
 
 .menu-links {
   display: flex;

@@ -155,10 +155,10 @@ function updateDynamicDates() {
   }
 
   // 2. Update Sticky Brand Block (Dual-line Bengali layout)
-  const stickyDayEl = document.getElementById("sticky-day");
+  // const stickyDayEl = document.getElementById("sticky-day");
   const stickyDateEl = document.getElementById("sticky-date");
-  if (stickyDayEl && stickyDateEl) {
-    stickyDayEl.textContent = bnDayName;
+  if (stickyDateEl) {
+    // stickyDayEl.textContent = bnDayName;
     stickyDateEl.textContent = bnFullDate;
   }
 
