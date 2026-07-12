@@ -58,53 +58,6 @@
 
     <!-- Header -->
     <header class="border-bottom bg-white">
-      <!-- =========================
-            TOP BAR
-    ========================== -->
-      <div class="bg-light border-bottom py-2 small">
-        <div class="container">
-          <div class="row align-items-center">
-            <!-- Date -->
-            <!-- Ensure your top bar text can be targeted by the script -->
-            <div class="col-lg-6">
-              <i class="fa-solid fa-calendar-days me-2 text-danger"></i>
-              <span class="text-muted" id="top-bar-date"> </span>
-            </div>
-            <!-- Top Links -->
-            <div class="col-lg-6">
-              <ul class="nav justify-content-end top-links">
-                <li class="nav-item">
-                  <a href="#" class="nav-link"> সোশ্যাল মিডিয়া </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="#" class="nav-link"> মোবাইল অ্যাপস </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="#" class="nav-link"> আর্কাইভ </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="#" class="nav-link"> কনভার্টার </a>
-                </li>
-
-                <li class="nav-item d-flex align-items-center">
-                  <a href="#" id="translate-to-en" class="nav-link fw-bold">
-                    EN
-                  </a>
-                  <span class="text-muted">|</span>
-                  <a href="#" id="translate-to-bn" class="nav-link fw-bold"
-                    >বাংলা</a
-                  >
-                </li>
-                <!-- Hidden container for the Google Translate widget -->
-                <div id="google_translate_element" style="display: none"></div>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- =========================
             MIDDLE HEADER
@@ -663,10 +616,7 @@
                   <!-- Date Header -->
                   <div class="col-12 p-0 mb-3">
                     <!-- Inside your mega menu panel -->
-                    <span
-                      class="text-dark fw-bold"
-                      id="mega-menu-date"
-                    ></span>
+                    <span class="text-dark fw-bold" id="mega-menu-date"></span>
                   </div>
 
                   <div class="col-12 p-0">
@@ -1705,7 +1655,9 @@
             <div class="col-8">
               <div class="d-flex justify-content-end py-2">
                 <div class="bottom-navigation">
-                  <a aria-label="কালবেলা" href="/about">কালবেলা</a>
+                  <a aria-label="কালবেলা" href="/about"
+                    >কালবেলা</a
+                  >
                   <a aria-label="গোপনীয়তার নীতি" href="/privacy-policy"
                     >গোপনীয়তার নীতি</a
                   >
@@ -1730,125 +1682,199 @@
         </div>
       </div>
 
-      <!-- Middle Address Section -->
-      <div class="container py-3 mt-2 site-address">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="site-add-p">
-              <span class="sompadok"
-                >সম্পাদক: সন্তোষ শর্মা । প্রকাশক: মিয়া নুরুদ্দিন আহাম্মেদ অপু
-              </span>
+      <div
+        class="container-fluid py-4 mt-3 site-address border-top border-bottom"
+        style="font-size: 16px; line-height: 1.6; color: #333"
+      >
+        <div class="row g-4">
+          <!-- Left Column: Editorial info -->
+          <div class="col-md-6" style="padding-right: 25px">
+            <p class="site-add-p mb-2">
+              <span class="sompadok" style="font-weight: bold; color: #000"
+                >সম্পাদক: সন্তোষ শর্মা । প্রকাশক: মিয়া নুরুদ্দিন আহাম্মেদ
+                অপু</span
+              >
             </p>
-            <address>
+            <address
+              style="
+                margin: 0;
+                font-style: normal;
+                color: #444;
+                font-size: 16px;
+                text-align: justify;
+              "
+            >
               কালবেলা মিডিয়া লিমিটেডের পক্ষে প্রকাশক কর্তৃক নিউমার্কেট সিটি
               কমপ্লেক্স, ৪৪/১, রহিম স্কয়ার, নিউমার্কেট, ঢাকা থেকে প্রকাশিত এবং
               ২৮/বি, টয়েনবি সার্কুলার রোড, মতিঝিল ঢাকা, শরীয়তপুর প্রিন্টিং
               প্রেস থেকে মুদ্রিত।
             </address>
           </div>
-          <div class="col-md-6">
-            <p class="contact-info">
-              ফোন : +৮৮ ০২ ৪৪৬১৭০০৩, +৮৮ ০২ ৪৪৬১৭০০৪ ।<br />
-              ফ্যাক্স : +৮৮ ০২ ৪৪৬১৭০০২ । ই-মেইল: news@kalbela.com. <br />
-              বিজ্ঞাপন বিভাগ: ফোন: +৮৮ ০২ ৪৪৬১৭০০৫, ০১৭৩০ ০৯৩৩২৮ । ই-মেইল:
-              ads@kalbela.com. <br />
-              সার্কুলেশন : ফোন: ০১৭৩০ ০৯৩৩৪৭ । কালবেলা মিডিয়া লিমিটেডের একটি
-              প্রকাশনা।
+
+          <!-- Right Column: Contact Numbers & details -->
+          <div
+            class="col-md-6"
+            style="
+              padding-left: 25px;
+              border-left: 1px solid #dee2e6;
+              color: #444;
+              font-size: 16px;
+            "
+          >
+            <p class="m-0">
+              <span style="color: #000">ফোন :</span> +৮৮ ০২ ৪৪৬১৭০০৩, +৮৮ ০২
+              ৪৪৬১৭০০৪ ।<br />
+              <span style="color: #000">ফ্যাক্স :</span> +৮৮ ০২ ৪৪৬১৭০০২ ।
+              <span style="color: #000">ই-মেইল:</span>
+              news@kalbela.com.<br />
+              <span style="color: #000">বিজ্ঞাপন বিভাগ:</span>
+              ফোন: +৮৮ ০২ ৪৪৬১৭০০৫, ০১৭৩০ ০৯৩৩২৮ ।
+              <span style="color: #000">ই-মেইল:</span>
+              ads@kalbela.com.<br />
+              <span style="color: #000">সার্কুলেশন :</span>
+              ফোন: ০১৭৩০ ০৯৩৩৪৭ । কালবেলা মিডিয়া লিমিটেডের একটি প্রকাশনা।
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Social & Newsletter Section -->
-      <div class="py-3 border-top" id="footer-social">
-        <div class="container">
+      <!-- Social, Newsletter and Mobile App Sections -->
+      <div
+        class="py-4 border-bottom"
+        id="footer-social"
+        style="font-size: 13px"
+      >
+        <div class="container-fluid">
           <div class="row align-items-start">
-            <div class="col-md-7 m-auto">
-              <div class="title d-inline-block">
+            <!-- Social Media Segment -->
+            <div class="col-md-6">
+              <div class="title d-flex align-items-center gap-2 mb-2">
                 <i
                   class="fa-solid fa-circle-nodes"
-                  style="font-size: 30px; float: left"
+                  style="font-size: 30px; color: #222"
                 ></i>
-                <span class="title-text">সোশ্যাল মিডিয়া</span>
+                <span style="font-weight: bold; font-size: 14px; color: #000"
+                  >সোশ্যাল মিডিয়া</span
+                >
               </div>
-              <div class="soacial-icon mt-2">
-                <div class="d-flex flex-row social-links">
+              <div class="soacial-icon mt-3">
+                <div class="d-flex flex-row gap-2">
                   <a
                     aria-label="facebook"
                     href="https://www.facebook.com/kalbeladigital/"
-                    class="facebook"
-                    target="_blank"
-                    ><i class="fa-brands fa-facebook"></i
+                    class="facebook text-decoration-none"
+                    ><i
+                      class="fa-brands fa-facebook"
+                      style="
+                        font-size: 35px;
+                        color: #1877f2;
+                        border-radius: 5px;
+                      "
+                    ></i
                   ></a>
                   <a
                     aria-label="youtube"
                     href="https://www.youtube.com/@kalbelanews24"
-                    class="youtube"
-                    target="_blank"
-                    ><i class="fa-brands fa-youtube"></i
+                    class="youtube text-decoration-none"
+                    ><i
+                      class="fa-brands fa-square-youtube"
+                      style="font-size: 35px; color: #ff0000"
+                    ></i
                   ></a>
                   <a
                     aria-label="twitter"
                     href="https://twitter.com/kalbeladigital"
-                    class="twitter"
-                    target="_blank"
-                    ><i class="fa-brands fa-twitter"></i
+                    class="twitter text-decoration-none"
+                    ><i
+                      class="fa-brands fa-square-x-twitter"
+                      style="font-size: 35px; color: #000000"
+                    ></i
                   ></a>
                   <a
                     aria-label="linkedin"
                     href="https://www.linkedin.com/company/kalbeladigital/"
-                    class="linkedin"
-                    target="_blank"
-                    ><i class="fa-brands fa-linkedin"></i
+                    class="linkedin text-decoration-none"
+                    ><i
+                      class="fa-brands fa-linkedin"
+                      style="font-size: 35px; color: #0077b5"
+                    ></i
                   ></a>
                   <a
                     aria-label="instagram"
                     href="https://www.instagram.com/kalbela_digital/"
-                    class="instagram"
-                    target="_blank"
-                    ><i class="fa-brands fa-instagram"></i
+                    class="instagram text-decoration-none"
+                    ><i
+                      class="fa-brands fa-square-instagram"
+                      style="font-size: 35px; color: #e1306c"
+                    ></i
                   ></a>
                 </div>
               </div>
             </div>
+
+            <!-- Newsletter Segment -->
             <div class="col-md-3">
               <div class="newsletter">
-                <h5 class="title d-inline-block mb-1">
+                <div class="title d-flex align-items-center gap-2 mb-2">
                   <i
-                    class="fa-regular fa-envelope-open"
-                    style="font-size: 30px; float: left"
+                    class="fa-regular fa-envelope"
+                    style="font-size: 30px; color: #222"
                   ></i>
-                  <span class="title-text">নিউজলেটার </span>
-                </h5>
-                <div class="newsletter-desc">
+                  <span
+                    style="font-weight: bold; font-size: 14.4px; color: #000"
+                    >নিউজলেটার</span
+                  >
+                </div>
+                <div
+                  class="d-block text-secondary mt-2"
+                  style="line-height: 1.5; font-size: 16px; text-align: left;"
+                >
                   কালবেলা থেকে প্রতিদিন মেইলে আপডেট পেতে সাবস্ক্রাইব করুন।
                 </div>
               </div>
             </div>
-            <div class="col-md-2">
+
+            <!-- Mobile Apps Segment -->
+            <div class="col-md-3">
               <div class="mobile_app">
-                <h5 class="title d-inline-block app mb-1">
+                <div class="title d-flex align-items-center gap-2 mb-2">
                   <i
-                    class="fa-solid fa-mobile-screen-button"
-                    style="font-size: 30px; float: left"
+                    class="fa-solid fa-mobile-screen"
+                    style="font-size: 28px; color: #222"
                   ></i>
-                  <span class="title-text">মোবাইল অ্যাপস</span>
-                </h5>
-                <div class="app-links">
+                  <span
+                    style="font-weight: bold; font-size: 14.4px; color: #000"
+                    >মোবাইল অ্যাপস</span
+                  >
+                </div>
+                <div
+                  class="mt-2 d-flex flex-column gap-1"
+                  style="font-size: 16px"
+                >
                   <a
-                    aria-label="অ্যান্ড্রয়েড"
+                    aria-label="অ্যান্ড্রয়েড"
+                    class="app-link item text-decoration-none text-dark d-flex align-items-center gap-2"
                     href="https://play.google.com/store/apps/details?id=apps.newspaper.kalbela"
                     target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square me-2"></i
-                    >অ্যান্ড্রয়েড</a
                   >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="font-size: 16px; color: #555"
+                    ></i
+                    >অ্যান্ড্রয়েড
+                  </a>
                   <a
-                    aria-label="আইফোন"
+                    aria-label="আইফোন "
+                    class="app-link-item text-decoration-none text-dark d-flex align-items-center gap-2"
                     href="https://apps.apple.com/us/app/kalbela-bangla-newspaper/id6476605509?platform=iphone"
                     target="_blank"
-                    ><i class="fa-solid fa-arrow-up-right-from-square me-2"></i
-                    >আইফোন</a
                   >
+                    <i
+                      class="fa-solid fa-arrow-up-right-from-square"
+                      style="font-size: 16px; color: #555"
+                    ></i
+                    >আইফোন
+                  </a>
                 </div>
               </div>
             </div>
@@ -1856,11 +1882,13 @@
         </div>
       </div>
 
-      <!-- Copyright Bar -->
-      <div class="bg-light py-2 mb-3 copyright-bar">
-        <div class="container">
-          <div class="d-flex justify-content-between flex-wrap">
-            <div>স্বত্ব © কালবেলা মিডিয়া লিমিটেড ২০২৬</div>
+      <!-- Copyright Segment -->
+      <div class="bg-light py-3 mb-3" style="font-size: 13px; color: #555">
+        <div class="container-fluid">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between gap-2"
+          >
+            <div>স্বত্ব © কালবেলা মিডিয়া লিমিটেড ২০২৬</div>
             <div>
               ওয়েবসাইটের কোনো লেখা, ছবি, ভিডিও অনুমতি ছাড়া ব্যবহার বেআইনি।
             </div>

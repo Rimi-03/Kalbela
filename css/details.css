@@ -780,9 +780,9 @@ Header Icons
 .site-footer .bottom-navigation a {
   color: #333;
   text-decoration: none;
-  font-size: 15px;
   font-weight: 600;
   transition: color 0.2s ease;
+  font-size: 16px !important;
 }
 .site-footer .bottom-navigation a:hover {
   color: #1a73e8;
@@ -884,6 +884,38 @@ Header Icons
   font-size: 14px;
   color: #555;
 }
+/* Title Hover Effect: Transitions color to Google Blue */
+#footer-social .title span,
+#footer-social .title i {
+  transition: color 0.2s ease-in-out;
+}
+#footer-social .title:hover span,
+#footer-social .title:hover i {
+  color: #1a73e8 !important;
+}
+
+/* Social Icon Hover Effect: Adds a clean scaling and opacity change */
+#footer-social .soacial-icon a i {
+  transition:
+    transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+}
+#footer-social .soacial-icon a:hover i {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* App Link Hover Effect: Changes icon and text color to Google Blue */
+#footer-social .app-link-item {
+  transition: color 0.2s ease-in-out;
+}
+#footer-social .app-link-item i {
+  transition: color 0.2s ease-in-out;
+}
+#footer-social .app-link-item:hover,
+#footer-social .app-link-item:hover i {
+  color: #1a73e8 !important;
+}
 
 /* Responsive Footer Tweaks */
 @media (max-width: 768px) {
@@ -893,7 +925,7 @@ Header Icons
     margin-top: 10px;
   }
   .site-footer .bottom-navigation a {
-    font-size: 13px;
+    font-size: 16px;
   }
   .site-footer #footer-social .row > div {
     margin-bottom: 20px;
