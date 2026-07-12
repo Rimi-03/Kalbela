@@ -286,12 +286,15 @@ Header Icons
   color: #222;
   transition: color 0.2s ease-in-out;
 }
-
-#top-nav ul li:not(:first-child) > a:hover {
+#top-nav ul li a:hover {
   color: #1a73e8 !important;
 }
+
 #top-nav ul li:not(.dropdownAllMenuIcon):not(:first-child) > a:hover {
   border-bottom: 3px solid #1a73e8;
+}
+.dropdownAllMenuBut:hover {
+  color: #1a73e8 !important;
 }
 
 /* Base Panel Styling */
