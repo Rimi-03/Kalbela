@@ -557,23 +557,22 @@
 
     <section id="top-nav" class="border-bottom py-2">
       <div class="container">
-        <!-- ADD THIS: Logo and Date Block -->
-        <div class="sticky-brand-block d-none" id="scroll-brand-block">
-          <img
-            src="https://www.kalbela.com/templates/web-view/images/sitesym.png"
-            alt="Logo"
-            class="sticky-logo"
-          />
-          <div class="sticky-date">
-            <span class="day" id="sticky-day"></span>
-            <span class="date" id="sticky-date"></span>
-          </div>
-        </div>
-
         <!-- Centered flex wrapper for the entire inline group -->
         <div
           class="d-flex justify-content-center align-items-center position-relative"
         >
+          <!-- ADD THIS: Logo and Date Block -->
+          <div class="sticky-brand-block d-none" id="scroll-brand-block">
+            <img
+              src="https://www.kalbela.com/templates/web-view/images/sitesym.png"
+              alt="Logo"
+              class="sticky-logo"
+            />
+            <div class="sticky-date">
+              <!-- <span class="day" id="sticky-day"></span> -->
+              <span class="date" id="sticky-date"></span>
+            </div>
+          </div>
           <!-- One single list ensures the menu button stays inline on desktop and wraps natively on mobile -->
           <ul
             class="d-flex flex-wrap align-items-center justify-content-center gap-3 list-unstyled m-0 p-0 text-nowrap"
@@ -665,7 +664,7 @@
                   <div class="col-12 p-0 mb-3">
                     <!-- Inside your mega menu panel -->
                     <span
-                      class="text-danger fw-bold"
+                      class="text-dark fw-bold"
                       id="mega-menu-date"
                     ></span>
                   </div>
@@ -977,7 +976,7 @@
                   <li><span class="sep">/</span></li>
                   <li><a href="#">খেলা</a></li>
                   <li><span class="sep">/</span></li>
-                  <li><a href="#" style="color: red">ফুটবল</a></li>
+                  <li><a href="#" style="color: #1a73e8">ফুটবল</a></li>
                 </ul>
 
                 <!-- Reporter Info -->
@@ -1278,446 +1277,191 @@
             <!-- Latest / Popular Tabs -->
             <div class="tabs-widget bg-white border rounded p-3 shadow-sm">
               <!-- Tab Navigation -->
-              <div
-                class="tab-buttons d-flex border-bottom border-2 border-light mb-2"
-              >
+              <div class="tab-buttons">
                 <button
                   type="button"
-                  class="tab-btn fw-bold text-dark bg-transparent border-0 pb-2 me-4 active"
+                  class="tab-btn active"
                   data-tab="latest-tab"
-                  style="border-bottom: 3px solid #000; font-size: 1rem"
                 >
                   সর্বশেষ
                 </button>
-                <button
-                  type="button"
-                  class="tab-btn fw-bold text-secondary bg-transparent border-0 pb-2"
-                  data-tab="popular-tab"
-                  style="font-size: 1rem"
-                >
+                <button type="button" class="tab-btn" data-tab="popular-tab">
                   জনপ্রিয়
                 </button>
               </div>
 
               <!-- Panel: Latest News -->
               <div class="tab-panel active" id="latest-tab">
-                <ol
-                  class="ranked-list list-unstyled m-0"
-                  style="
-                    max-height: 440px;
-                    overflow-y: auto;
-                    padding-right: 5px;
-                  "
-                >
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১</span
-                    >
+                <ol class="ranked-list">
+                  <li class="news-item">
+                    <span class="news_sl">১</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306710"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >আর্জেন্টিনার প্রতিপক্ষ মিসরের ভাগ্য বদলেছেন যে যমজ দুই
                       ভাই</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >২</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">২</span>
                     <a
                       href="https://www.kalbela.com/capital/306709"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >বর্জ্য ব্যবস্থাপনায় ডিএসসিসির ‘ক্লিন কেয়ার’ অ্যাপ
                       চালু</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৩</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৩</span>
                     <a
                       href="https://www.kalbela.com/world/middle-east/306706"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ফ্রান্স প্রেসিডেন্টের সফরের মধ্যেই সিরিয়ায় জোড়া
                       বিস্ফোরণ</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৪</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৪</span>
                     <a
                       href="https://www.kalbela.com/corporate/306704"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >গাজীপুর সিটি করপোরেশনে মশাবাহিত রোগ প্রতিরোধে সমন্বয়
                       সভা</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৫</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৫</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306705"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >যিনি ফিলিস্তিনিদের কষ্ট অনুভব করেন না, তিনি মানুষ নন:
                       মিসরের কোচ</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৬</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৬</span>
                     <a
                       href="https://www.kalbela.com/national/306703"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >প্রধানমন্ত্রীর সঙ্গে ক্যান্সার আক্রান্ত সন্তানসহ জুলাইয়ে
                       শহীদের মায়ের সাক্ষাৎ, চাকরির আশ্বাস</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৭</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৭</span>
                     <a
                       href="https://www.kalbela.com/world/pakistan/306702"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >পাকিস্তানের পুলিশ পোস্টে সন্ত্রাসী হামলা, ৯ পুলিশ সদস্য
                       নিহত</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৮</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৮</span>
                     <a
                       href="https://www.kalbela.com/country-news/306701"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >মাটির নিচে লুকিয়ে রাখা ২৯ লাখ টাকার স্বর্ণালংকার চুরি</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৯</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৯</span>
                     <a
                       href="https://www.kalbela.com/country-news/306699"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >জমিসংক্রান্ত বিরোধের জেরে হামলায় আহত ১০, প্রধান
                       অভিযুক্তসহ গ্রেপ্তার ৫</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১০</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১০</span>
                     <a
                       href="https://www.kalbela.com/country-news/306698"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >নানা সীমাবদ্ধতায় ধুঁকছে চাঁদপুর ২৫০ শয্যা হাসপাতাল</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১১</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১১</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306700"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >জর্জিনার পাঠানো উপহার নিয়ে যা বললেন মেসির স্ত্রী</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১২</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১২</span>
                     <a
                       href="https://www.kalbela.com/country-news/306686"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >৪২ ঘণ্টা পার হলেও মেলেনি নিখোঁজ ৬ জেলের সন্ধান</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৩</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৩</span>
                     <a
                       href="https://www.kalbela.com/country-news/306675"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >বৈরী আবহাওয়ায় চট্টগ্রামে নামতে পারেনি ৩ ফ্লাইট</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৪</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৪</span>
                     <a
                       href="https://www.kalbela.com/world/middle-east/306697"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ভিসা নিয়ে বড় সুখবর দিল সৌদি আরব</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৫</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৫</span>
                     <a
                       href="https://www.kalbela.com/national/306696"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >পানিসম্পদ উন্নয়নে বাংলাদেশকে সহযোগিতা করতে চায়
                       নেদারল্যান্ডস</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৬</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৬</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306695"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >মিসরের বিপক্ষে জিতলে আর্জেন্টিনার পরবর্তী খেলা কবে,
                       প্রতিপক্ষ কে?</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৭</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৭</span>
                     <a
                       href="https://www.kalbela.com/country-news/306693"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >সাভারে এনসিপির সমাবেশে বিস্ফোরণ, সাবেক যুবলীগ নেতাসহ আটক
                       ২</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৮</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৮</span>
                     <a
                       href="https://www.kalbela.com/country-news/306691"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ডেঙ্গুর তথ্য জানেন না সিলেটের সিভিল সার্জন</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৯</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৯</span>
                     <a
                       href="https://www.kalbela.com/country-news/306694"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ঢাকা-কক্সবাজার ট্রেন চলাচল বন্ধ, মাঝপথে আটকা পর্যটক
                       এক্সপ্রেস</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >২০</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">২০</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306692"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ব্রাজিলের বিদায়ে আর্জেন্টিনা কোচের সতর্কবার্তা</a
                     >
                   </li>
@@ -1725,13 +1469,8 @@
 
                 <div class="mt-3 text-center">
                   <a
-                    class="all-news-link d-block py-2 rounded text-decoration-none fw-bold"
+                    class="all-news-link"
                     href="https://www.kalbela.com/latest-news"
-                    style="
-                      border: 1px solid #93c5fd;
-                      background-color: #eff6ff;
-                      color: #1e3a8a;
-                    "
                   >
                     সর্বশেষ সব খবর
                   </a>
@@ -1740,214 +1479,87 @@
 
               <!-- Panel: Popular News -->
               <div class="tab-panel d-none" id="popular-tab">
-                <ol
-                  class="ranked-list list-unstyled m-0"
-                  style="
-                    max-height: 440px;
-                    overflow-y: auto;
-                    padding-right: 5px;
-                  "
-                >
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১</span
-                    >
+                <ol class="ranked-list">
+                  <li class="news-item">
+                    <span class="news_sl">১</span>
                     <a
                       href="https://www.kalbela.com/world/middle-east/306645"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >খামেনির শেষ বিদায়ে দেখা গেল আহমাদিনেজাদকে</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >২</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">২</span>
                     <a
                       href="https://www.kalbela.com/country-news/306649"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >এনসিপির ৫ নেতা গ্রেপ্তার</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৩</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৩</span>
                     <a
                       href="https://www.kalbela.com/country-news/306486"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >এক উপদেষ্টাসহ আওয়ামী লীগের ৪ নেতার পদত্যাগ</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৪</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৪</span>
                     <a
                       href="https://www.kalbela.com/dainikshiksha/others/306429"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >দেশের সব মাদ্রাসার জন্য জরুরি নির্দেশনা জারি</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৫</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৫</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306625"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >আর্জেন্টিনা-পর্তুগাল ২০৩০ বিশ্বকাপ খেলবে বাছাইপর্ব
                       ছাড়াই</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৬</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৬</span>
                     <a
                       href="https://www.kalbela.com/country-news/306383"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >জজ-নির্বাহী ম্যাজিস্ট্রেট দম্পতির বাড়িতে দুর্ধর্ষ চুরি,
                       ৩২ লাখ টাকার সম্পদ লুট</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৭</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৭</span>
                     <a
                       href="https://www.kalbela.com/country-news/306409"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >হাইকোর্টের রায়ে দায়িত্বে ফিরছেন ৮ ইউপি চেয়ারম্যান</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৮</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৮</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306405"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >বিশ্বকাপ ব্যর্থতার পর কোচকে নিয়ে ব্রাজিলের চূড়ান্ত
                       সিদ্ধান্ত</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >৯</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">৯</span>
                     <a
                       href="https://www.kalbela.com/national/306489"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ডিজি ছাড়া ইসিতে এনআইডি সেবা বন্ধ, সেবা মিলবে মাঠে</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১০</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১০</span>
                     <a
                       href="https://www.kalbela.com/world/middle-east/306608"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       ><span class="sholder text-danger fw-bold"
                         >নিউইয়র্ক টাইমসের প্রতিবেদন /</span
                       >
@@ -1955,207 +1567,87 @@
                       ট্রাম্প</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১১</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১১</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306678"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >আর্জেন্টিনাসহ ২০৩০ বিশ্বকাপ নিশ্চিত করল যেসব দল</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১২</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১২</span>
                     <a
                       href="https://www.kalbela.com/national/306626"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >প্রধানমন্ত্রীর সঙ্গে সাক্ষাৎ, যা বললেন ভোক্তা অধিকারের
                       জব্বার মণ্ডল</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৩</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৩</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306660"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >আর্জেন্টিনা-মিশর ম্যাচে কে জিতবে, জানাল এআই</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৪</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৪</span>
                     <a
                       href="https://www.kalbela.com/country-news/306472"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >এনসিপির সমাবেশস্থলে ককটেল বিস্ফোরণ, আহত ৩</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৫</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৫</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306473"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >মিসর ম্যাচের আগে স্বস্তির খবর পেল আর্জেন্টিনা</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৬</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৬</span>
                     <a
                       href="https://www.kalbela.com/national/306462"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >পরিবেশ সচিবকে প্রত্যাহার</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৭</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৭</span>
                     <a
                       href="https://www.kalbela.com/sports/cricket/306680"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >মারা গেলেন আফগান ক্রিকেটার শাপুর জাদরান</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৮</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৮</span>
                     <a
                       href="https://www.kalbela.com/court-law/306420"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       ><span class="sholder text-danger fw-bold"
                         >৬ বছরের আইনি লড়াই /</span
                       >
                       ৩০ লাখ টাকা পেল কারখানায় হাত হারানো সেই নাঈম</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >১৯</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">১৯</span>
                     <a
                       href="https://www.kalbela.com/national/306481"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >মেয়াদ শেষের আগেই নিয়োগ বাতিল ডেপুটি গভর্নরের</a
                     >
                   </li>
-                  <li
-                    class="d-flex align-items-start py-2 border-bottom border-light"
-                  >
-                    <span
-                      class="news_sl d-flex align-items-center justify-content-center bg-light text-secondary rounded-circle me-2 flex-shrink-0"
-                      style="
-                        width: 28px;
-                        height: 28px;
-                        font-size: 0.85rem;
-                        font-weight: bold;
-                      "
-                      >২০</span
-                    >
+                  <li class="news-item">
+                    <span class="news_sl">২০</span>
                     <a
                       href="https://www.kalbela.com/sports/football/306622"
-                      class="text-dark text-decoration-none"
-                      style="line-height: 1.4"
+                      class="news-link"
                       >ফাইনালের আগে বদলে যাচ্ছে বিশ্বকাপের অফিসিয়াল বল; কিন্তু
                       কেন?</a
                     >
@@ -2164,13 +1656,8 @@
 
                 <div class="mt-3 text-center">
                   <a
-                    class="all-news-link d-block py-2 rounded text-decoration-none fw-bold"
+                    class="all-news-link"
                     href="https://www.kalbela.com/popular-news"
-                    style="
-                      border: 1px solid #93c5fd;
-                      background-color: #eff6ff;
-                      color: #1e3a8a;
-                    "
                   >
                     জনপ্রিয় সব খবর
                   </a>
