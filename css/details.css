@@ -1244,3 +1244,45 @@ Header Icons
     font-size: 14px;
   }
 }
+
+@media print {
+  /* Hide major layout headers, sidebars, navbars, and footers completely */
+  header,
+  footer,
+  nav,
+  aside,
+  .sidebar,
+  #top-nav,
+  .col-md-3,
+  .top-ad-main,
+  .ad-slot,
+  .border_infinity,
+  .fa-spinner,
+  #sticky-ad-footer {
+    display: none !important;
+  }
+
+  /* Force the news column to take up the full width */
+  .col-md-9 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* Ensure the body container doesn't force extra heights */
+  body,
+  html,
+  .row,
+  .container {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  @page {
+    margin: 12mm;
+  }
+}

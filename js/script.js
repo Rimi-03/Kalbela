@@ -785,3 +785,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document
+  .querySelector(".share-icon-btn.print")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.print();
+  });
