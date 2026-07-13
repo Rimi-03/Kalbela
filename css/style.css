@@ -1997,7 +1997,9 @@ HAMBURGER MENU
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+.border-end-divider {
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
 @media (max-width: 991px) {
   .quick-links {
     margin-top: 20px;
@@ -2038,6 +2040,9 @@ HAMBURGER MENU
     flex: 0 0 calc((100% - 30px) / 3);
     min-width: calc((100% - 30px) / 3);
   }
+}
+.border-end-divider {
+  border-right: none;
 }
 
 /*==============================
