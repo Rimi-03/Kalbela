@@ -164,7 +164,7 @@ function updateDynamicDates() {
 
   // 3. Update Mega Menu Panel Bengali Date
   const megaMenuDateEl = document.querySelector(
-    ".all-mega-menu-panel .text-danger",
+    ".all-mega-menu-panel .text-dark",
   );
   if (megaMenuDateEl) {
     megaMenuDateEl.textContent = bnDateStr;
