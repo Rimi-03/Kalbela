@@ -1064,6 +1064,9 @@ HAMBURGER MENU
   border-right: 1px solid #e2e2e2;
   padding-right: 18px;
 }
+.col-md-4:last-child{
+    padding-left:32px;
+}
 
 /* On stacked/mobile layouts a right-border does nothing useful,
    so it flips to a bottom-border instead */
@@ -2373,3 +2376,4 @@ Story
 #scroll-to-top.show {
   display: flex; /* Shows when scrolled down */
 }
+
