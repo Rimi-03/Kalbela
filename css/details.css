@@ -297,6 +297,24 @@ Header Icons
   color: #1a73e8 !important;
 }
 
+/* Navbar dropdown */
+#top-nav .dropdown-menu {
+  min-width: 220px;
+  margin-top: 8px;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+#top-nav .dropdown-item {
+  padding: 10px 18px;
+  font-weight: 500;
+}
+
+#top-nav .dropdown-toggle::after {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 /* Base Panel Styling */
 .all-mega-menu-panel {
   position: absolute;
