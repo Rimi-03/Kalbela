@@ -579,10 +579,24 @@
                 >শিক্ষা</a
               >
             </li>
-            <li>
-              <a class="text-decoration-none text-dark fw-bold px-1" href="#"
-                >বাণিজ্য</a
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark fw-bold px-1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                বাণিজ্য
+              </a>
+
+              <ul class="dropdown-menu shadow border-0">
+                <li><a class="dropdown-item" href="#">শেয়ার বাজার</a></li>
+                <li><a class="dropdown-item" href="#">ব্যাংক</a></li>
+                <li><a class="dropdown-item" href="#">অর্থনীতি</a></li>
+                <li><a class="dropdown-item" href="#">বীমা</a></li>
+                <li><a class="dropdown-item" href="#">কর্পোরেট</a></li>
+              </ul>
             </li>
             <li>
               <a class="text-decoration-none text-dark fw-bold px-1" href="#"
@@ -1063,7 +1077,7 @@
                 <!-- Lead Content -->
                 <div class="col-lg-5">
                   <div class="card-body h-100 d-flex flex-column">
-                    <h2 class="lead-title mb-3">
+                    <h2 class="lead-title mb-3 fw-bold">
                       শিগগির স্বেচ্ছাসেবক দলের নতুন কমিটি, আলোচনায় এক ডজন নেতা
                     </h2>
 
@@ -2779,7 +2793,7 @@
           <!-- সর্বশেষ / জনপ্রিয় : tabbed list                              -->
           <!-- ---------------------------------------------------------- -->
           <div class="col-12 col-md-4">
-            <div class="tabs-widget">
+            <div class="tabs-widget mb-3">
               <!-- Tab Navigation -->
               <div class="tab-buttons">
                 <button
@@ -3385,24 +3399,6 @@
                         </div>
                       </div>
                     </div>
-                    <hr class="news-separator-horizontal-border my-1" />
-                    <div class="flex-content">
-                      <div class="d-flex">
-                        <span class="imgWrep"
-                          ><img
-                            src="https://www.kalbela.com/assets/news_photos/2026/07/07/image_306600_1783394537.webp"
-                            alt=""
-                        /></span>
-                        <div class="flex-grow-1">
-                          <h4 class="title">
-                            সৌদিতে বাংলাদেশিদের জন্য দূতাবাসের জরুরি সতর্কবার্তা
-                          </h4>
-                          <div class="time">
-                            <i class="fa-regular fa-clock me-1"></i>৩ ঘণ্টা আগে
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -3628,123 +3624,129 @@
                   src="https://www.kalbela.com/assets/verified_icon/menu/business-news.png?v=1"
                   alt="menu-icon"
                 />
-                <span class="cat-name" style="font-size: 24px">বাণিজ্য</span>
-                <a class="cat-more" style="font-size: 18px" href="#"
+                <span class="cat-name">বাণিজ্য</span>
+                <a class="cat-more" href="#"
                   >সব দেখুন <i class="fa-solid fa-arrow-right"></i
                 ></a>
               </div>
 
-              <div class="row g-3">
+              <div class="row g-4">
+                <!-- Left Side: Large News Items -->
                 <div class="col-12 col-lg-8 news-separator-vertical-border">
-                  <div class="flex-content">
-                    <div class="d-flex">
-                      <span class="imgWrep"
-                        ><img
-                          src="https://www.kalbela.com/cache-images/news_photos/2026/07/07/resize-340x200x1x0-image_306586_1783389512.jpg"
-                          alt=""
-                      /></span>
-                      <div class="flex-grow-1">
-                        <h4 class="title">
-                          ডলারের চাপে বিশ্ববাজারে কমলো স্বর্ণের দাম
-                        </h4>
-                        <div class="summery">
-                          মার্কিন ডলারের দর শক্তিশালী হওয়ায় আন্তর্জাতিক বাজারে
-                          স্বর্ণের দাম দুই সপ্তাহের সর্বোচ্চ অবস্থান থেকে কিছুটা
-                          কমেছে। তবে যুক্তরাষ্ট্রের শ্রমবাজারে ধীরগতির ইঙ্গিত
-                          পাওয়ায় বড় ধরনের পতন হয়নি।
-                        </div>
+                  <div class="large-news-item">
+                    <div class="news-image-wrapper">
+                      <img
+                        src="https://www.kalbela.com/cache-images/news_photos/2026/07/07/resize-340x200x1x0-image_306586_1783389512.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="news-content">
+                      <h4 class="title">
+                        ডলারের চাপে বিশ্ববাজারে কমলো স্বর্ণের দাম
+                      </h4>
+                      <div class="summary">
+                        মার্কিন ডলারের দর শক্তিশালী হওয়ায় আন্তর্জাতিক বাজারে
+                        স্বর্ণের দাম দুই সপ্তাহের সর্বোচ্চ অবস্থান থেকে কিছুটা
+                        কমেছে। তবে যুক্তরাষ্ট্রের শ্রমবাজারে ধীরগতির ইঙ্গিত
+                        পাওয়ায় বড় ধরনের পতন হয়নি।অর্থনৈতিক বিশ্লেষকদের মতে,
+                        মার্কিন কেন্দ্রীয় ব্যাংক ফেডারেল রিজার্ভের সুদের হার
+                        কমানোর সিদ্ধান্তের ওপরই এখন স্বর্ণের পরবর্তী দাম নির্ভর
+                        করছে।
                       </div>
                     </div>
                   </div>
+
                   <hr class="news-separator-horizontal-border" />
-                  <div class="flex-content">
-                    <div class="d-flex">
-                      <span class="imgWrep"
-                        ><img
-                          src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306477_1783355158.webp"
-                          alt=""
-                      /></span>
-                      <div class="flex-grow-1">
-                        <h4 class="title">রিজার্ভ আরও বাড়ল</h4>
-                        <div class="summery">
-                          দেশের মোট বৈদেশিক মুদ্রার রিজার্ভ আরও বেড়েছে। বর্তমান
-                          রিজার্ভ ৩৭ হাজার ৮৪৭ দশমিক ৭৭ মিলিয়ন বা ৩৭ দশমিক ৮৪
-                          বিলিয়ন ডলারে দাঁড়িয়েছে।
-                        </div>
+
+                  <div class="large-news-item">
+                    <div class="news-image-wrapper">
+                      <img
+                        src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306477_1783355158.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="news-content">
+                      <h4 class="title">রিজার্ভ আরও বাড়ল</h4>
+                      <div class="summary">
+                        দেশের মোট বৈদেশিক মুদ্রার রিজার্ভ আরও বেড়েছে। বর্তমান
+                        রিজার্ভ ৩৭ হাজার ৮৪৭ দশমিক ৭৭ মিলিয়ন বা ৩৭ দশমিক ৮৪
+                        বিলিয়ন ডলারে দাঁড়িয়েছে।
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <!-- Right Side: Sidebar News Items with Summary and Image below Title -->
                 <div class="col-12 col-lg-4">
-                  <div id="flex-right-image">
-                    <div class="flex-content">
-                      <h4 class="title">
-                        সঞ্চয় স্কিমের সুদের হার বাড়ল না কমলো, জানাল বাংলাদেশ
-                        ব্যাংক
-                      </h4>
-                      <div class="d-flex align-items-start">
-                        <div class="flex-grow-1">
-                          <div class="summery">
-                            আগামী ডিসেম্বর পর্যন্ত জাতীয় সঞ্চয় স্কিমগুলোর
-                            সুদের হার অপরিবর্তিত থাকবে।
-                          </div>
-                          <div class="time">
-                            <i class="fa-regular fa-clock me-1"></i>১৬ ঘণ্টা আগে
-                          </div>
+                  <div class="sidebar-news-item">
+                    <h4 class="title">
+                      সঞ্চয় স্কিমের সুদের হার বাড়ল না কমলো, জানাল বাংলাদেশ
+                      ব্যাংক
+                    </h4>
+                    <div class="d-flex align-items-start gap-2 mt-2">
+                      <div class="flex-grow-1">
+                        <div class="summary">
+                          আগামী ডিসেম্বর পর্যন্ত জাতীয় সঞ্চয়...
                         </div>
-                        <span class="imgWrep"
-                          ><img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306439_1783347178.webp"
-                            alt=""
-                        /></span>
+                        <div class="time">
+                          <i class="fa-regular fa-clock me-1"></i>১৬ ঘণ্টা আগে
+                        </div>
                       </div>
+                      <span class="thumb-image-wrapper">
+                        <img
+                          src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306439_1783347178.webp"
+                          alt=""
+                        />
+                      </span>
                     </div>
-                    <hr class="news-separator-horizontal-border" />
-                    <div class="flex-content">
-                      <h4 class="title">
-                        বাজেট ব্যবসাবন্ধব, বড় চ্যালেঞ্জ রাজস্ব আদায়:
-                        বিপিজিএমইএ
-                      </h4>
-                      <div class="d-flex align-items-start">
-                        <div class="flex-grow-1">
-                          <div class="summery">
-                            চলতি ২০২৬-২৭ অর্থবছরের বাজেট সার্বিকভাবে
-                            ব্যবসাবান্ধব হয়েছে বলে মন্তব্য করেছে বিপিজিএমইএ।
-                          </div>
-                          <div class="time">
-                            <i class="fa-regular fa-clock me-1"></i>১৭ ঘণ্টা আগে
-                          </div>
+                  </div>
+
+                  <hr class="news-separator-horizontal-border" />
+
+                  <div class="sidebar-news-item">
+                    <h4 class="title">
+                      বাজেট ব্যবসাবন্ধব, বড় চ্যালেঞ্জ রাজস্ব আদায়: বিপিজিএমইএ
+                    </h4>
+                    <div class="d-flex align-items-start gap-2 mt-2">
+                      <div class="flex-grow-1">
+                        <div class="summary">
+                          চলতি ২০২৬-২৭ অর্থবছরের বাজেট সার্বিকভাবে
+                          ব্যবসাবান্ধব...
                         </div>
-                        <span class="imgWrep"
-                          ><img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306428_1783345267.jpg"
-                            alt=""
-                        /></span>
+                        <div class="time">
+                          <i class="fa-regular fa-clock me-1"></i>১৭ ঘণ্টা আগে
+                        </div>
                       </div>
+                      <span class="thumb-image-wrapper">
+                        <img
+                          src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306428_1783345267.jpg"
+                          alt=""
+                        />
+                      </span>
                     </div>
-                    <hr class="news-separator-horizontal-border" />
-                    <div class="flex-content">
-                      <h4 class="title">
-                        কমেছে জ্বালানি তেলের দাম, স্বাভাবিক হচ্ছে বিশ্ববাজার
-                      </h4>
-                      <div class="d-flex align-items-start">
-                        <div class="flex-grow-1">
-                          <div class="summery">
-                            ওপেক প্লাসের উৎপাদন বাড়ানোর সিদ্ধান্তের পর
-                            আন্তর্জাতিক বাজারে অপরিশোধিত জ্বালানি তেলের দাম
-                            কিছুটা কমেছে।
-                          </div>
-                          <div class="time">
-                            <i class="fa-regular fa-clock me-1"></i>২২ ঘণ্টা আগে
-                          </div>
+                  </div>
+
+                  <hr class="news-separator-horizontal-border" />
+
+                  <div class="sidebar-news-item">
+                    <h4 class="title">
+                      কমেছে জ্বালানি তেলের দাম, স্বাভাবিক হচ্ছে বিশ্ববাজার
+                    </h4>
+                    <div class="d-flex align-items-start gap-2 mt-2">
+                      <div class="flex-grow-1">
+                        <div class="summary">
+                          ওপেক প্লাসের উৎপাদন বাড়ানোর সিদ্ধান্তের...
                         </div>
-                        <span class="imgWrep"
-                          ><img
-                            src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306353_1783328094.webp"
-                            alt=""
-                        /></span>
+                        <div class="time">
+                          <i class="fa-regular fa-clock me-1"></i>২২ ঘণ্টা আগে
+                        </div>
                       </div>
+                      <span class="thumb-image-wrapper">
+                        <img
+                          src="https://www.kalbela.com/cache-images/news_photos/2026/07/06/resize-340x200x1x0-image_306353_1783328094.webp"
+                          alt=""
+                        />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -3985,33 +3987,42 @@
               </div>
 
               <div class="row g-3">
-                <div class="col-12 col-md-6 news-separator-vertical-border">
-                  <div class="flex-content">
-                    <div class="d-flex flex-column-reverse flex-md-row">
-                      <div class="flex-grow-1">
-                        <h4 class="title">
-                          এরদোয়ানকে অস্ত্র না দিতে ট্রাম্পকে অনুরোধ
-                          নেতানিয়াহুর
-                        </h4>
-                        <div class="summery">
-                          তুরস্কের প্রেসিডেন্ট রিসেপ তাইয়েপ এরদোয়ানের
-                          ইসরায়েলবিরোধী অবস্থান নিয়ে মার্কিন প্রেসিডেন্ট
-                          ডোনাল্ড ট্রাম্পের কাছে উদ্বেগ প্রকাশ করেছেন ইসরায়েলের
-                          প্রধানমন্ত্রী বেনিয়ামিন নেতানিয়াহু।
+                <div
+                  class="col-md-6 news-separator-vertical-border position-relative lead-lews"
+                  id="lead-lews"
+                >
+                  <div class="flex-content position-relative overflow-hidden">
+                    <!-- Removed d-flex to allow float wrapping -->
+                    <div class="story-wrapper clearfix">
+                      <!-- Image moved to top of the block so it floats properly -->
+                      <div class="lead-image-side">
+                        <div class="img-content position-relative text-center">
+                          <div
+                            class="longimg"
+                            style="
+                              background: url(https://www.kalbela.com/assets/news_photos/2026/07/13/image_308431_1783919526.webp);
+                            "
+                          ></div>
                         </div>
                       </div>
-                      <div
-                        class="flex-shrink-0 mb-2 mb-md-0 ms-md-3"
-                        style="width: 100%; max-width: 260px"
-                      >
-                        <div
-                          class="longimg"
-                          style="
-                            background-image: url(&quot;https://www.kalbela.com/assets/news_photos/2026/07/07/image_306631_1783405843.webp&quot;);
-                          "
-                        ></div>
+
+                      <!-- Text elements are now direct siblings of the floated image -->
+                      <h4 class="title">
+                        যুক্তরাষ্ট্রের হাই মোবিলিটি আর্টিলারi রকেট সিস্টেম ধ্বংস
+                        করল ইরান
+                      </h4>
+
+                      <div class="summery d-block">
+                        ইরানের ইসলামিক রেভল্যুশনারি গার্ড কোর (আইআরজিসি) দাবি
+                        করেছে, কুয়েতে থাকা যুক্তরাষ্ট্রের হাই মোবিলিটি
+                        আর্টিলারি রকেট সিস্টেম (হিমার্স) ক্ষেপণাস্ত্র উৎক্ষেপণ
+                        ব্যবস্থা ড্রোন হামলায় ধ্বংস করা হয়েছে।
                       </div>
                     </div>
+                    <a
+                      class="link"
+                      href="https://www.kalbela.com/world/united-states/308431"
+                    ></a>
                   </div>
                 </div>
 
@@ -5011,7 +5022,7 @@
     >
       <!-- Top Segment: Brand SEO text and Navigation Links -->
       <div class="border-bottom pb-3">
-        <div class="container-fluid">
+        <div class="container">
           <div class="row align-items-start">
             <!-- SEO Branding Text Block -->
             <div class="col-lg-5 col-md-12 mb-3 mb-lg-0">
@@ -5114,7 +5125,7 @@
 
       <!-- Middle Segment: Editorial Info & Contacts -->
       <div
-        class="container-fluid py-4 mt-3 site-address border-top border-bottom"
+        class="container py-4 mt-3 site-address border-top border-bottom"
         style="font-size: 16px; line-height: 1.6; color: #333"
       >
         <div class="row g-4">
@@ -5175,7 +5186,7 @@
         id="footer-social"
         style="font-size: 13px"
       >
-        <div class="container-fluid">
+        <div class="container">
           <div class="row align-items-start">
             <!-- Social Media Segment -->
             <div class="col-md-6">
@@ -5315,7 +5326,7 @@
 
       <!-- Copyright Segment -->
       <div class="bg-light py-3 mb-3" style="font-size: 13px; color: #555">
-        <div class="container-fluid">
+        <div class="container">
           <div
             class="d-flex flex-column flex-md-row justify-content-between gap-2"
           >
