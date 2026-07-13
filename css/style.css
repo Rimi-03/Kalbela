@@ -1100,7 +1100,7 @@ HAMBURGER MENU
 }
 .news-separator-horizontal-border {
   border-top: 1px solid var(--kb-border);
-  margin: 14px 0;
+  margin: 18px 0;
 }
 
 /* ============================================================
@@ -1179,6 +1179,86 @@ HAMBURGER MENU
   border-top: 1px solid #e2e2e2;
   margin: 10px 0;
   opacity: 1; /* Bootstrap's default <hr> opacity fades it too much */
+}
+
+/* ============================================================
+   LEFT SIDE: Large News Items Layout
+   ============================================================ */
+.large-news-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.large-news-item .news-image-wrapper {
+  flex: 0 0 40%; /* Let the image occupy 40% of the column width */
+  max-width: 340px;
+}
+
+.large-news-item .news-image-wrapper img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.large-news-item .news-content {
+  flex: 1;
+}
+
+.large-news-item .title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+.large-news-item .summary {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RIGHT SIDE: Sidebar Title + Side-by-Side Summary & Image
+   ============================================================ */
+.sidebar-news-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-news-item .title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0;
+  color: #111;
+}
+
+.sidebar-news-item .summary {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.sidebar-news-item .thumb-image-wrapper {
+  flex: 0 0 100px; /* Width matching the clean look */
+  display: block;
+}
+
+.sidebar-news-item .thumb-image-wrapper img {
+  width: 100px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.sidebar-news-item .time {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
 }
 
 /* ============================================================
