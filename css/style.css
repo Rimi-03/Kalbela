@@ -1103,187 +1103,222 @@ HAMBURGER MENU
   margin: 14px 0;
 }
 
-/* ---- category block wrapper ---- */
+/* ============================================================
+   SECTION WRAPPER — gives each category block its own
+   bordered "card" so sections don't visually collide
+   ============================================================ */
 .category-block {
-  padding: 18px 16px;
-  border-bottom: 8px solid var(--kb-bg);
+  padding: 18px 20px 22px;
+  margin-bottom: 28px;
+  background: #ffffff;
 }
 
-/* ---- category header : icon + name + arrow link ---- */
+/* ============================================================
+   HEADER — black horizontal rule under every section title
+   (this is the line you circled in the জাতীয় screenshot)
+   ============================================================ */
 .category-header {
   display: flex;
   align-items: center;
   gap: 8px;
   padding-bottom: 10px;
-  margin-bottom: 16px;
-  border-bottom: 2px solid var(--kb-orange);
+  margin-bottom: 18px;
+  border-bottom: 3px solid #111111;
 }
+
 .category-header img {
   width: 22px;
   height: 22px;
-  object-fit: contain;
+  flex-shrink: 0;
 }
-.category-header span.cat-name {
+
+.category-header .cat-name {
   font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--kb-text);
+  flex-grow: 1;
 }
+
 .category-header .cat-more {
-  margin-left: auto;
-  color: var(--kb-muted);
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.category-header .cat-more:hover {
-  color: var(--kb-orange);
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-/* ---- generic image wrapper ---- */
-.imgWrep {
-  display: block;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: #ddd;
-}
-.imgWrep img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-.common-card-content:hover .imgWrep img,
-.flex-content:hover .imgWrep img {
-  transform: scale(1.04);
+.category-header .cat-more i {
+  margin-left: 4px;
+  font-size: 0.8em;
 }
 
-/* ---- title / summary / time typography ---- */
-.title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 8px 0 4px;
-  color: var(--kb-text);
-}
-.title:hover a,
-.title a:hover {
-  color: var(--kb-red) !important;
+/* ============================================================
+   VERTICAL DIVIDERS — separates the columns inside a section
+   (e.g. lead story | middle list | right list)
+   ============================================================ */
+.news-separator-vertical-border {
+  border-right: 1px solid #e2e2e2;
+  padding-right: 18px;
 }
 
-/* পুরো ফ্লেক্স-কন্টেন্টে হোভার করলে ইমেজ জুম হবে */
-.flex-content:hover .longimg {
-  transform: scale(1.04);
+/* On stacked/mobile layouts a right-border does nothing useful,
+   so it flips to a bottom-border instead */
+@media (max-width: 767.98px) {
+  .news-separator-vertical-border {
+    border-right: none;
+    border-bottom: 1px solid #e2e2e2;
+    padding-right: 0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
 }
-.summery {
-  font-size: 16px;
-  color: #4a4a4a;
-  line-height: 1.55;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+
+/* ============================================================
+   HORIZONTAL DIVIDERS — the <hr> lines between stacked items
+   inside one column (e.g. the 4 rows in the middle জাতীয় column)
+   ============================================================ */
+.news-separator-horizontal-border {
+  border: none;
+  border-top: 1px solid #e2e2e2;
+  margin: 10px 0;
+  opacity: 1; /* Bootstrap's default <hr> opacity fades it too much */
 }
-.time {
-  font-size: 13px;
-  color: var(--kb-muted);
-}
-.sholder {
-  color: var(--kb-red);
+
+/* ============================================================
+   CARD CONTENT — consistent spacing/typography for both card
+   styles (image-on-top cards and image-left flex rows)
+   ============================================================ */
+.common-card-content .title {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 10px 0 6px;
 }
 
-/* ---- common-card-content : image on top, text below ---- */
-.common-card-content {
-  height: 100%;
-}
-.common-card-content .image-lead .imgWrep {
-  padding-top: 60%;
-}
-.common-card-content .image-lead .imgWrep img {
-  position: absolute;
-  inset: 0;
-}
-.common-card-content .image-lead {
-  position: relative;
+.common-card-content .summery {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.55;
 }
 
-/* ---- flex-content : image beside text (used in national/business middle col) ---- */
+.common-card-content .time,
+.flex-content .time,
+.sub2-lead-content .time {
+  font-size: 12px;
+  color: #888;
+  margin-top: 6px;
+}
+
+.image-lead img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Image-left rows (e.g. middle জাতীয় column, বাণিজ্য rows) */
 .flex-content .d-flex {
   gap: 12px;
 }
-.flex-content .imgWrep {
-  width: 120px;
-  height: 82px;
-  flex: 0 0 auto;
-}
+
 .flex-content .imgWrep img {
-  position: absolute;
-  inset: 0;
+  width: 90px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
 }
-.flex-content .imgWrep {
-  position: relative;
-}
+
 .flex-content .title {
-  font-size: 18px;
-  margin-top: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0 0 4px;
 }
 
-/* right-image variant (business sidebar): image right, text left */
-#flex-right-image .d-flex {
-  align-items: flex-start;
-  gap: 12px;
-}
-#flex-right-image .imgWrep {
-  width: 120px;
-  height: 82px;
-}
-
-/* ---- sub2-lead : arrow-bullet text-only list item ---- */
+/* Text-only arrow list (right-hand জাতীয় column) */
 .sub2-lead-content .title {
-  font-size: 18px;
-  margin: 0;
-}
-.sub2-lead-content .title i {
-  color: var(--kb-orange);
-  margin-right: 6px;
-  font-size: 0.8rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 4px;
 }
 
-/* ---- world section : background-image "long" lead ---- */
-.longimg {
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease;
+.sub2-lead-content .title i {
+  color: #c00000;
+  margin-right: 6px;
+  font-size: 11px;
+}
+/* Base styles for the main container wrapper */
+.d-flex.flex-column-reverse.flex-md-row {
+  display: flex !important;
+  flex-direction: row-reverse; /* Puts image on the right for desktop */
+  align-items: flex-start;
+  gap: 24px; /* Slightly wider gap looks better with larger images */
   width: 100%;
-  height: 230px;
-  background-size: cover !important;
-  background-position: center !important;
+}
+
+/* The actual image container dimensions */
+.longimg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Keeps the uncropped layout ratio */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 4px;
 }
 
-/* ---- sports section ---- */
-.sports-upcoming {
-  background: #fff;
-  border: 1px solid var(--kb-border);
-  border-radius: 6px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+/* Desktop view configuration */
+@media (min-width: 768px) {
+  #lead-lews .story-wrapper {
+    display: block !important;
+    width: 100%;
+  }
+
+  #lead-lews .lead-image-side {
+    float: right;
+    width: 48% !important; /* Control desktop width of the image */
+    margin-left: 20px; /* Spacing between text and image side */
+    margin-bottom: 12px; /* Spacing below the image if text continues past it */
+  }
+
+  #lead-lews .longimg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintains correct photo proportions */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 4px;
+  }
+
+  /* Clearfix container fix */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
-.sports-upcoming-header {
-  background: var(--kb-orange);
-  font-size: 22px;
-  color: #181818 !important; /* Forces the text to stay white */
-  font-weight: 700;
-  padding: 8px 0;
-  text-align: center;
-  position: relative;
-  z-index: 10;
+
+/* Mobile responsive fallback */
+@media (max-width: 767px) {
+  #lead-lews .story-wrapper {
+    display: flex !important;
+    flex-direction: column-reverse; /* Put image on top of text for mobile screens */
+  }
+
+  #lead-lews .lead-image-side {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0;
+  }
+
+  #lead-lews .longimg {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 16px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
 }
+
 .upcoming-scroll {
   max-height: 360px;
   overflow: hidden;
@@ -2164,9 +2199,6 @@ Story
   }
   .side-scroll-viewport {
     height: 350px;
-  }
-  .longimg {
-    height: 180px;
   }
   .news-separator-vertical-border {
     border-right: none;
